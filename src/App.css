@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden !important;
+}
+
+/* ############################ 
+Utilities Classes
+############################ */
+.primary-button {
+    background-color: #fff;
+    color: #3b7bce;
+    padding: .6rem 2rem;
+    font-weight: 700;
+    position: relative;
+    border: none !important;
+    z-index: 1 !important;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: all .2s ease-in-out;
+    box-shadow: rgba(255, 255, 255, 0.36) 0px 2px 15px 1px;
+}
+.primary-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 0%;
+    border: none !important;
+    background: linear-gradient(to left, #7711b1, #1179e7 );
+    z-index: -1;
+    transition: all .2s ease-in-out;
+}
+.primary-button:hover::after {
+    height: 100%;
+}
+.primary-button:hover {
+    color: #fff;
+}
+
+.secondary-button {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border: 1px solid #fff;
+    padding: .7rem 1.2rem !important;
+    font-weight: 600;
+    text-shadow: none;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+.secondary-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    transition: all .3s ease-in-out;
+}
+.secondary-button:hover::after {
+    transform: scale(1);
+}
+.secondary-button:hover {
+    text-shadow: 4px 4px 6px rgb(32,167,219);
+}
+
+
+.glowingButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: 4px solid;
+    border-image: linear-gradient( #913ae4, #0898ff);
+    border-image-slice: 1;
+    background: rgb(51, 56, 116);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+};
+
+[data-scroll-container] {
+    height: 100%;
+    overflow: hidden;
+  }
+
+.effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bg-cover {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}

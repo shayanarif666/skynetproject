@@ -1,0 +1,132 @@
+#homeServices {
+    background: #00042a;
+    position: relative;
+    overflow-x: clip;
+}
+
+.service-intro {
+    padding: 2rem; /* Optional: add padding for spacing */
+    min-height: 40%;
+    position: sticky;
+    top: 0px;
+}
+
+.service-detail {
+    background-color: #070b30;
+    padding: 4rem 3rem;
+    width: 100%;
+    transition: all .4s ease-in-out;
+    position: relative;
+    width: 100%;
+    z-index: 999 !important;
+    overflow: hidden;
+}
+
+.service-detail p {
+    max-width: 50rem;
+}
+
+.service-detail-wrapper {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(255, 255, 255) !important;
+    z-index: -1;
+    transition: all .4s ease-in-out;
+    visibility: hidden;
+    background: url("https://www.digitalsilk.com/wp-content/uploads/2024/09/responsive_design-min.png");
+    background-position: 70%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+}
+
+.service-detail:hover {
+    cursor: pointer;
+    width: 60vw;
+}
+
+.service-detail:hover .service-detail-wrapper {
+    width: 100%;
+    visibility: visible !important;
+    opacity: 1;
+}
+
+.service-detail:hover p,
+.service-detail:hover h3 {
+    color: #00042a !important;
+    z-index: 999 !important;
+}
+
+.service-detail svg {
+    color: #00b9ff !important;
+}
+
+.service-detail:hover .overlay-circle-one,
+.service-detail:hover .overlay-circle-two {
+    visibility: visible;
+    opacity: .7;
+}
+.service-intro-column::before,
+.service-intro-column::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(4, 228, 255, 0.8) 0%, rgba(4, 228, 255, 0) 70%);
+    opacity: 0.3;
+}
+.service-intro-column::before {
+    bottom: 60%;
+    left: -20%;
+}
+.service-intro-column::after {
+    bottom: 45%;
+    right: -20%;
+}
+
+.overlay-circle-one,
+.overlay-circle-two {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(70px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.overlay-circle-one {
+    width: 350px;
+    height: 350px;
+    background: #7e57c2;
+    right: 0%;
+    bottom: -30%;
+}
+.overlay-circle-two {
+    width: 270px;
+    height: 270px;
+    background: #00b9ff;
+    right: -8%;
+    top: 17%;
+}
+
+
+@media (max-width: 768px) {
+    .home-service-overlay {
+        display: none;
+    }
+
+    .service-detail {
+        width: 100% !important;
+        padding: 2rem;
+    }
+    .service-detail:hover {
+        background-color: #fff;
+    }
+}

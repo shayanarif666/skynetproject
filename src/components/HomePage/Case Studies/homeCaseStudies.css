@@ -1,0 +1,58 @@
+.case_studies {
+    position: relative;
+    height: 100vh;
+}
+
+.case_studies .case_studies_tabs {
+    z-index: 9;
+}
+
+.case_studies .case_studies_tabs_content .case_studies_tabs_content_tab_panal .effect::before {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://www.digitalsilk.com/wp-content/uploads/2022/10/cc-preview2.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 28vw;
+    height: 100%;
+    z-index: 0;
+}
+
+.case_studies .MuiTabs-indicator {
+    display: none !important;
+}
+
+.case_studies .case_studies_tabs .case_studies_tabs_list button {
+    position: relative;
+    border: none;
+    padding: 0;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: visible !important;
+}
+.case_studies .case_studies_tabs .case_studies_tabs_list button.Mui-selected {
+    filter: brightness(0) !important;
+}
+
+.case_studies .case_studies_tabs .case_studies_tabs_list button::after {
+    content: "";
+    display: block;
+    width: 450px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(0px);
+}
+
+.case_studies .case_studies_tabs .case_studies_tabs_list button img {
+    filter: brightness(1000%) saturate(0);
+    display: block;
+    width: auto;
+    /* Adjust image width automatically */
+    height: auto;
+    /* Maintain aspect ratio */
+    transform: translateY(-20px);
+}
