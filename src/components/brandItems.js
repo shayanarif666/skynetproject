@@ -1,47 +1,47 @@
 export const heroBrands = [
     {
         id: 1,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/BRU_Logo-1.png.webp"
+        src: "./Images/T&A Home Efficient.webp"
     },
     {
         id: 2,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/xerox_logo-1.png.webp"
+        src: "./Images/United Remodeling.webp"
     },
     {
         id: 3,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/Sony-1.png.webp"
+        src: "./Images/T&A Home Efficient.webp"
     },
     {
         id: 4,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/PG_logo-1.png.webp"
+        src: "./Images/United Remodeling.webp"
     },
     {
         id: 5,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/nyc_logo-1.png.webp"
+        src: "./Images/T&A Home Efficient.webp"
     },
     {
         id: 6,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/nfl_logo-1.png.webp"
+        src: "./Images/United Remodeling.webp"
     },
     {
         id: 7,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/mcds_logo-1.png.webp"
+        src: "./Images/T&A Home Efficient.webp"
     },
     {
         id: 8,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/MicrosoftTeams-image-2.png.webp"
+        src: "./Images/United Remodeling.webp"
     },
     {
         id: 9,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/nyc_logo-1.png.webp"
+        src: "./Images/T&A Home Efficient.webp"
     },
     {
         id: 10,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/MicrosoftTeams-image-2.png.webp"
+        src: "./Images/United Remodeling.webp"
     },
     {
         id: 11,
-        src: "https://www.digitalsilk.com/wp-content/uploads/2024/05/nyc_logo-1.png.webp"
+        src: "./Images/T&A Home Efficient.webp"
     }
 ]
 

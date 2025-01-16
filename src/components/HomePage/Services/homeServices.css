@@ -1,7 +1,7 @@
 #homeServices {
     background: #00042a;
     position: relative;
-    overflow-x: clip;
+    overflow: clip;
 }
 
 .service-intro {
@@ -19,7 +19,7 @@
     position: relative;
     width: 100%;
     z-index: 999 !important;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .service-detail p {

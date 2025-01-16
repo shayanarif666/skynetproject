@@ -1,9 +1,11 @@
 import React from 'react';
 import "./brandSlider.css";
+import "../../../public/Images/T&A Home Efficient.webp"
+import "../../../public/Images/United Remodeling.webp"
 
 const BrandsSlider = ({
     items = [],
-    height = "10vh",
+    height = "15vh",
     bgColor = "#03042a",
     itemBgColor = "",
     itemWidth = "",
@@ -23,7 +25,7 @@ const BrandsSlider = ({
             <div id="marquee" className={`${sliderGap}`} data-scroll-section>
                 <div className={`marquee-wrapper`} style={{ height: height, backgroundColor: `${bgColor}` }}>
                     {
-                        items?.map((item) => {
+                        items?.map((item, ind) => {
                             return (
                                 <div
                                     class={`item item${item.id} ${className}`}
@@ -39,7 +41,7 @@ const BrandsSlider = ({
                                         padding: "2.5rem",
                                     }}
                                 >
-                                    <img src={item.src} alt="" />
+                                    <img src={item.src} className={`img-fluid ${ind % 2 !== 0 ? "custom-img-size" : ""} `} alt="" />
                                     <h3 className='text-lg mt-4 font-medium text-slate-300'>{item.comapny}</h3>
                                 </div>
                             )

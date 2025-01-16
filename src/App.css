@@ -110,3 +110,16 @@ Utilities Classes
     background-size: cover !important;
     background-position: center !important;
 }
+.effect-design-line {
+    background: #009cff;
+    width: 100%;
+    height: 2px;
+}
+.text_gradient {
+    background: linear-gradient(131.8deg, #009cff 0, #9536e5 100%);
+    background-clip: border-box;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding-right: 8px;
+}

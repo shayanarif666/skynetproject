@@ -1,20 +1,95 @@
 .case_studies {
     position: relative;
-    height: 100vh;
+    height: 100%;
+}
+
+.case_studies .case_studies_intro {
+    position: relative;
+    z-index: 9;
+}
+.case_studies .case_studies_intro .case_studies_intro_title {
+    text-align: end;
+}
+.case_studies .case_studies_intro .case_studies_intro_title h1 {
+    font-size: 3.5rem;
+    font-weight: bolder !important;
+    background: linear-gradient(to right, #fff 76%, #1B2C5C 51%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .case_studies .case_studies_tabs {
     z-index: 9;
 }
+.case_studies .case_studies_tabs_content {
+    z-index: 8;
+}
+
+.case_studies .case_studies_tabs_content .case_studies_tabs_content_tab_panal_effect::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 35vw;
+    width: 65vw;
+    height: 100%;
+    background-color: #efefef;
+    z-index: -1;
+}
+
+.case_studies .case_studies_tabs_content .case_studies_tab_panal_effect_logo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -70%);
+    opacity: .1;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center !important;
+}
+.case_studies_tab_panal_effect_logo-hp::after {
+    background: url("https://www.digitalsilk.com/wp-content/uploads/2022/07/bo-logo-dark.svg");
+}
+.case_studies_tab_panal_effect_logo-xerox::after {
+    background: url("https://www.digitalsilk.com/wp-content/uploads/2022/07/xerox-logo-dark.svg");
+}
+.case_studies_tab_panal_effect_logo-doForms::after {
+    background: url("https://www.digitalsilk.com/wp-content/uploads/2022/11/doForms-logo-dark-blue.svg");
+}
+.case_studies_tab_panal_effect_logo-fieldEdge::after {
+    background: url("https://www.digitalsilk.com/wp-content/uploads/2022/11/FieldEdge-logo-dark-blue.svg");
+}
+.case_studies_tab_panal_effect_logo-miami::after {
+    background: url("https://www.digitalsilk.com/wp-content/uploads/2022/11/MCDS-logo-dark-blue.svg");
+}
 
 .case_studies .case_studies_tabs_content .case_studies_tabs_content_tab_panal .effect::before {
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://www.digitalsilk.com/wp-content/uploads/2022/10/cc-preview2.jpg') !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 28vw;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 35vw;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
+}
+.case_studies_tab_panal_effect_img_one::before {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://www.digitalsilk.com/wp-content/uploads/2022/10/cc-preview2.jpg') !important;
+}
+.case_studies_tab_panal_effect_img_two::before {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://www.digitalsilk.com/wp-content/uploads/2022/10/xerox-bg-tall.jpg') !important;
+}
+.case_studies_tab_panal_effect_img_three::before {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://www.digitalsilk.com/wp-content/uploads/2022/11/Web-design-case-study-Doforms.jpg') !important;
+}
+.case_studies_tab_panal_effect_img_four::before {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://www.digitalsilk.com/wp-content/uploads/2022/11/fieldedge-main.jpg') !important;
+}
+.case_studies_tab_panal_effect_img_five::before {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('https://www.digitalsilk.com/wp-content/uploads/2022/11/Web-design-case-study-mcds.jpg') !important;
 }
 
 .case_studies .MuiTabs-indicator {
@@ -31,20 +106,21 @@
     align-items: start;
     overflow: visible !important;
 }
-.case_studies .case_studies_tabs .case_studies_tabs_list button.Mui-selected {
-    filter: brightness(0) !important;
-}
-
 .case_studies .case_studies_tabs .case_studies_tabs_list button::after {
     content: "";
     display: block;
-    width: 450px;
+    width: 20vw;
     position: absolute;
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: #fff;
+    background-color: #efefef;
     transform: translateY(0px);
+    transition: all .6s ease-in-out;
+}
+.case_studies .case_studies_tabs .case_studies_tabs_list button.Mui-selected::after {
+    width: 100vw;
+    background-color: #15a4d4;
 }
 
 .case_studies .case_studies_tabs .case_studies_tabs_list button img {
@@ -55,4 +131,33 @@
     height: auto;
     /* Maintain aspect ratio */
     transform: translateY(-20px);
+}
+.case_studies .case_studies_tabs .case_studies_tabs_list button.Mui-selected img {
+    filter: hue-rotate(50deg) saturate(3) brightness(.9) !important;
+}
+
+/* ##################################### 
+Accordion Item
+###################################### */
+.case_studies .accordion_container {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+.case_studies .case_studies_accordion .MuiAccordionSummary-expandIconWrapper {
+    display: none !important;
+}
+.case_studies .case_studies_accordion .case_studies_accordion_tag_line {
+    display: block;
+    width: 100%;
+    text-align: center;
+    z-index: 9;
+}
+.case_studies .case_studies_accordion .case_studies_accordion_tag_line img {
+    margin: auto;
+    max-width: 70px;
+}
+.case_studies .case_studies_accordion .case_studies_accordion_tag_line h5 {
+    font-weight: bold;
+    font-size: 1.2rem;
 }

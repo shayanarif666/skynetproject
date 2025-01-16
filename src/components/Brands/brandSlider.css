@@ -27,3 +27,9 @@ Marquee Section
     font-weight: bold;
     padding: 1.5rem 1rem 1rem;
 }
+#marquee .item img {
+    filter: brightness(100%) saturate(0%);
+}
+#marquee .custom-img-size {
+    max-width: 200px;
+}

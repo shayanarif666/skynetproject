@@ -61,37 +61,13 @@
     font-size: 1.2rem;
     margin-top: 1rem;
 }
-
-.coming-soon-content .input-box {
-    position: relative;
+.coming-soon-content .coming-soon-button {
+    background: linear-gradient(to right, #92cfe3, #1e90ff);
+    transition: all 2s ease-in-out;
+    display: inline-block;
 }
-
-.coming-soon-content .input-box input {
-    background-color: #222 !important;
-    border-radius: 5px !important;
-    color: #fff;
-    border: none !important;
-    margin-top: 2rem;
-    padding: 1rem;
-}
-
-.coming-soon-content .input-box button {
-    position: absolute;
-    right: 2%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.coming-soon-content .input-box button:hover {
-    background-color: #ccc !important;
-}
-
-.coming-soon-content input:focus {
-    box-shadow: none !important;
-}
-
-.coming-soon-content input::placeholder {
-    color: #ccc;
+.coming-soon-content .coming-soon-button a:hover {
+    background: linear-gradient(to right, #73cfee, #037ffc) !important;
 }
 
 .coming-soon-logo {

@@ -3,6 +3,7 @@ import { Footer, Header } from '../index';
 import LocomotiveScroll from "locomotive-scroll";
 import "./layout.css";
 import { OpenMenuContext } from '../../context/MenuContext';
+import { Link } from 'react-router-dom';
 
 const Layout = ({ children }) => {
 
@@ -48,71 +49,71 @@ const Layout = ({ children }) => {
         </div>
 
         <ul className={`menu-container-links ${isMenuOpen ? "d-block" : "d-none"}`}>
-          <li><a href="#">About</a></li>
+          <li><Link to="/about">About</Link></li>
           <li className='dropdown'>
-            <a href="#" className='dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <Link href="/services" className='dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</Link>
             <ul class="dropdown-menu">
             <div className="sub-menus flex justify-between px-4">
                 <div>
                   <h3 className='text-lg uppercase font-bold'>Branding</h3>
-                  <a href="">Branding Services</a>
-                  <a href="">Logo Design</a>
-                  <a href="">Brand Identity</a>
-                  <a href="">Graphic Design</a>
-                  <a href="">Brand Marketing</a>
+                  <Link to="/branding-service">Branding Services</Link>
+                  <Link to="/logo-design-service">Logo Design</Link>
+                  <Link to="/brand-identity-service">Brand Identity</Link>
+                  <Link to="/graphic-design-service">Graphic Design</Link>
+                  <Link to="/brand-marketing-service">Brand Marketing</Link>
                 </div>
                 <div>
                   <h3 className='text-lg uppercase font-bold'>Web Designing</h3>
-                  <a href="">Branding Services</a>
-                  <a href="">Logo Design</a>
-                  <a href="">Brand Identity</a>
-                  <a href="">Graphic Design</a>
-                  <a href="">Brand Marketing</a>
+                  <Link to="/branding-service">Branding Services</Link>
+                  <Link to="/logo-design-service">Logo Design</Link>
+                  <Link to="/brand-identity-service">Brand Identity</Link>
+                  <Link to="/graphic-design-service">Graphic Design</Link>
+                  <Link to="/brand-marketing-service">Brand Marketing</Link>
                 </div>
                 <div>
                   <h3 className='text-lg uppercase font-bold'>Marketing</h3>
-                  <a href="">Branding Services</a>
-                  <a href="">Logo Design</a>
-                  <a href="">Brand Identity</a>
-                  <a href="">Graphic Design</a>
-                  <a href="">Brand Marketing</a>
+                  <Link to="/branding-service">Branding Services</Link>
+                  <Link to="/logo-design-service">Logo Design</Link>
+                  <Link to="/brand-identity-service">Brand Identity</Link>
+                  <Link to="/graphic-design-service">Graphic Design</Link>
+                  <Link to="/brand-marketing-service">Brand Marketing</Link>
                 </div>
               </div>
             </ul>
           </li>
           <li className='dropdown'>
-            <a href="#" className='dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false">Work Trends</a>
+            <Link to="#" className='dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false">Work Trends</Link>
             <ul class="dropdown-menu">
               <div className="sub-menus flex justify-between px-4">
                 <div>
                   <h3 className='text-lg uppercase font-bold'>Branding</h3>
-                  <a href="">Branding Services</a>
-                  <a href="">Logo Design</a>
-                  <a href="">Brand Identity</a>
-                  <a href="">Graphic Design</a>
-                  <a href="">Brand Marketing</a>
+                  <Link to="/branding-service">Branding Services</Link>
+                  <Link to="/logo-design-service">Logo Design</Link>
+                  <Link to="/brand-identity-service">Brand Identity</Link>
+                  <Link to="/graphic-design-service">Graphic Design</Link>
+                  <Link to="/brand-marketing-service">Brand Marketing</Link>
                 </div>
                 <div>
                   <h3 className='text-lg uppercase font-bold'>Web Designing</h3>
-                  <a href="">Branding Services</a>
-                  <a href="">Logo Design</a>
-                  <a href="">Brand Identity</a>
-                  <a href="">Graphic Design</a>
-                  <a href="">Brand Marketing</a>
+                  <Link to="/branding-service">Branding Services</Link>
+                  <Link to="/logo-design-service">Logo Design</Link>
+                  <Link to="/brand-identity-service">Brand Identity</Link>
+                  <Link to="/graphic-design-service">Graphic Design</Link>
+                  <Link to="/brand-marketing-service">Brand Marketing</Link>
                 </div>
                 <div>
                   <h3 className='text-lg uppercase font-bold'>Marketing</h3>
-                  <a href="">Branding Services</a>
-                  <a href="">Logo Design</a>
-                  <a href="">Brand Identity</a>
-                  <a href="">Graphic Design</a>
-                  <a href="">Brand Marketing</a>
+                  <Link to="/branding-service">Branding Services</Link>
+                  <Link to="/logo-design-service">Logo Design</Link>
+                  <Link to="/brand-identity-service">Brand Identity</Link>
+                  <Link to="/graphic-design-service">Graphic Design</Link>
+                  <Link to="/brand-marketing-service">Brand Marketing</Link>
                 </div>
               </div>
             </ul>
           </li>
-          <li><a href="#">Digital Trends</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><Link to="/digital-trends">Digital Trends</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
     </>
