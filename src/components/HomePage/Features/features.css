@@ -1,3 +1,30 @@
 #features_section .effect-design-line {
     background: linear-gradient(131.8deg, #009cff 0, #9536e5 100%) !important;
 }
+
+/* #####################################
+Service Tab Section
+##################################### */
+.service_tab_section hr {
+    color: #fff;
+    border: 2px solid #fff;
+}
+.service_tab_section .service_tab_section_tab .nav-item .nav-link {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.service_tab_section .service_tab_section_tab .nav-item .nav-link.active{
+    background-color: transparent !important;
+    color: #fff !important;
+}
+.service_tab_section .service_tab_section_tab .nav-item .nav-link {
+    color: #666 !important;
+}
+.service_tab_section_content ul {
+    list-style: circle;
+}
+.service_tab_section_content ul li {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}

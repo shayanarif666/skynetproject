@@ -11,6 +11,7 @@ import InfoVideo from "./HomePage/Info/InfoVideo";
 import Layout from "./Layout/Layout";
 import ModalVideo from "./HomePage/Modal/ModalVideo";
 import Navbar from "./Navbar/Navbar";
+import ServiceTab from "./HomePage/Features/ServiceTab";
 import TopBrands from "./HomePage/Top Brands/TopBrands";
 
 export {
@@ -27,5 +28,6 @@ export {
     Layout,
     ModalVideo,
     Navbar,
+    ServiceTab,
     TopBrands,
 }

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { HeroSection, Info, Layout, BrandsSlider, InfoVideo, TopBrands, HomeServices, Contact, Features } from '../components';
+import { HeroSection, Info, Layout, BrandsSlider, InfoVideo, TopBrands, HomeServices, Contact, Features, ServiceTab } from '../components';
 import { heroBrands } from "../components/brandItems";
 import { OpenMenuContext } from '../context/MenuContext';
 import HomeCaseStudies from '../components/HomePage/Case Studies/HomeCaseStudies';
@@ -19,6 +19,7 @@ const HomePage = () => {
           <TopBrands />
           <HomeServices />
           <Features />
+          {/* <ServiceTab /> */}
           <HomeCaseStudies />
           <Contact />
         </div>
