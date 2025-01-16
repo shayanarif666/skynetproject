@@ -12,7 +12,7 @@ const HomePage = () => {
     <>
       <Layout>
         <HeroSection />
-        <BrandsSlider items={heroBrands} itemHeight='100%' itemWidth='200px' className="flex justify-center items-center justify-center" />
+        <BrandsSlider items={heroBrands} itemHeight='100%' itemWidth='200px' className="flex justify-center items-center" />
         <div className={`secondary-container ${isMenuOpen ? "d-none" : "d-block"}`} style={{ background: "#00041c", zIndex: 999 }}>
           <Info />
           <InfoVideo />
