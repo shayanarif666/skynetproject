@@ -14,15 +14,15 @@ const Info = () => {
                             <div className="info-service mt-5">
                                 <p className='text-2xl text-white mb-4 flex items-center'>
                                     <IoCheckmarkDoneSharp className='me-2 text-cyan-500' />
-                                    <p>Custom Web Design Solutions <span className='text-cyan-400 ms-2'> To Drive Conversions</span></p>
+                                    <p>Custom Web Design Solutions <span className='text_gradient ms-2'> To Drive Conversions</span></p>
                                 </p>
                                 <p className='text-2xl text-white mb-4 flex items-center'>
                                     <IoCheckmarkDoneSharp className='me-2 text-cyan-500' />
-                                    <p>Effective Marketing Campaigns <span className='text-cyan-400 ms-2'> To Generate Growth</span></p>
+                                    <p>Effective Marketing Campaigns <span className='text_gradient ms-2'> To Generate Growth</span></p>
                                 </p>
                                 <p className='text-2xl text-white mb-4 flex items-center'>
                                     <IoCheckmarkDoneSharp className='me-2 text-cyan-500' />
-                                    <p>Tailored Branding Strategies <span className='text-cyan-400 ms-2'>To Drive Engagemen</span></p>
+                                    <p>Tailored Branding Strategies <span className='text_gradient ms-2'>To Drive Engagemen</span></p>
                                 </p>
                             </div>
                             <p className='text-xl text-white mt-5'>Skynet Silicon is a web design company & digital marketing agency focused on growing brands online.

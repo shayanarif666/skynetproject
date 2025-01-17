@@ -38,7 +38,7 @@ const HomeCaseStudies = () => {
                             <div className="col-lg-7">
                                 <div className="case_studies_intro_description text-end">
                                     <p className='text-3xl font-semibold'>From Concept To Market:</p>
-                                    <p className='text-3xl font-semibold'>We Engineer Projects For <span className='text-sky-500'>Superior Performance</span></p>
+                                    <p className='text-3xl font-semibold'>We Engineer Projects For <span className='text_gradient'>Superior Performance</span></p>
                                 </div>
                             </div>
                         </div>
@@ -129,13 +129,13 @@ const HomeCaseStudies = () => {
                                         <div className="row mt-20">
                                             <div className="col-lg-6">
                                                 <div className="case_studies_tab_content_counter">
-                                                    <h1 className='text-9xl text-sky-500 font-semibold'>40 <sub>K</sub></h1>
+                                                    <h1 className='text-9xl text-sky-500 font-semibold'>80 <sub>K</sub></h1>
                                                     <p className='flex justify-center mt-5 text-xl font-semibold'>active members <br /> inside the program</p>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6">
                                                 <div className="case_studies_tab_content_counter">
-                                                    <h1 className='text-9xl text-sky-500 font-semibold'>56 <sub>%</sub></h1>
+                                                    <h1 className='text-9xl text-sky-500 font-semibold'>49 <sub>%</sub></h1>
                                                     <p className='flex justify-center mt-5 text-xl font-semibold'>active members <br /> inside the program</p>
                                                 </div>
                                             </div>
@@ -177,13 +177,13 @@ const HomeCaseStudies = () => {
                                         <div className="row mt-20">
                                             <div className="col-lg-6">
                                                 <div className="case_studies_tab_content_counter">
-                                                    <h1 className='text-9xl text-sky-500 font-semibold'>40 <sub>K</sub></h1>
+                                                    <h1 className='text-9xl text-sky-500 font-semibold'>71 <sub>K</sub></h1>
                                                     <p className='flex justify-center mt-5 text-xl font-semibold'>active members <br /> inside the program</p>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6">
                                                 <div className="case_studies_tab_content_counter">
-                                                    <h1 className='text-9xl text-sky-500 font-semibold'>56 <sub>%</sub></h1>
+                                                    <h1 className='text-9xl text-sky-500 font-semibold'>46 <sub>%</sub></h1>
                                                     <p className='flex justify-center mt-5 text-xl font-semibold'>active members <br /> inside the program</p>
                                                 </div>
                                             </div>
@@ -225,13 +225,13 @@ const HomeCaseStudies = () => {
                                         <div className="row mt-20">
                                             <div className="col-lg-6">
                                                 <div className="case_studies_tab_content_counter">
-                                                    <h1 className='text-9xl text-sky-500 font-semibold'>40 <sub>K</sub></h1>
+                                                    <h1 className='text-9xl text-sky-500 font-semibold'>66 <sub>K</sub></h1>
                                                     <p className='flex justify-center mt-5 text-xl font-semibold'>active members <br /> inside the program</p>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6">
                                                 <div className="case_studies_tab_content_counter">
-                                                    <h1 className='text-9xl text-sky-500 font-semibold'>56 <sub>%</sub></h1>
+                                                    <h1 className='text-9xl text-sky-500 font-semibold'>89 <sub>%</sub></h1>
                                                     <p className='flex justify-center mt-5 text-xl font-semibold'>active members <br /> inside the program</p>
                                                 </div>
                                             </div>
@@ -273,7 +273,7 @@ const HomeCaseStudies = () => {
                                         <div className="row mt-20">
                                             <div className="col-lg-6">
                                                 <div className="case_studies_tab_content_counter">
-                                                    <h1 className='text-9xl text-sky-500 font-semibold'>40 <sub>K</sub></h1>
+                                                    <h1 className='text-9xl text-sky-500 font-semibold'>92 <sub>K</sub></h1>
                                                     <p className='flex justify-center mt-5 text-xl font-semibold'>active members <br /> inside the program</p>
                                                 </div>
                                             </div>

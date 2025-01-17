@@ -29,7 +29,12 @@ Marquee Section
 }
 #marquee .item img {
     filter: brightness(100%) saturate(0%);
+    transition: all .3s ease-in-out;
+}
+#marquee .item img:hover {
+    filter: none;
+    cursor: pointer;
 }
 #marquee .custom-img-size {
-    max-width: 200px;
+    max-width: 220px;
 }

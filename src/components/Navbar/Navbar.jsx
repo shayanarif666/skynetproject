@@ -21,9 +21,9 @@ const Navbar = () => {
                         <div className="col-xl-4 col-6">
                             <div className="navbar-menus flex items-center justify-end">
                                 <button className='secondary-button text-white me-3 md:block hidden' style={{ zIndex: 9 }}>REQUEST A QUOTE</button>
-                                <div className="navbar-menu-icon flex items-center">
-                                    <RiMenu3Line className='text-white text-4xl font-semibold me-2' style={{ zIndex: 9, cursor: "pointer" }} onClick={() => setIsMenuOpen(!isMenuOpen)} />
-                                    <p className='text-white text-2xl font-semibold me-3 sm:block hidden' style={{ zIndex: 9 }}>Menu</p>
+                                <div className="navbar-menu-icon flex items-center cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                                    <RiMenu3Line className='text-white text-4xl font-semibold me-2 cursor-pointer z-50' />
+                                    <p className='text-white text-2xl font-semibold me-3 sm:block hidden z-50'>Menu</p>
                                 </div>
                             </div>
                         </div>

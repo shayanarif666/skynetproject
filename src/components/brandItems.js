@@ -48,52 +48,52 @@ export const heroBrands = [
 export const workingBrands = [
     {
         id: 1,
-        src: "./Images/buddha.png",
-        comapny: "Buddha"
+        src: "./Images/T&A Home Efficient.webp",
+        comapny: "T&A Home Efficient"
     },
     {
         id: 2,
-        src: "./Images/Mitsui-Plastics.png.png",
-        comapny: "Mitsui Plastics"
+        src: "./Images/United Remodeling.webp",
+        comapny: "United Remodeling"
     },
     {
         id: 3,
-        src: "./Images/paul-stuart.png.png",
-        comapny: "Paul Stuart"
+        src: "./Images/T&A Home Efficient.webp",
+        comapny: "T&A Home Efficient"
     },
     {
         id: 4,
-        src: "./Images/spar.png",
-        comapny: "Spar"
+        src: "./Images/United Remodeling.webp",
+        comapny: "United Remodeling"
     },
     {
         id: 5,
-        src: "./Images/buddha.png",
-        comapny: "Buddha"
+        src: "./Images/T&A Home Efficient.webp",
+        comapny: "T&A Home Efficient"
     },
     {
         id: 6,
-        src: "./Images/Mitsui-Plastics.png.png",
-        comapny: "Mitsui Plastics"
+        src: "./Images/United Remodeling.webp",
+        comapny: "United Remodeling"
     },
     {
         id: 7,
-        src: "./Images/paul-stuart.png.png",
-        comapny: "Paul Stuart"
+        src: "./Images/T&A Home Efficient.webp",
+        comapny: "T&A Home Efficient"
     },
     {
         id: 8,
-        src: "./Images/spar.png",
-        comapny: "Spar"
+        src: "./Images/United Remodeling.webp",
+        comapny: "United Remodeling"
     },
     {
         id: 9,
-        src: "./Images/buddha.png",
-        comapny: "Buddha"
+        src: "./Images/T&A Home Efficient.webp",
+        comapny: "T&A Home Efficient"
     },
     {
         id: 10,
-        src: "./Images/Mitsui-Plastics.png.png",
-        comapny: "Mitsui Plastics"
+        src: "./Images/United Remodeling.webp",
+        comapny: "United Remodeling"
     }
 ]

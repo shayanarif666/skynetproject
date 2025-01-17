@@ -4,6 +4,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import "./layout.css";
 import { OpenMenuContext } from '../../context/MenuContext';
 import { Link } from 'react-router-dom';
+import Logo from '../Logo';
 
 const Layout = ({ children }) => {
 
@@ -53,7 +54,7 @@ const Layout = ({ children }) => {
           <li className='dropdown'>
             <Link href="/services" className='dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false">Services</Link>
             <ul class="dropdown-menu">
-            <div className="sub-menus flex justify-between px-4">
+              <div className="sub-menus flex justify-between px-4">
                 <div>
                   <h3 className='text-lg uppercase font-bold'>Branding</h3>
                   <Link to="/branding-service">Branding Services</Link>
@@ -115,6 +116,7 @@ const Layout = ({ children }) => {
           <li><Link to="/digital-trends">Digital Trends</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
+
       </div>
     </>
   )

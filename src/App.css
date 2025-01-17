@@ -5,7 +5,7 @@
 }
 
 body {
-    overflow-x: hidden !important;
+    overflow-x: hidden;
 }
 
 /* ############################ 
@@ -122,4 +122,11 @@ Utilities Classes
     -webkit-background-clip: text;
     background-clip: text;
     padding-right: 8px;
+}
+.bottom_text {
+    position: absolute;
+    bottom: 0;
+}
+.bottom_text img {
+    opacity: .04;
 }

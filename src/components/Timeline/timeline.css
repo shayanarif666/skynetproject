@@ -1,0 +1,39 @@
+.timeline_section_left_column {
+    z-index: 99;
+}
+.timeline_card {
+    position: relative;
+    z-index: 9;
+}
+.timeline_card:hover .timeline_card_btn {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.timeline_card::after {
+    content: "";
+    display: block;
+    width: 0vw;
+    height: 50%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    transition: all .6s ease;
+}
+.timeline_card:hover::after {
+    height: 100%;
+    width: 100vw;
+}
+
+@media (max-width: 640px) {
+    .timeline_card::after {
+        display: none !important;
+    }
+    .timeline_card_content {
+        text-align: center;
+    }
+    .timeline_card_btn {
+        display: flex;
+        justify-content: center;
+    }
+}

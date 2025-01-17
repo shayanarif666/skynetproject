@@ -22,7 +22,7 @@ const TopBrands = () => {
                 <BrandsSlider sliderGap="mb-4" items={workingBrands} scrollPosition='left' scrollTo="scrollLeft" itemHeight='150px' itemWidth='300px' className="flex flex-column justify-center items-center" height="160px" bgColor="none !important" border="1px solid rgba(31, 60, 128, .2)" itemBgColor="rgba(31, 60, 128, .2)" />
                 <BrandsSlider sliderGap="mb-4" items={workingBrands} scrollPosition='right' scrollTo="scrollRight" itemHeight='150px' itemWidth='300px' className="flex flex-column justify-center items-center" height="160px" bgColor="none !important" border="1px solid rgba(31, 60, 128, .2)" itemBgColor="rgba(31, 60, 128, .2)" />
 
-                <div className="row">
+                <div className="row gx-0">
                     <div className="col-12 flex justify-center mt-5">
                         <button className='glowingButton'>
                             <span className='me-3'>EXPLORE ALL SERVICES</span>

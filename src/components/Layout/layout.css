@@ -7,13 +7,27 @@
     transition: 0.5s;
 }
 
-
+/* #########################
+Logo Overlay
+########################## */
+.logo_overlay_menu_container img {
+    inset: 8% 0 0 auto;
+    position: absolute;
+    height: 25%;
+    overflow: clip;
+    opacity: .1;
+    transform: rotate(90deg) translate(-12%, -100%);
+    top: 50%;
+    right: 0%;
+}
 
 .menu-container.active {
     background: linear-gradient(297deg, rgba(0, 15, 55, 1) 10%, rgba(2, 100, 167, 1) 43%, rgba(32, 15, 82, 1) 74%);
     transition: all .3s linear;
     position: relative;
-    height: 100% !important;
+    overflow: hidden;
+    height: 100vh !important;
+    max-height: 100vh;
 }
 
 .menu-container.active .wrapper {

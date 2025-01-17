@@ -1,7 +1,5 @@
 import React from 'react';
 import "./brandSlider.css";
-import "../../../public/Images/T&A Home Efficient.webp"
-import "../../../public/Images/United Remodeling.webp"
 
 const BrandsSlider = ({
     items = [],
@@ -15,6 +13,7 @@ const BrandsSlider = ({
     scrollPosition = "left",
     scrollTo = "scrollLeft",
     sliderGap = "",
+    imgMxWid = "",
     ...props
 }) => {
 
@@ -41,7 +40,7 @@ const BrandsSlider = ({
                                         padding: "2.5rem",
                                     }}
                                 >
-                                    <img src={item.src} className={`img-fluid ${ind % 2 !== 0 ? "custom-img-size" : ""} `} alt="" />
+                                    <img src={item.src} className={`${ind % 2 !== 0 ? "custom-img-size" : "max-w-24"} `} alt="" />
                                     <h3 className='text-lg mt-4 font-medium text-slate-300'>{item.comapny}</h3>
                                 </div>
                             )
