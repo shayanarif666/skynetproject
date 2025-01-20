@@ -5,6 +5,7 @@ import { VscSettingsGear } from "react-icons/vsc";
 import { MdOutlineSendToMobile } from "react-icons/md";
 import { FaMagnifyingGlassChart } from "react-icons/fa6";
 import { RiLuggageCartLine } from "react-icons/ri";
+import { motion } from 'framer-motion';
 import "./homeServices.css";
 
 const HomeServices = () => {
@@ -13,7 +14,7 @@ const HomeServices = () => {
             <section id="homeServices" className='py-20'>
                 <div className="container">
                     <div className="row g-4">
-                        <div className="col-lg-5 service-intro-column">
+                        <motion.div initial={{ x: "-300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="col-lg-5 service-intro-column">
                             <div className="service-intro">
                                 <h3 className='text-sky-500 font-semibold text-xl mb-4'>WHY SKYNET SILICON?</h3>
                                 <h1 className='text-white font-bold text-3xl md:text-4xl xl:text-6xl'>Discover Our Expertise as a Web Design Company</h1>
@@ -23,9 +24,9 @@ const HomeServices = () => {
                                 </p>
                                 <img className='img-fluid mt-20' src="https://www.digitalsilk.com/wp-content/uploads/2024/09/Explore-Our-Web-Design-Services-1.png.webp" alt="" />
                             </div>
-                        </div>
+                        </motion.div>
                         <div className="col-lg-7">
-                            <div className="service-detail mb-4">
+                            <motion.div initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="service-detail mb-4">
                                 <div className="service-detail-wrapper"></div>
                                 <TbDeviceDesktopStar className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
                                 <h3 className='text-white font-bold text-4xl my-3'>Custom Web Design</h3>
@@ -36,8 +37,8 @@ const HomeServices = () => {
 
                                 <div className="overlay-circle-one"></div>
                                 <div className="overlay-circle-two"></div>
-                            </div>
-                            <div className="service-detail mb-4">
+                            </motion.div>
+                            <motion.div initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1, delay: .2 }, x: 0 }} className="service-detail mb-4">
                                 <div className="service-detail-wrapper"></div>
 
                                 <VscSettingsGear className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
@@ -47,8 +48,8 @@ const HomeServices = () => {
 
                                 <div className="overlay-circle-one"></div>
                                 <div className="overlay-circle-two"></div>
-                            </div>
-                            <div className="service-detail mb-4">
+                            </motion.div>
+                            <motion.div initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1, delay: .3 }, x: 0 }} className="service-detail mb-4">
                                 <div className="service-detail-wrapper"></div>
 
                                 <MdOutlineSendToMobile className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
@@ -57,8 +58,8 @@ const HomeServices = () => {
 
                                 <div className="overlay-circle-one"></div>
                                 <div className="overlay-circle-two"></div>
-                            </div>
-                            <div className="service-detail mb-4">
+                            </motion.div>
+                            <motion.div initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1, delay: .4 }, x: 0 }} className="service-detail mb-4">
                                 <div className="service-detail-wrapper"></div>
 
                                 <FaMagnifyingGlassChart className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
@@ -67,8 +68,8 @@ const HomeServices = () => {
 
                                 <div className="overlay-circle-one"></div>
                                 <div className="overlay-circle-two"></div>
-                            </div>
-                            <div className="service-detail mb-4">
+                            </motion.div>
+                            <motion.div initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1, delay: .5 }, x: 0 }} className="service-detail mb-4">
                                 <div className="service-detail-wrapper"></div>
 
                                 <RiLuggageCartLine className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
@@ -77,7 +78,7 @@ const HomeServices = () => {
 
                                 <div className="overlay-circle-one"></div>
                                 <div className="overlay-circle-two"></div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

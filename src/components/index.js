@@ -1,5 +1,6 @@
 import BrandsSlider from "./Brands/BrandsSlider";
 import Contact from "./Contact Us/Contact";
+import CompanyLocation from "./Company Location/CompanyLocation";
 import Features from "./HomePage/Features/Features";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -19,6 +20,7 @@ import TopBrands from "./HomePage/Top Brands/TopBrands";
 export {
     BrandsSlider,
     Contact,
+    CompanyLocation,
     Features,
     Footer,
     Header,

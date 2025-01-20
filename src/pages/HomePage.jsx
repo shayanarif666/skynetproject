@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { HeroSection, Info, Layout, BrandsSlider, InfoVideo, TopBrands, HomeServices, Contact, Features, ServiceTab, PricingFeatures, Subscribe } from '../components';
+import { HeroSection, Info, Layout, BrandsSlider, InfoVideo, TopBrands, HomeServices, Contact, Features, ServiceTab, PricingFeatures, Subscribe, CompanyLocation } from '../components';
 import { heroBrands } from "../components/brandItems";
 import { OpenMenuContext } from '../context/MenuContext';
 import HomeCaseStudies from '../components/HomePage/Case Studies/HomeCaseStudies';
@@ -25,6 +25,7 @@ const HomePage = () => {
           <PricingFeatures />
           <Subscribe />
           <HomeCaseStudies />
+          <CompanyLocation />
           <Contact />
         </div>
       </Layout>

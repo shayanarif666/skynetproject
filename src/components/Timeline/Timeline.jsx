@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion";
 import "./timeline.css";
 
 const Timeline = () => {
@@ -10,8 +11,8 @@ const Timeline = () => {
                         <div className="col-lg-6 py-20 px-4 bg-white timeline_section_left_column">
                             <div className="timeline_left_section sticky top-24 min-h-2">
                                 <div className="timeline_left_content">
-                                    <h2 className='text-[#1b2c5c] font-bold text-4xl md:text-5xl lg:text-4xl xl:text-5xl xxl:text-6xl'>CMS Platform Tailored For Client Needs</h2>
-                                    <p className='text-lg font-medium text-[#1b2c5c] mt-4'>No matter which Content Management System (CMS) your website utilizes, our experts are here to help. We tailor our services to meet your specific needs, ensuring your CMS is optimized for performance, flexibility, and ease of use.</p>
+                                    <motion.h2 initial={{ x: "-200px", opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className='text-[#1b2c5c] font-bold text-4xl md:text-5xl lg:text-4xl xl:text-5xl xxl:text-6xl'>CMS Platform Tailored For Client Needs</motion.h2>
+                                    <motion.p initial={{ x: "-200px", opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className='text-lg font-medium text-[#1b2c5c] mt-4'>No matter which Content Management System (CMS) your website utilizes, our experts are here to help. We tailor our services to meet your specific needs, ensuring your CMS is optimized for performance, flexibility, and ease of use.</motion.p>
                                 </div>
                                 <div className="timeline_left_img mt-4">
                                     <img src="https://www.digitalsilk.com/wp-content/uploads/2024/10/CMS-Platform-Tailored-For-Client-Needs.png.webp" alt="" />

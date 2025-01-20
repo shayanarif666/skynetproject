@@ -161,7 +161,6 @@
     }
     .case_studies .case_studies_tabs .case_studies_tabs_list a img,
     .case_studies .case_studies_tabs .case_studies_tabs_list button img {
-        transform: translate(0);
         margin: 0 auto;
     }
     .case_studies .case_studies_tabs_content .case_studies_tab_panal_effect_logo::after {
