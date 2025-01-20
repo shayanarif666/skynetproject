@@ -59,7 +59,7 @@ const Contact = () => {
         <>
             <section id="contact" className='py-20'>
                 <div className="container">
-                    <div className="row g-5">
+                    <div className="row gy-5">
                         <div className="col-12 col-lg-6 mt-20">
                             <h4 className='text-white uppercase text-2xl font-bold mb-3'>Take The Silk Road To</h4>
                             <h1 className='text-sky-400 font-bold text-4xl sm:text-5xl'>Digitizing Your Business <br /> Growth</h1>

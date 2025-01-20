@@ -14,7 +14,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row g-5">
+                    <div className="row gy-5">
                         <div className="col-lg-3 col-sm-6">
                             <div className="footer-menus-links">
                                 <h3>Main Services</h3>

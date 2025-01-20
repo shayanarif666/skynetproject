@@ -15,7 +15,7 @@ const Features = ({
                             </div>
                         </div>
                     </div>
-                    <div className="row g-5">
+                    <div className="row gy-5">
                         <div className="col-lg-6">
                             <div className="features_section_content flex">
                                 <div className="features_section_content_counter">
