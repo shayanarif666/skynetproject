@@ -1,5 +1,5 @@
 .wrapper {
-    background: linear-gradient(rgba(0, 4, 28, 1), rgb(0, 4, 28, .95));
+    background: linear-gradient(#00041c, #00041cf2);
     position: relative;
     left: 0;
     transform-origin: left;
@@ -22,7 +22,7 @@ Logo Overlay
 }
 
 .menu-container.active {
-    background: linear-gradient(297deg, rgba(0, 15, 55, 1) 10%, rgba(2, 100, 167, 1) 43%, rgba(32, 15, 82, 1) 74%);
+    background: linear-gradient(297deg, #000f37 10%, #0264a7 43%, #200f52 74%);
     transition: all .3s linear;
     position: relative;
     overflow: hidden;

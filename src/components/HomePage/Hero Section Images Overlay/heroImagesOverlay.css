@@ -1,0 +1,28 @@
+.animate_top_to_bottom {
+    animation: slideToBottom 14s infinite linear;
+}
+.animate_bottom_to_top {
+    animation: slideToTop 14s infinite linear;
+}
+.hero_section_images_overlays {
+    transform: scale(1.2);
+}
+
+@keyframes slideToBottom {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(200px);
+    }
+}
+
+@keyframes slideToTop {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+}
+

@@ -1,47 +1,35 @@
 export const heroBrands = [
     {
         id: 1,
-        src: "./Images/T&A Home Efficient.webp"
+        src: "./Images/United Remodeling.webp"
     },
     {
         id: 2,
-        src: "./Images/United Remodeling.webp"
+        src: "./Images/SOUTHWEST-Original-Logo.svg"
     },
     {
         id: 3,
-        src: "./Images/T&A Home Efficient.webp"
-    },
+        src: "./Images/logo.webp"
+    }, 
     {
         id: 4,
-        src: "./Images/United Remodeling.webp"
+        src: "./Images/logo-dark.svg"
     },
     {
         id: 5,
-        src: "./Images/T&A Home Efficient.webp"
+        src: "./Images/United Remodeling.webp"
     },
     {
         id: 6,
-        src: "./Images/United Remodeling.webp"
+        src: "./Images/SOUTHWEST-Original-Logo.svg"
     },
     {
         id: 7,
-        src: "./Images/T&A Home Efficient.webp"
+        src: "./Images/logo-dark.svg"
     },
     {
         id: 8,
-        src: "./Images/United Remodeling.webp"
-    },
-    {
-        id: 9,
-        src: "./Images/T&A Home Efficient.webp"
-    },
-    {
-        id: 10,
-        src: "./Images/United Remodeling.webp"
-    },
-    {
-        id: 11,
-        src: "./Images/T&A Home Efficient.webp"
+        src: "./Images/logo.webp"
     }
 ]
 

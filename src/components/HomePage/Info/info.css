@@ -1,3 +1,6 @@
+#info {
+    overflow-x: hidden !important;
+}
 #infoVideo {
     position: relative;
     overflow: hidden;

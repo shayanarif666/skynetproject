@@ -1,32 +1,25 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import logoSrc from "../../assets/logo-white.svg"
 import Logo from '../Logo';
-import logoSrc from "../../assets/logo-white.png";
-import { RiMenu3Line } from "react-icons/ri";
-import { OpenMenuContext } from '../../context/MenuContext';
 
-const Navbar = () => {
-
-    const { isMenuOpen, setIsMenuOpen } = useContext(OpenMenuContext);
-
+const Navbar = ({
+    onSideMenuChange
+}) => {
     return (
         <>
-            <nav id='navbar' className='p-3 border-b border-slate-500'>
-                <div className="container-fluid" >
-                    <div className="row items-center justify-between">
-                        <div className="col-xl-4 col-6 my-auto" style={{ zIndex: 9 }}>
-                            <div className="navbar-logo"  >
-                                <Logo src={logoSrc} />
-                            </div>
+            <nav className="navbar fixed top-0 w-full left-0 z-[999] border-b border-b-[#ffffff66]">
+                <div className="container-fluid flex-nowrap">
+                    <div className="logo">
+                        <Logo src={logoSrc} />
+                    </div>
+                    <div className="quote sm:block hidden">
+                        <button className='secondary-button text-white'>Request a Quote</button>
+                    </div>
+                    <div className='flex items-center'>
+                        <div className="hamburger-menu" onClick={onSideMenuChange}>
+                            <div className="bar"></div>
                         </div>
-                        <div className="col-xl-4 col-6">
-                            <div className="navbar-menus flex items-center justify-end">
-                                <button className='secondary-button text-white me-3 md:block hidden' style={{ zIndex: 9 }}>REQUEST A QUOTE</button>
-                                <div className="navbar-menu-icon flex items-center cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                                    <RiMenu3Line className='text-white text-4xl font-semibold me-2 cursor-pointer z-50' />
-                                    <p className='text-white text-2xl font-semibold me-3 sm:block hidden z-50'>Menu</p>
-                                </div>
-                            </div>
-                        </div>
+                        <h3 className="mx-4 uppercase text-xl text-extrabold text-white">Menu</h3>
                     </div>
                 </div>
             </nav>

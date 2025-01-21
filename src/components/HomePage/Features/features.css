@@ -1,3 +1,6 @@
+#features_section {
+    overflow-x: hidden !important;
+}
 #features_section .effect-design-line {
     background: linear-gradient(131.8deg, #009cff 0, #9536e5 100%) !important;
 }

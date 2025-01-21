@@ -22,16 +22,15 @@ const BrandsSlider = ({
     return (
         <>
             <div id="marquee" className={`${sliderGap}`} data-scroll-section>
-                <div className={`marquee-wrapper`} style={{ height: height, backgroundColor: `${bgColor}` }}>
+                <div className={`marquee-wrapper flex items-center justify-center`} style={{ height: height, backgroundColor: `${bgColor}` }}>
                     {
                         items?.map((item, ind) => {
                             return (
                                 <div
-                                    class={`item item${item.id} ${className}`}
+                                    class={`item item${item.id} ${className} mt-2`}
                                     style={{
                                         position: "absolute",
                                         width: itemWidth,
-                                        height: itemHeight,
                                         [scrollPosition]: `max(calc(${itemWidth} * ${items.length}), 100%)`,
                                         animation: `${scrollTo} 80s infinite linear`, 
                                         animationDelay: `calc(80s / ${items?.length} * (${items?.length} - ${item.id}) * -1)`,
@@ -40,8 +39,10 @@ const BrandsSlider = ({
                                         padding: "2.5rem",
                                     }}
                                 >
-                                    <img src={item.src} className={`${ind % 2 !== 0 ? "custom-img-size" : "max-w-24"} `} alt="" />
-                                    <h3 className='text-lg mt-4 font-medium text-slate-300'>{item.comapny}</h3>
+                                     <div className="client_logos">
+                                        <img src={item.src} alt="" />
+                                    </div>
+                                    {item.company && <h3 className='text-lg mt-4 font-medium text-slate-300'>{item.comapny}</h3>}
                                 </div>
                             )
                         })
