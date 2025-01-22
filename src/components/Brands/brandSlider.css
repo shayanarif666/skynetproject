@@ -2,10 +2,9 @@
 Marquee Section
 ##################################*/
 #marquee .marquee-wrapper {
-    width: 100%;
     position: relative;
     overflow: hidden;
-    margin: 0% !important;
+    margin: 0;
 }
 
 @keyframes scrollLeft {
@@ -20,13 +19,6 @@ Marquee Section
     }
 }
 
-#marquee .item {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #fff;
-    font-weight: bold;
-    padding: 1.5rem 1rem 1rem;
-}
 #marquee .item img {
     filter: brightness(100%) saturate(0%);
     transition: all .3s ease-in-out;
@@ -34,7 +26,4 @@ Marquee Section
 #marquee .item img:hover {
     filter: none;
     cursor: pointer;
-}
-#marquee .custom-img-size {
-    max-width: 270px;
 }

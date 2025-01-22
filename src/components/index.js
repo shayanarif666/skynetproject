@@ -4,14 +4,13 @@ import CompanyLocation from "./Company Location/CompanyLocation";
 import Features from "./HomePage/Features/Features";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
-import HeroSection from "./HomePage/Hero Section/HeroSection";
 import HeroImagesOverlay from "./HomePage/Hero Section Images Overlay/HeroImagesOverlay";
 import HomeServices from "./HomePage/Services/HomeServices";
 import Info from "./HomePage/./Info/Info";
 import InfoVideo from "./HomePage/Info/InfoVideo";
-import Layout from "./Layout/Layout";
 import ModalVideo from "./HomePage/Modal/ModalVideo";
 import Navbar from "./Navbar/Navbar";
+import NavbarMenuItems from "./Navbar/NavbarMenuItems";
 import PricingFeatures from "./HomePage/Pricing Features/PricingFeatures";
 import ServiceTab from "./HomePage/Features/ServiceTab";
 import Subscribe from "./Subscribe/Subscribe";
@@ -24,14 +23,13 @@ export {
     Features,
     Footer,
     Header,
-    HeroSection,
     HeroImagesOverlay,
     HomeServices,
     Info,
     InfoVideo,
-    Layout,
     ModalVideo,
     Navbar,
+    NavbarMenuItems,
     PricingFeatures,
     ServiceTab,
     Subscribe,

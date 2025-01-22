@@ -3,7 +3,7 @@ import "./brandSlider.css";
 
 const BrandsSlider = ({
     items = [],
-    height = "15vh",
+    bannerHeight = "10vh",
     bgColor = "#03042a",
     itemBgColor = "",
     itemWidth = "",
@@ -12,8 +12,6 @@ const BrandsSlider = ({
     className = "",
     scrollPosition = "left",
     scrollTo = "scrollLeft",
-    sliderGap = "",
-    imgMxWid = "",
     ...props
 }) => {
 
@@ -21,8 +19,8 @@ const BrandsSlider = ({
 
     return (
         <>
-            <div id="marquee" className={`${sliderGap}`} data-scroll-section>
-                <div className={`marquee-wrapper flex items-center justify-center`} style={{ height: height, backgroundColor: `${bgColor}` }}>
+            <div id="marquee" data-scroll-section>
+                <div className={`marquee-wrapper flex items-center justify-center`} style={{ height: bannerHeight, backgroundColor: `${bgColor}` }}>
                     {
                         items?.map((item, ind) => {
                             return (

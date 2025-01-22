@@ -5,7 +5,7 @@
 }
 
 body {
-    overflow: hidden !important; 
+    overflow-x: hidden !important; 
 }
 
 /* ############################ 
@@ -122,6 +122,14 @@ Utilities Classes
     -webkit-background-clip: text;
     background-clip: text;
     padding-right: 8px;
+}
+.bg_gradient {
+    background: linear-gradient(131.8deg, #009cff 0, #9536e5 100%);
+    transition: all .3s ease-in-out;
+    padding-right: 8px;
+}
+.bg_gradient:hover {
+    background: linear-gradient(131.8deg, #006cae 0, #840ee4 100%);
 }
 .bottom_text {
     position: absolute;
