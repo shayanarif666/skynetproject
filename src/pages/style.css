@@ -1,5 +1,5 @@
 .container-full {
-    background: radial-gradient(circle, rgba(94,5,122,1) 0%, rgba(17,69,140,1) 75%);
+    background: radial-gradient(circle, rgba(94, 5, 122, 1) 0%, rgba(17, 69, 140, 1) 75%);
     transform-style: preserve-3d;
 }
 
@@ -48,7 +48,7 @@
 .container-full.active .main {
     animation: main-animation 0.5s ease;
     cursor: pointer;
-    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(.5);
 }
 
 @keyframes main-animation {
@@ -164,12 +164,12 @@
 }
 
 
-
 /* Range Between 1025px - 1300px */
 @media (min-width: 1025px) and (max-width: 1300px) {
     .navbar_menu_links {
         right: 5%;
     }
+
     .navbar_menu_links a {
         font-size: 2rem !important;
     }
@@ -182,12 +182,15 @@
         transition: all .3s ease-in-out;
         overflow-y: scroll;
     }
+
     .container-full.active .navbar {
         position: static;
     }
+
     .container-full.active .main-container {
         display: none;
     }
+
     .navbar_menu_links {
         position: relative;
         width: 100%;
