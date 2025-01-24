@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderOverlay from '../HomePage/Header Overlay/HeaderOverlay';
+import HeaderOverlay from '../Home Page Components/Header Overlay/HeaderOverlay';
 import "./header.css";
 
 const Header = ({

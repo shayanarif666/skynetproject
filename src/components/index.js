@@ -4,7 +4,7 @@ import BrandsSlider from "./Brands/BrandsSlider";
 // import Features from "./HomePage/Features/Features";
 // import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
-import HeaderOverlay from "./HomePage/Header Overlay/HeaderOverlay"
+import HeaderOverlay from "./Home Page Components/Header Overlay/HeaderOverlay"
 // import HomeServices from "./HomePage/Services/HomeServices";
 // import Info from "./HomePage/./Info/Info";
 // import InfoVideo from "./HomePage/Info/InfoVideo";
