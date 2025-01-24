@@ -6,9 +6,9 @@ import BrandsSlider from "./Brands/BrandsSlider";
 import Header from "./Header/Header";
 import HeaderOverlay from "./Home Page Components/Header Overlay/HeaderOverlay"
 // import HomeServices from "./HomePage/Services/HomeServices";
-// import Info from "./HomePage/./Info/Info";
-// import InfoVideo from "./HomePage/Info/InfoVideo";
-// import ModalVideo from "./HomePage/Modal/ModalVideo";
+import ShortCompanyInfo from "./Home Page Components/Short Company Info/ShortCompanyInfo";
+import CompanyIntroVideo from "./Home Page Components/Short Company Info/CompanyIntroVideo";
+import ModalVideo from "./Home Page Components/Short Company Info/ModalVideo";
 import Navbar from "./Navbar/Navbar";
 import NavbarMenuItems from "./Navbar/NavbarMenuItems";
 // import PricingFeatures from "./HomePage/Pricing Features/PricingFeatures";
@@ -25,9 +25,9 @@ export {
     Header,
     HeaderOverlay,
     // HomeServices,
-    // Info,
-    // InfoVideo,
-    // ModalVideo,
+    ShortCompanyInfo,
+    CompanyIntroVideo,
+    ModalVideo,
     Navbar,
     NavbarMenuItems,
     // PricingFeatures,
