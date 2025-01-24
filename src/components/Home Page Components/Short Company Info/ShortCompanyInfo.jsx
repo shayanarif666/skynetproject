@@ -2,13 +2,15 @@ import React from 'react';
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { CompanyIntroVideo } from "../../index";
+import { GiVibratingShield } from "react-icons/gi";
+import { IoStar } from "react-icons/io5";
 import "./info.css";
 
 const Info = () => {
     return (
         <>
             <section id="short_company_info" className='py-16 bg-[#00042a] overflow-x-hidden' data-scroll-section>
-                
+
                 <div className="container">
                     <div className="lg:flex">
                         <div className="lg:w-1/2 w-full">
@@ -40,6 +42,34 @@ const Info = () => {
                 </div>
 
                 <CompanyIntroVideo />
+
+                <div className="container pt-10 sm:flex items-center">
+                    <div className="short_company_info_ratings flex items-center me-5 mb-4">
+                        <div className="short_company_ratings_icon">
+                            <GiVibratingShield className='text-5xl text-cyan-500' />
+                        </div>
+                        <div className="short_company_ratings_description ms-3">
+                            <h4 className='text-white font-medium mb-2 text-lg'>5 Star DesignRush Reviews</h4>
+                            <div className="short_company_ratings_stars flex items-center">
+                                <IoStar className='text-yellow-400 text-xl me-1' />
+                                <IoStar className='text-yellow-400 text-xl me-1' />
+                                <IoStar className='text-yellow-400 text-xl me-1' />
+                                <IoStar className='text-yellow-400 text-xl me-1' />
+                                <IoStar className='text-yellow-400 text-xl me-1' />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="short_company_info_ratings sm:ms-4 relative mb-4">
+                        <div className="short_company_ratings_icon mb-1">
+                            <h4 className='text-white font-medium text-lg'>Latest Web Design Award</h4>
+                        </div>
+                        <div className="short_company_ratings_description">
+                            <img src="../../../public/Images/company info logo.webp" alt="" />
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </>
     )
