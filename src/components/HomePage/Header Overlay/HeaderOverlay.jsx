@@ -49,66 +49,47 @@ const HeaderOverlay = () => {
     },
   ]
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await fetch("http://localhost:5000/api/portfolio");
-        const data = await response.json();
-        setFilePath(data);
-      } catch (error) {
-        console.log(error)
-      }
-    })()
-  }, [])
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:5000/api/portfolio");
+  //       const data = await response.json();
+  //       setFilePath(data);
+  //     } catch (error) {
+  //       console.log(error)
+  //     }
+  //   })()
+  // }, [])
 
   // Columns Per Image
-  const heroImagesOverlayColumnOne = portfolio.slice(0, 10);
-  const heroImagesOverlayColumnTwo = portfolio.slice(0, 10);
-  const heroImagesOverlayColumnThree = portfolio.slice(0, 10);
+  const heroImagesOverlayColumn = [portfolio, portfolio, portfolio];
 
-  console.log("filepath", filePath.slice(0, 10))
+  // console.log("filepath", filePath.slice(0, 10))
 
   return (
     <>
       <div className="hero_section_images_overlays flex md:flex-row flex-col scale-125">
-        <motion.div className="hero_section_images_overlay_box" initial={{ y: 0 }} animate={{ y: "-200px" }} transition={{ ease: "linear", repeat: Infinity, duration: 14 }}>
-          {
-            heroImagesOverlayColumnOne.map(({ id, src }) => (
-              <img
-                key={id}
-                src={`${src}`}
-                alt="Image"
-                className="w-full p-1 rounded-lg"
-              />
-            ))
-          }
-        </motion.div>
-
-        <motion.div className="hero_section_images_overlay_box" initial={{ y: 0 }} animate={{ y: "200px" }} transition={{ ease: "linear", repeat: Infinity, duration: 14 }}>
-          {
-            heroImagesOverlayColumnTwo.map(({ id, src }) => (
-              <img
-                key={id}
-                src={`${src}`}
-                alt="Image"
-                className="w-full p-1 rounded-lg"
-              />
-            ))
-          }
-        </motion.div>
-
-        <motion.div className="hero_section_images_overlay_box" initial={{ y: 0 }} animate={{ y: "-200px" }} transition={{ ease: "linear", repeat: Infinity, duration: 14 }}>
-          {
-            heroImagesOverlayColumnThree.map(({ id, src }) => (
-              <img
-                key={id}
-                src={`${src}`}
-                alt="Image"
-                className="w-full p-1 rounded-lg"
-              />
-            ))
-          }
-        </motion.div>
+        {heroImagesOverlayColumn
+          .fill(portfolio)
+          .map((column, index) => (
+            <motion.div
+              key={index}
+              className="hero_section_images_overlay_box"
+              initial={{ y: 0 }}
+              animate={{ y: index % 2 === 0 ? "-200px" : "200px" }}
+              transition={{ ease: "linear", repeat: Infinity, repeatType: "loop", duration: 13 }}
+              style={{ overflow: "hidden" }}
+            >
+              {column.map(({ id, src }) => (
+                <img
+                  key={id}
+                  src={src}
+                  alt="Image"
+                  className="w-full p-1 rounded-lg"
+                />
+              ))}
+            </motion.div>
+          ))}
       </div>
     </>
   )
