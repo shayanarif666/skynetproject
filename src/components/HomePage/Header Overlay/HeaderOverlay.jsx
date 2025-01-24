@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion"
 
-const HeroImagesOverlay = () => {
+const HeaderOverlay = () => {
 
   const [filePath, setFilePath] = useState([]);
 
@@ -114,4 +114,4 @@ const HeroImagesOverlay = () => {
   )
 }
 
-export default HeroImagesOverlay
+export default HeaderOverlay;

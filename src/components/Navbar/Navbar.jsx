@@ -12,12 +12,12 @@ const Navbar = ({
                     <div className="logo">
                         <Logo src={logoSrc} />
                     </div>
-                    <div className="quote sm:block hidden">
+                    <div className="ml-[auto] navbar_request_btn sm:block hidden">
                         <button className='secondary-button text-white'>Request a Quote</button>
                     </div>
-                    <div className='flex items-center'>
-                        <div className="hamburger-menu" onClick={onSideMenuChange}>
-                            <div className="bar"></div>
+                    <div className='navbar_hamburger_menu flex items-center'>
+                        <div className="hamburger-menu h-[4rem] w-[3rem] cursor-pointer flex items-center justify-end" onClick={onSideMenuChange}>
+                            <div className="bar relative transition-all duration-500 bg-[#eee] rounded-sm h-[3px] w-[1.4rem]"></div>
                         </div>
                         <h3 className="mx-4 uppercase text-xl text-extrabold text-white">Menu</h3>
                     </div>

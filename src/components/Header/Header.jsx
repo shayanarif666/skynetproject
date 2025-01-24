@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroImagesOverlay from '../HomePage/Hero Section Images Overlay/HeroImagesOverlay';
+import HeaderOverlay from '../HomePage/Header Overlay/HeaderOverlay';
 import "./header.css";
 
 const Header = ({
@@ -20,8 +20,8 @@ const Header = ({
                 <h1 className="header_secondary_heading text-2xl lg:text-3xl xl:text-4xl text-white font-bold mt-4">Innovate. Inspire. Achieve – with SKYNET SILICON</h1>
             </div>
             {
-                isHeroImagesContained && <div className="hero_section_images absolute z-[1] opacity-[.6] lg:max-w-[80vw] max-w-[100vw]">
-                    <HeroImagesOverlay />
+                isHeroImagesContained && <div className="header_overlay_images absolute z-[1] opacity-[.6] lg:max-w-[80vw] max-w-[100vw]">
+                    <HeaderOverlay />
                 </div>
             }
         </header>

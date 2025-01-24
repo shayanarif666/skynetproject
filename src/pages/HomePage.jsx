@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import "./style.css"
-import Header from "../components/Header/Header";
-import Navbar from "../components/Navbar/Navbar";
-import BrandsSlider from "../components/Brands/BrandsSlider"
-import { heroBrands } from "../components/brandItems";
-import NavbarMenuItems from "../components/Navbar/NavbarMenuItems";
+import { Header, Navbar, NavbarMenuItems } from "../components/index";
 
 const HomePage = () => {
 
@@ -16,12 +12,12 @@ const HomePage = () => {
 
   return (
     <>
-      <div className={`container-full ${isClick ? "active" : ""}`}>
+      <div className={`container-full h-[100vh] w-[100vw] ${isClick ? "active" : ""}`}>
 
         <Navbar onSideMenuChange={handleSideMenu} />
 
         <div className="main-container">
-          <div className="main">
+          <div className="main relative w-full left-0 z-50 overflow-x-hidden origin-left border-[#ffffff66] transition-all duration-500">
             <Header bgColor="bg-gradient-to-r from-[#30007d] to-[#000]" />
           </div>
 
