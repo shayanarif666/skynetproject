@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css"
-import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services } from "../components/index";
+import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline } from "../components/index";
 
 const HomePage = () => {
 
@@ -12,9 +12,9 @@ const HomePage = () => {
 
   return (
     <>
-      <div className={`container-full h-[100vh] w-[100vw] ${isClick ? "active overflow-hidden" : ""}`}>
+      <div className={`container-full relative h-screen w-screen ${isClick ? "active overflow-hidden" : ""}`}>
 
-        <Navbar onSideMenuChange={handleSideMenu} />
+        <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />
 
         <div className="main-container">
           <div className={`main w-full z-50 origin-left border-[#ffffff66] transition-all duration-500 h-screen`}>
@@ -23,6 +23,7 @@ const HomePage = () => {
               }`}>
               <ShortCompanyInfo />
               <Services title={"Discover Our Expertise as a Web Design Company"} description={"As a full-service web design agency, we handle all your digital needs under one roof. Our custom web design services include thorough research and planning, bespoke designs and digital strategies tailored to grow your reach, drive traffic and encourage engagement."} />
+              <Timeline />
             </main>
           </div>
 

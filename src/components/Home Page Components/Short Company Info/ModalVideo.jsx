@@ -4,7 +4,6 @@ import { FaXmark } from "react-icons/fa6";
 import "./info.css";
 
 const ModalVideo = ({
-    openModal,
     closeModal,
     isOpen
 }) => {

@@ -5,42 +5,63 @@
 }
 
 body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 /* ############################ 
-Utilities Classes
+Custom Scrollbar
 ############################ */
-.primary-button {
-    background-color: #fff;
-    color: #3b7bce;
-    padding: .6rem 2rem;
-    font-weight: 700;
-    position: relative;
-    border: none !important;
-    z-index: 1 !important;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    transition: all .2s ease-in-out;
-    box-shadow: rgba(255, 255, 255, 0.36) 0px 2px 15px 1px;
+::-webkit-scrollbar {
+    width: 8px;
 }
-.primary-button::after {
+/* Track */
+::-webkit-scrollbar-track {
+    background: none !important;
+    width: 0px !important;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, rgba(27,8,108,1) 43%, rgba(0,0,0,1) 100%);
+    border-radius: 15px;
+}
+/* ############################ 
+Buttons Classes Start
+############################ */
+.primary-btn {
+    border: 4px solid;
+    border-image: linear-gradient(#913ae4, #0898ff);
+    border-image-slice: 1;
+    color: #006cae;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 9 !important;
+    transition: all .6s ease-in-out;
+}
+
+.primary-btn::after {
     content: "";
     display: block;
     position: absolute;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    height: 0%;
-    border: none !important;
-    background: linear-gradient(to left, #7711b1, #1179e7 );
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(26, 8, 152, 1) 0%, rgba(24, 12, 75, 1) 64%);
+    width: 0%;
+    height: 500px;
+    transition: all .6s ease-in-out;
     z-index: -1;
-    transition: all .2s ease-in-out;
+    transform: rotate(-50deg) translateY(-150px);
+    opacity: 0;
 }
-.primary-button:hover::after {
-    height: 100%;
+
+.primary-btn:hover::after {
+    width: 500px !important;
+    opacity: 1;
 }
-.primary-button:hover {
+
+.primary-btn:hover {
     color: #fff;
 }
 
@@ -54,6 +75,7 @@ Utilities Classes
     transition: all .3s ease-in-out;
     position: relative;
 }
+
 .secondary-button::after {
     content: "";
     display: block;
@@ -66,55 +88,32 @@ Utilities Classes
     transform: scale(0);
     transition: all .3s ease-in-out;
 }
+
 .secondary-button:hover::after {
     transform: scale(1);
 }
+
 .secondary-button:hover {
-    text-shadow: 4px 4px 6px rgb(32,167,219);
+    text-shadow: 4px 4px 6px rgb(32, 167, 219);
 }
 
+/* ############################ 
+----------  Buttons Classes End ----------
+############################ */
 
-.glowingButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 16px;
-    border: 4px solid;
-    border-image: linear-gradient( #913ae4, #0898ff);
-    border-image-slice: 1;
-    background: rgb(51, 56, 116);
-    color: white;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease;
-};
 
 [data-scroll-container] {
     height: 100%;
     overflow: hidden;
-  }
+}
 
-.effect::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.bg-cover {
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-}
+
 .effect-design-line {
     background: #009cff;
     width: 100%;
     height: 2px;
 }
+
 .text_gradient {
     background: linear-gradient(131.8deg, #009cff 0, #9536e5 100%);
     background-clip: border-box;
@@ -123,18 +122,21 @@ Utilities Classes
     background-clip: text;
     padding-right: 8px;
 }
+
 .bg_gradient {
     background: linear-gradient(131.8deg, #009cff 0, #9536e5 100%);
     transition: all .3s ease-in-out;
     padding-right: 8px;
 }
+
 .bg_gradient:hover {
     background: linear-gradient(131.8deg, #006cae 0, #840ee4 100%);
 }
-.bottom_text {
+
+/* .bottom_text {
     position: absolute;
     bottom: 0;
 }
 .bottom_text img {
     opacity: .04;
-}
+} */

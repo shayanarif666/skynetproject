@@ -1,16 +1,19 @@
 import BrandsSlider from "./Brands/BrandsSlider";
+import Button from "./Button";
 import CompanyIntroVideo from "./Home Page Components/Short Company Info/CompanyIntroVideo";
 // import Contact from "./Contact Us/Contact";
 // import CompanyLocation from "./Company Location/CompanyLocation";
 // import Features from "./HomePage/Features/Features";
 // import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
-import HeaderOverlay from "./Home Page Components/Header Overlay/HeaderOverlay"
+import HeaderOverlay from "./Home Page Components/Header Overlay/HeaderOverlay";
+import Logo from "./Logo";
 import ModalVideo from "./Home Page Components/Short Company Info/ModalVideo";
 import Navbar from "./Navbar/Navbar";
 import NavbarMenuItems from "./Navbar/NavbarMenuItems";
 import ShortCompanyInfo from "./Home Page Components/Short Company Info/ShortCompanyInfo";
 import Services from "./Services/Services";
+import Timeline from "./Timeline/Timeline"
 // import PricingFeatures from "./HomePage/Pricing Features/PricingFeatures";
 // import ServiceTab from "./HomePage/Features/ServiceTab";
 // import Subscribe from "./Subscribe/Subscribe";
@@ -18,6 +21,7 @@ import Services from "./Services/Services";
 
 export {
     BrandsSlider,
+    Button,
     CompanyIntroVideo,
     // Contact,
     // CompanyLocation,
@@ -25,12 +29,13 @@ export {
     // Footer,
     Header,
     HeaderOverlay,
-    // HomeServices,
+    Logo,
     ModalVideo,
     Navbar,
     NavbarMenuItems,
     ShortCompanyInfo,
     Services,
+    Timeline
     // PricingFeatures,
     // ServiceTab,
     // Subscribe,

@@ -48,7 +48,7 @@
 .container-full.active .main {
     animation: main-animation 0.5s ease;
     cursor: pointer;
-    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(.5);
+    transform: perspective(1200px) rotateY(30deg) translateZ(250px) scale(.6);
 }
 
 @keyframes main-animation {
@@ -57,7 +57,7 @@
     }
 
     to {
-        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+        transform: perspective(1200px) rotateY(30deg) translateZ(250px) scale(.6);
     }
 }
 
@@ -119,7 +119,7 @@
 
 .container-full.active .shadow.one {
     animation: shadow-one 0.6s ease-out;
-    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+    transform: perspective(1200px) rotateY(30deg) translateZ(180px) scale(0.6);
 }
 
 @keyframes shadow-one {
@@ -128,17 +128,17 @@
     }
 
     5% {
-        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+        transform: perspective(1200px) rotateY(30deg) translateZ(215px) scale(0.6);
     }
 
     100% {
-        transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+        transform: perspective(1200px) rotateY(30deg) translateZ(180px) scale(0.6);
     }
 }
 
 .container-full.active .shadow.two {
     animation: shadow-two 0.6s ease-out;
-    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+    transform: perspective(1200px) rotateY(30deg) translateZ(80px) scale(0.6);
 }
 
 @keyframes shadow-two {
@@ -147,27 +147,19 @@
     }
 
     20% {
-        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+        transform: perspective(1200px) rotateY(30deg) translateZ(115px) scale(0.6);
     }
 
     100% {
-        transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+        transform: perspective(1200px) rotateY(30deg) translateZ(80px) scale(0.6);
     }
-}
-
-.container-full.active .main:hover+.shadow.one {
-    transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
-}
-
-.container-full.active .main:hover {
-    transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
 }
 
 
 /* Range Between 1025px - 1300px */
-@media (min-width: 1025px) and (max-width: 1300px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
     .navbar_menu_links {
-        right: 5%;
+        width: 35%;
     }
 
     .navbar_menu_links a {
@@ -175,12 +167,12 @@
     }
 }
 
-/* Range Between 0 - 1024px */
+/* Range Between 0 - 1023px */
 @media (max-width: 1024px) {
     .container-full.active {
         min-height: 100vh;
         transition: all .3s ease-in-out;
-        overflow-y: scroll;
+        overflow-y: scroll !important;
     }
 
     .container-full.active .navbar {
@@ -192,13 +184,15 @@
     }
 
     .navbar_menu_links {
-        position: relative;
-        width: 100%;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
         padding-bottom: 2rem;
+        position: relative !important;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_sub_menu {
+        display: block;
+    }
+    .navbar_menu_links ul {
+        text-align: center;
     }
 }

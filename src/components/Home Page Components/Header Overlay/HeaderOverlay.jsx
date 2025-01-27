@@ -9,43 +9,43 @@ const HeaderOverlay = () => {
   const portfolio = [
     {
       id: 1,
-      src: "../../../../public/Images/Portfolio/1.jpg"
+      src: "/Images/Portfolio/1.jpg"
     },
     {
       id: 2,
-      src: "../../../../public/Images/Portfolio/2.webp"
+      src: "/Images/Portfolio/2.webp"
     },
     {
       id: 3,
-      src: "../../../../public/Images/Portfolio/3.jpg"
+      src: "/Images/Portfolio/3.jpg"
     },
     {
       id: 4,
-      src: "../../../../public/Images/Portfolio/4.jpg"
+      src: "/Images/Portfolio/4.jpg"
     },
     {
       id: 5,
-      src: "../../../../public/Images/Portfolio/1.jpg"
+      src: "/Images/Portfolio/1.jpg"
     },
     {
       id: 6,
-      src: "../../../../public/Images/Portfolio/2.webp"
+      src: "/Images/Portfolio/2.webp"
     },
     {
       id: 7,
-      src: "../../../../public/Images/Portfolio/3.jpg"
+      src: "/Images/Portfolio/3.jpg"
     },
     {
       id: 8,
-      src: "../../../../public/Images/Portfolio/4.jpg"
+      src: "/Images/Portfolio/4.jpg"
     },
     {
       id: 9,
-      src: "../../../../public/Images/Portfolio/3.jpg"
+      src: "/Images/Portfolio/3.jpg"
     },
     {
       id: 10,
-      src: "../../../../public/Images/Portfolio/4.jpg"
+      src: "/Images/Portfolio/4.jpg"
     },
   ]
 

@@ -1,133 +1,67 @@
-#services {
-    background: #00042a;
-    position: relative;
-    overflow: clip;
-}
-
-.service-intro {
-    padding: 2rem;
-    /* Optional: add padding for spacing */
-    min-height: 40%;
-    position: sticky;
-    top: 0px;
-}
-
 .service-detail {
-    background-color: #070b30;
-    padding: 4rem 3rem;
-    width: 100%;
-    position: relative;
-    width: 100%;
-    z-index: 999 !important;
-    overflow: hidden;
-    transition: all .3s ease-in-out
+    transition: width .6s ease-in-out;
 }
-
 .service-detail p {
     max-width: 50rem;
 }
-
 .service-detail-wrapper {
-    display: block;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255) !important;
-    z-index: -1;
-    transition: all .4s ease-in-out;
-    visibility: hidden;
-    background: url("https://www.digitalsilk.com/wp-content/uploads/2024/09/responsive_design-min.png");
-    background-position: 70%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0;
+    background-position: 70% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important; 
 }
-
-.service-detail:hover {
-    cursor: pointer;
-    width: 60vw;
-}
-
 .service-detail:hover .service-detail-wrapper {
-    width: 100%;
+    width: 100% !important;
     visibility: visible !important;
-    opacity: 1;
+    opacity: 1 !important;
 }
-
 .service-detail:hover p,
 .service-detail:hover h3 {
     color: #00042a !important;
-    z-index: 999 !important;
 }
-
 .service-detail svg {
     color: #00b9ff !important;
 }
-
 .service-detail:hover .overlay-circle-one,
 .service-detail:hover .overlay-circle-two {
-    visibility: visible;
-    opacity: .7;
+    visibility: visible !important;
+    opacity: .7 !important;
 }
-
 .service-intro-column::before,
-.service-intro-column::after {
+.service-intro-column::after,
+.service_detail_before_effect::before {
     content: "";
     display: block;
     position: absolute;
     width: 50vw;
     height: 50vw;
     border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(4, 228, 255, 0.8) 0%, rgba(4, 228, 255, 0) 70%);
-    opacity: 0.3;
+    opacity: .5;
 }
-
+.service_detail_before_effect::before {
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    background: radial-gradient(ellipse at center, rgb(119, 17, 177, .8) 0%, rgba(4, 228, 255, 0) 70%);
+}
 .service-intro-column::before {
     bottom: 60%;
     left: -20%;
+    background: radial-gradient(ellipse at center, rgba(4, 228, 255, 0.8) 0%, rgba(4, 228, 255, 0) 70%);
 }
-
 .service-intro-column::after {
     bottom: 45%;
     right: -20%;
-}
-
-.overlay-circle-one,
-.overlay-circle-two {
-    content: "";
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    filter: blur(70px);
-    visibility: hidden;
-    opacity: 0;
-    transition: all .4s ease-in-out;
-}
-
-.overlay-circle-one {
-    width: 350px;
-    height: 350px;
-    background: #7e57c2;
-    right: 0%;
-    bottom: -30%;
-}
-
-.overlay-circle-two {
-    width: 270px;
-    height: 270px;
-    background: #00b9ff;
-    right: -8%;
-    top: 17%;
+    background: radial-gradient(ellipse at center, rgba(4, 228, 255, 0.8) 0%, rgba(4, 228, 255, 0) 70%);
 }
 
 
 @media (max-width: 768px) {
-
     .service-detail-wrapper,
     .overlay-circle-one,
-    .overlay-circle-two {
+    .overlay-circle-two,
+    .service_detail_before_effect::before,
+    .service-intro-column::before,
+    .service-intro-column::after {
         display: none !important;
     }
 
