@@ -35,7 +35,7 @@
     width: 50vw;
     height: 50vw;
     border-radius: 50%;
-    opacity: .5;
+    opacity: .3;
 }
 .service_detail_before_effect::before {
     top: 50%;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css"
-import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, CaseStudies } from "../components/index";
+import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, CaseStudies, Contact, Footer } from "../components/index";
 
 const HomePage = () => {
 
@@ -26,6 +26,8 @@ const HomePage = () => {
                 <Services title={"Discover Our Expertise as a Web Design Company"} description={"As a full-service web design agency, we handle all your digital needs under one roof. Our custom web design services include thorough research and planning, bespoke designs and digital strategies tailored to grow your reach, drive traffic and encourage engagement."} />
                 <Timeline />
                 <CaseStudies />
+                <Contact />
+                <Footer />
               </main>
             </div>
 
