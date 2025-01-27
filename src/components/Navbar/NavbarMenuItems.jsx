@@ -55,8 +55,9 @@ const NavbarMenuItems = ({
                 <h3 className='text-white uppercase font-bold my-3'>Development</h3>
                 <span className='text-white block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>App Development</span>
                 <span className='text-white block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Web Development</span>
-                <span className='text-white block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>SEO</span>
+                <span className='text-white block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Appsheet Development</span>
                 <span className='text-white block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Social Media Marketing</span>
+                <span className='text-white block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>SEO</span>
               </div>
             </div>
           </li>

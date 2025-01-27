@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { CompanyIntroVideo } from "../../index";
 import { GiVibratingShield } from "react-icons/gi";
 import { IoStar } from "react-icons/io5";
+import solutionImg from "/Images/web-designs-with-trophy.png.webp"
 import "./info.css";
 
 const Info = () => {
@@ -36,7 +37,7 @@ const Info = () => {
                                 ensure optimal results.</motion.p>
                         </div>
                         <motion.div viewport={{ once: true }} className="lg:w-1/2 w-full lg:mt-0 mt-[2rem]" initial={{ opacity: 0, x: "300px" }} whileInView={{ opacity: 1, transition: { duration: 1, delay: .2 }, x: 0 }}>
-                            <img src="https://www.digitalsilk.com/wp-content/uploads/2024/06/solutions.png.webp" alt="" />
+                            <img src={solutionImg} alt="" />
                         </motion.div>
                     </div>
                 </div>

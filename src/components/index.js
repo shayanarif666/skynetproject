@@ -15,7 +15,7 @@ import NavbarMenuItems from "./Navbar/NavbarMenuItems";
 import ShortCompanyInfo from "./Home Page Components/Short Company Info/ShortCompanyInfo";
 import Services from "./Services/Services";
 import Timeline from "./Timeline/Timeline"
-// import PricingFeatures from "./HomePage/Pricing Features/PricingFeatures";
+import PricingObjectives from "./Pricing Objectives/PricingObjectives";
 // import ServiceTab from "./HomePage/Features/ServiceTab";
 // import Subscribe from "./Subscribe/Subscribe";
 // import TopBrands from "./HomePage/Top Brands/TopBrands";
@@ -37,8 +37,8 @@ export {
     NavbarMenuItems,
     ShortCompanyInfo,
     Services,
-    Timeline
-    // PricingFeatures,
+    Timeline,
+    PricingObjectives,
     // ServiceTab,
     // Subscribe,
     // TopBrands,
