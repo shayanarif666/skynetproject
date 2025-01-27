@@ -24,7 +24,7 @@
 .service-detail:hover .overlay-circle-one,
 .service-detail:hover .overlay-circle-two {
     visibility: visible !important;
-    opacity: .7 !important;
+    opacity: .5 !important;
 }
 .service-intro-column::before,
 .service-intro-column::after,

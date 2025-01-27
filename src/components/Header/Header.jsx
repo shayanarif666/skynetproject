@@ -4,9 +4,10 @@ import "./header.css";
 
 const Header = ({
     bgColor = "",
-    minHeight = "min-h-[100vh]",
+    minHeight = "h-[100vh]",
     isHeroImagesContained = true,
     content = "",
+    isActive,
     ...props
 }) => {
     return (
@@ -14,7 +15,7 @@ const Header = ({
 
             <div className={`absolute w-screen h-screen ${bgColor} z-[2] opacity-70`}></div>
 
-            <div className="header_content text-center z-[9] px-">
+            <div className="header_content text-center z-[9] mt-[10vh] px-3">
                 <h2 className="header_primary_heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white font-bold leading-tight">Transforming Ideas <br className='sm:block hidden' />
                     into Digital Success Stories</h2>
                 <h1 className="header_secondary_heading text-2xl lg:text-3xl xl:text-4xl text-white font-bold mt-4">Innovate. Inspire. Achieve – with SKYNET SILICON</h1>

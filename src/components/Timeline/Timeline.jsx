@@ -22,7 +22,7 @@ const Timeline = () => {
                         </div>
                         <div className="lg:w-1/2 w-full">
                             <div className="timeline_right_section">
-                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#c6eff9] to-[#61dbfb] py-5 sm:border-l-[6px] sm:border-[#61dbfb] cursor-pointer">
+                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#c6eff9] to-[#38d5fc] py-5 sm:border-l-[6px] sm:border-[#61dbfb] cursor-pointer">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" className='-ms-20 me-10 img-fluid max-w-52 sm:block hidden' alt="" />
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">
@@ -32,11 +32,11 @@ const Timeline = () => {
                                             <p>At Skynet Silicon, we deliver high-performance, fully customized WordPress websites that align perfectly with your brand and business goals. Our experts create seamless, user-friendly experiences designed to drive engagement and conversions. With robust security measures and ongoing support, we ensure your WordPress site remains optimized, secure, and scalable as your business grows.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                            <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="React Js Development" />
+                                            <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="React Js Development" txtColor='text-[#000]' bgColor='bg-gradient-to-r from-[#9be8fb] to-[#26d2fc]' />
                                         </div>
                                     </div>
                                 </div>
-                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#c1ffb3] to-[#529f41]  py-5 sm:border-l-[6px] sm:border-[#529f41] cursor-pointer">
+                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#a5ff90] to-[#529f41]  py-5 sm:border-l-[6px] sm:border-[#529f41] cursor-pointer">
                                     <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png" className='sm:block hidden me-10 max-w-52 -ms-20' alt="" />
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">
@@ -46,11 +46,11 @@ const Timeline = () => {
                                             <p>At Skynet Silicon, we deliver high-performance, fully customized WordPress websites that align perfectly with your brand and business goals. Our experts create seamless, user-friendly experiences designed to drive engagement and conversions. With robust security measures and ongoing support, we ensure your WordPress site remains optimized, secure, and scalable as your business grows.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                            <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Node Js Development" />
+                                            <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Node Js Development" bgColor='bg-gradient-to-r from-[#a0fd8b] to-[#339d1b]' />
                                         </div>
                                     </div>
                                 </div>
-                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#bdd9ff] to-[#3B7BCE] py-5 sm:border-l-[6px] sm:border-[#3B7BCE] cursor-pointer">
+                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#bdd9ff] to-[#105fc7] py-5 sm:border-l-[6px] sm:border-[#3B7BCE] cursor-pointer">
                                     <img src="https://www.digitalsilk.com/wp-content/uploads/2024/09/g10.svg" className='sm:block hidden me-10' alt="" />
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">
@@ -60,7 +60,7 @@ const Timeline = () => {
                                             <p>At Skynet Silicon, we deliver high-performance, fully customized WordPress websites that align perfectly with your brand and business goals. Our experts create seamless, user-friendly experiences designed to drive engagement and conversions. With robust security measures and ongoing support, we ensure your WordPress site remains optimized, secure, and scalable as your business grows.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                        <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Wordpress Development" />
+                                        <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Wordpress Development" bgColor='bg-gradient-to-r from-[#92bfff] to-[#105fc7]' />
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@ const Timeline = () => {
                                             <p>At Skynet Silicon, we deliver high-performance, fully customized WordPress websites that align perfectly with your brand and business goals. Our experts create seamless, user-friendly experiences designed to drive engagement and conversions. With robust security measures and ongoing support, we ensure your WordPress site remains optimized, secure, and scalable as your business grows.</p>
                                         </div>
                                         <div className="timeline_card_btn justify-center lg:invisible lg:opacity-0 transition-all duration-100 linear">
-                                        <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Android Development" />
+                                        <Button className="primary-btn py-0 transition-all duration-100 linear uppercase" label="Android Development" txtColor='text-[#000]' bgColor='bg-gradient-to-r from-[#defe87] to-[#8fc204]' />
                                         </div>
                                     </div>
                                 </div>

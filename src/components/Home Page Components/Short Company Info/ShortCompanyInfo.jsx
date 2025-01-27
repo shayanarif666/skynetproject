@@ -43,7 +43,7 @@ const Info = () => {
 
                 <CompanyIntroVideo />
 
-                <div className="container pt-10 sm:flex items-center">
+                <div className="container pt-10">
                     <div className="short_company_info_ratings flex items-center me-5 mb-4">
                         <div className="short_company_ratings_icon">
                             <GiVibratingShield className='text-5xl text-cyan-500' />
@@ -57,15 +57,6 @@ const Info = () => {
                                 <IoStar className='text-yellow-400 text-xl me-1' />
                                 <IoStar className='text-yellow-400 text-xl me-1' />
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="short_company_info_ratings sm:ms-4 relative mb-4">
-                        <div className="short_company_ratings_icon mb-1">
-                            <h4 className='text-white font-medium text-lg'>Latest Web Design Award</h4>
-                        </div>
-                        <div className="short_company_ratings_description">
-                            <img src="../../../public/Images/company info logo.webp" alt="" />
                         </div>
                     </div>
                 </div>

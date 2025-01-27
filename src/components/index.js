@@ -1,6 +1,7 @@
 import BrandsSlider from "./Brands/BrandsSlider";
 import Button from "./Button";
 import CompanyIntroVideo from "./Home Page Components/Short Company Info/CompanyIntroVideo";
+import CaseStudies from "./Case Studies/CaseStudies";
 // import Contact from "./Contact Us/Contact";
 // import CompanyLocation from "./Company Location/CompanyLocation";
 // import Features from "./HomePage/Features/Features";
@@ -23,6 +24,7 @@ export {
     BrandsSlider,
     Button,
     CompanyIntroVideo,
+    CaseStudies,
     // Contact,
     // CompanyLocation,
     // Features,

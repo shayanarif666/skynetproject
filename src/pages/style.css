@@ -48,7 +48,7 @@
 .container-full.active .main {
     animation: main-animation 0.5s ease;
     cursor: pointer;
-    transform: perspective(1200px) rotateY(30deg) translateZ(250px) scale(.6);
+    transform: perspective(1300px) rotateY(30deg) translateZ(250px) scale(.6) translateY(80px);
 }
 
 @keyframes main-animation {
@@ -57,7 +57,7 @@
     }
 
     to {
-        transform: perspective(1200px) rotateY(30deg) translateZ(250px) scale(.6);
+        transform: perspective(1300px) rotateY(30deg) translateZ(250px) scale(.6) translateY(80px);
     }
 }
 
@@ -116,7 +116,9 @@
     z-index: -2;
     opacity: 0.1;
 }
-
+.container-full.active .shadow {
+    top: 58px;
+}
 .container-full.active .shadow.one {
     animation: shadow-one 0.6s ease-out;
     transform: perspective(1200px) rotateY(30deg) translateZ(180px) scale(0.6);
@@ -161,16 +163,12 @@
     .navbar_menu_links {
         width: 35%;
     }
-
-    .navbar_menu_links a {
-        font-size: 2rem !important;
-    }
 }
 
 /* Range Between 0 - 1023px */
 @media (max-width: 1024px) {
     .container-full.active {
-        min-height: 100vh;
+        min-height: 100%;
         transition: all .3s ease-in-out;
         overflow-y: scroll !important;
     }
@@ -184,7 +182,6 @@
     }
 
     .navbar_menu_links {
-        padding-bottom: 2rem;
         position: relative !important;
         justify-content: center;
         width: 100%;
@@ -194,5 +191,8 @@
     }
     .navbar_menu_links ul {
         text-align: center;
+    }
+    .active_menu_link {
+        justify-content: center;
     }
 }
