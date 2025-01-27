@@ -5,6 +5,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Button } from "../index";
+import { motion } from "framer-motion"
 import "./caseStudies.css";
 
 const CaseStudies = () => {
@@ -58,7 +59,7 @@ const CaseStudies = () => {
                                     <TabPanel value="1" id='case_studies_tab_panal-hp'>
                                         <div className="case_studies_tab_panal_effect case_studies_tab_panal_effect_img_one"></div>
                                         <div className="case_studies_tab_panal_effect_logo case_studies_tab_panal_effect_logo-hp"></div>
-                                        <div className="row gy-5 flex items-center">
+                                        <motion.div viewport={{ once: true }} initial={{ y: "200px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row gy-5 flex items-center">
                                             <div className="col-lg-3 col-6">
                                                 <div className="case_studies_tabs_content_logo">
                                                     <img src="https://www.digitalsilk.com/wp-content/uploads/2022/07/bo-logo-dark.svg" alt="" />
@@ -73,8 +74,8 @@ const CaseStudies = () => {
                                                     <p className='mt-3'><span className='font-semibold text-xl lg:text-lg'>In 6 months,</span> we achieved:</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="row mt-20">
+                                        </motion.div>
+                                        <motion.div viewport={{ once: true }} initial={{ y: "200px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row mt-20">
                                             <div className="col-6">
                                                 <div className="case_studies_tab_content_counter">
                                                     <h1 className='text-7xl lg:text-8xl xl:text-9xl text-sky-500 font-semibold'>40 <sub>K</sub></h1>
@@ -92,12 +93,12 @@ const CaseStudies = () => {
                                                     <Button className="primary-btn" label={"Read HP Case Study"} />
                                                 </div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     </TabPanel>
                                     <TabPanel value="2" id='case_studies_tab_panal-xerox'>
                                         <div className="case_studies_tab_panal_effect case_studies_tab_panal_effect_img_two"></div>
                                         <div className="case_studies_tab_panal_effect_logo case_studies_tab_panal_effect_logo-xerox"></div>
-                                        <div className="row gy-5 flex items-center">
+                                        <motion.div viewport={{ once: true }} initial={{ y: "200px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row gy-5 flex items-center">
                                             <div className="col-lg-3 col-6">
                                                 <div className="case_studies_tabs_content_logo">
                                                     <img src="https://www.digitalsilk.com/wp-content/uploads/2022/07/xerox-logo-dark.svg" alt="" />
@@ -112,8 +113,8 @@ const CaseStudies = () => {
                                                     <p className='mt-3'><span className='font-semibold text-xl lg:text-lg'>In 6 months,</span> we achieved:</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="row mt-20">
+                                        </motion.div>
+                                        <motion.div viewport={{ once: true }} initial={{ y: "200px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row mt-20">
                                             <div className="col-6">
                                                 <div className="case_studies_tab_content_counter">
                                                     <h1 className='text-7xl lg:text-8xl xl:text-9xl text-sky-500 font-semibold'>78 <sub>K</sub></h1>
@@ -131,12 +132,12 @@ const CaseStudies = () => {
                                                     <Button className="primary-btn" label={"Read Xerox Case Study"} />
                                                 </div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     </TabPanel>
                                     <TabPanel value="3" id='case_studies_tab_panal-doForms'>
                                         <div className="case_studies_tab_panal_effect case_studies_tab_panal_effect_img_three"></div>
                                         <div className="case_studies_tab_panal_effect_logo case_studies_tab_panal_effect_logo-doForms"></div>
-                                        <div className="row gy-5 flex items-center">
+                                        <motion.div viewport={{ once: true }} initial={{ y: "200px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row gy-5 flex items-center">
                                             <div className="col-lg-3 col-6">
                                                 <div className="case_studies_tabs_content_logo">
                                                     <img src="https://www.digitalsilk.com/wp-content/uploads/2022/11/doForms-logo-dark-blue.svg" alt="" />
@@ -151,8 +152,8 @@ const CaseStudies = () => {
                                                     <p className='mt-3'><span className='font-semibold text-xl lg:text-lg'>In 6 months,</span> we achieved:</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="row mt-20">
+                                        </motion.div>
+                                        <motion.div viewport={{ once: true }} initial={{ y: "200px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row mt-20">
                                             <div className="col-6">
                                                 <div className="case_studies_tab_content_counter">
                                                     <h1 className='text-7xl lg:text-8xl xl:text-9xl text-sky-500 font-semibold'>55 <sub>K</sub></h1>
@@ -170,12 +171,12 @@ const CaseStudies = () => {
                                                     <Button className="primary-btn" label={"Read doForms Case Study"} />
                                                 </div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     </TabPanel>
                                     <TabPanel value="4" id='case_studies_tab_panal-fieldEdge'>
                                         <div className="case_studies_tab_panal_effect case_studies_tab_panal_effect_img_four"></div>
                                         <div className="case_studies_tab_panal_effect_logo case_studies_tab_panal_effect_logo-fieldEdge"></div>
-                                        <div className="row gy-5 flex items-center">
+                                        <motion.div viewport={{ once: true }} initial={{ y: "200px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row gy-5 flex items-center">
                                             <div className="col-lg-3 col-6">
                                                 <div className="case_studies_tabs_content_logo">
                                                     <img src="https://www.digitalsilk.com/wp-content/uploads/2022/11/FieldEdge-logo-dark-blue.svg" alt="" />
@@ -190,8 +191,8 @@ const CaseStudies = () => {
                                                     <p className='mt-3'><span className='font-semibold text-xl lg:text-lg'>In 6 months,</span> we achieved:</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="row mt-20">
+                                        </motion.div>
+                                        <motion.div viewport={{ once: true }} initial={{ y: "200px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row mt-20">
                                             <div className="col-6">
                                                 <div className="case_studies_tab_content_counter">
                                                     <h1 className='text-7xl lg:text-8xl xl:text-9xl text-sky-500 font-semibold'>39 <sub>K</sub></h1>
@@ -209,12 +210,12 @@ const CaseStudies = () => {
                                                     <Button className="primary-btn" label={"Read FieldEdge Case Study"} />
                                                 </div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     </TabPanel>
                                     <TabPanel value="5" id='case_studies_tab_panal-miami'>
                                         <div className="case_studies_tab_panal_effect case_studies_tab_panal_effect_img_five"></div>
                                         <div className="case_studies_tab_panal_effect_logo case_studies_tab_panal_effect_logo-miami"></div>
-                                        <div className="row gy-5 flex items-center">
+                                        <motion.div viewport={{ once: true }} initial={{ y: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row gy-5 flex items-center">
                                             <div className="col-lg-3 col-6">
                                                 <div className="case_studies_tabs_content_logo">
                                                     <img src="https://www.digitalsilk.com/wp-content/uploads/2022/11/MCDS-logo-dark-blue.svg" alt="" />
@@ -229,8 +230,8 @@ const CaseStudies = () => {
                                                     <p className='mt-3'><span className='font-semibold text-xl lg:text-lg'>In 6 months,</span> we achieved:</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="row mt-20">
+                                        </motion.div>
+                                        <motion.div viewport={{ once: true }} initial={{ y: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="row mt-20">
                                             <div className="col-6">
                                                 <div className="case_studies_tab_content_counter">
                                                     <h1 className='text-7xl lg:text-8xl xl:text-9xl text-sky-500 font-semibold'>40 <sub>K</sub></h1>
@@ -248,7 +249,7 @@ const CaseStudies = () => {
                                                     <Button className="primary-btn" label={"Read Miami Case Study"} />
                                                 </div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     </TabPanel>
                                 </div>
                             </div>
