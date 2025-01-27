@@ -3,7 +3,7 @@ import Button from "./Button";
 import CompanyIntroVideo from "./Home Page Components/Short Company Info/CompanyIntroVideo";
 import CaseStudies from "./Case Studies/CaseStudies";
 import Contact from "./Contact Us/Contact";
-// import CompanyLocation from "./Company Location/CompanyLocation";
+import CompanyLocation from "./Company Location/CompanyLocation";
 // import Features from "./HomePage/Features/Features";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -26,7 +26,7 @@ export {
     CompanyIntroVideo,
     CaseStudies,
     Contact,
-    // CompanyLocation,
+    CompanyLocation,
     // Features,
     Footer,
     Header,
