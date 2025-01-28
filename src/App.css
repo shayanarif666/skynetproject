@@ -16,7 +16,7 @@ Custom Scrollbar
 }
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #11458c;
+    background: #00042a;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -32,9 +32,9 @@ Buttons Classes Start
     border-image: linear-gradient(#913ae4, #0898ff);
     border-image-slice: 1;
     color: #006cae;
-    padding: 1rem 2.5rem;
+    padding: .7rem 2.5rem;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     position: relative;
     overflow: hidden;
     z-index: 9 !important;

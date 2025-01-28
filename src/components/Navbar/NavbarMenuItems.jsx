@@ -23,7 +23,7 @@ const NavbarMenuItems = ({
       <div className={`navbar_menu_links h-full mt-[20vh] absolute w-[40%] transition-all duration-200 ease-in-out flex justify-start ${activeLink === "services" || activeLink === "workHistory" ? "top-[0]" : "top-[0]"} right-0 z-20 ${isClick ? "opacity-100" : "opacity-0"}`}>
         <ul className='list-none'>
           <li>
-            <a href="#" className='text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]' style={{ "--i": "0.05s" }}>About</a>
+            <Link to="/about-us" className='text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]' style={{ "--i": "0.05s" }}>About</Link>
           </li>
           <li className='relative'>
             <a
