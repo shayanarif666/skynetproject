@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css"
-import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, CaseStudies, Contact, Footer, CompanyLocation, PricingObjectives } from "../components/index";
+import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, CaseStudies, Contact, Footer, CompanyLocation, PricingObjectives, Subscribe, ServiceTab } from "../components/index";
 
 const HomePage = () => {
 
@@ -12,7 +12,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className={`container-full relative h-[115vh] w-screen ${isClick ? "active overflow-hidden" : ""}`}>
+      <div className={`container-full h-screen w-screen ${isClick ? "active overflow-hidden" : ""}`}>
 
         <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />
 
@@ -26,11 +26,13 @@ const HomePage = () => {
                 <Services title={"Explore Our Experience as a Web Design Firm"} description={"Being a full-service web design firm, we take care of all your online requirements in one location. In-depth planning and research, unique designs, and digital tactics that expand your audience, increase traffic, and promote interaction are all part of our custom web design services."} />
                 <Timeline />
                 <CaseStudies />
+                <ServiceTab />
                 <PricingObjectives />
+                <Subscribe />
                 <CompanyLocation />
                 <Contact />
-                <Footer />
               </main>
+              <Footer />
             </div>
 
             <div className={`shadow one`}></div>

@@ -5,12 +5,12 @@ const Button = ({
     Icon = null,
     className = '',
     bgColor = "bg-[radial-gradient(circle,_rgba(26,8,152,1)_0%,_rgba(24,12,75,1)_64%)]",
-    txtColor = 'text-[#fff]',
+    color = '',
     ...props
 }) => {
     return (
         <>
-            <button className={`${className} after:${bgColor} hover:${txtColor} `} {...props}>
+            <button className={`${className} after:${bgColor} hover:${color} `} {...props}>
                 {label} 
             </button>
         </>

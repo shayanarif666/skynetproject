@@ -4,7 +4,7 @@ import CompanyIntroVideo from "./Home Page Components/Short Company Info/Company
 import CaseStudies from "./Case Studies/CaseStudies";
 import Contact from "./Contact Us/Contact";
 import CompanyLocation from "./Company Location/CompanyLocation";
-// import Features from "./HomePage/Features/Features";
+import Features from "./Features/Features";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import HeaderOverlay from "./Home Page Components/Header Overlay/HeaderOverlay";
@@ -16,8 +16,8 @@ import ShortCompanyInfo from "./Home Page Components/Short Company Info/ShortCom
 import Services from "./Services/Services";
 import Timeline from "./Timeline/Timeline"
 import PricingObjectives from "./Pricing Objectives/PricingObjectives";
-// import ServiceTab from "./HomePage/Features/ServiceTab";
-// import Subscribe from "./Subscribe/Subscribe";
+import ServiceTab from "./Features/ServiceTab";
+import Subscribe from "./Subscribe/Subscribe";
 // import TopBrands from "./HomePage/Top Brands/TopBrands";
 
 export {
@@ -27,7 +27,7 @@ export {
     CaseStudies,
     Contact,
     CompanyLocation,
-    // Features,
+    Features,
     Footer,
     Header,
     HeaderOverlay,
@@ -39,7 +39,7 @@ export {
     Services,
     Timeline,
     PricingObjectives,
-    // ServiceTab,
-    // Subscribe,
+    ServiceTab,
+    Subscribe,
     // TopBrands,
 }

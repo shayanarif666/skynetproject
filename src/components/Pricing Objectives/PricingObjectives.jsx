@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '../index';
 import "./pricingObjectives.css";
 
 const PricingObjectives = () => {
@@ -9,14 +10,11 @@ const PricingObjectives = () => {
                     <div className="row g-4">
                         <div className="col-12">
                             <div className="pricing_features_intro text-center">
-                                <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold'>Custom Web Design Pricing For <span className='text_gradient leading-snug'>Each Client’s Objectives</span></h1>
-                                <p className='text-lg md:text-2xl text-white font-normal mt-5 max-w-5xl mx-auto'>Every website design project comes with unique challenges and specific requirements that influence its final cost. A simple project typically ranges from <span className='text-sky-500 font-bold'>$25,000</span> to <span className='text-sky-500 font-bold'>$30,000</span>, while more complex endeavors can reach <span className='text-sky-500 font-bold'>$50,000</span> to <span className='text-sky-500 font-bold'>$60,000</span> or more.</p>
-                                <p className='text-lg md:text-2xl text-white font-normal mt-5 max-w-5xl mx-auto'>The technical setup of your website, which directly impacts its performance, is a key factor in determining cost. More complex setups that demand significant time and effort will naturally increase the overall price.</p>
+                                <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold 2xl:max-w-[70%] mx-auto'>Custom Web Design Costs Based on the  <span className='text_gradient leading-snug'>Goals of Each Client</span></h1>
+                                <p className='text-lg md:text-2xl text-white font-normal mt-5 max-w-5xl mx-auto'>Every website design project has different requirements and problems, which affect the project's ultimate cost. While more complicated projects can cost <span className='text-sky-500 font-bold'>$50,000</span> to <span className='text-sky-500 font-bold'>$60,000</span> or more. a simple project usually costs between <span className='text-sky-500 font-bold'>$25,000</span> to <span className='text-sky-500 font-bold'>$30,000</span> </p>
+                                <p className='text-lg md:text-2xl text-white font-normal mt-5 max-w-5xl mx-auto'>One of the main determinants of cost is your website's technical configuration, which has a direct effect on how well it performs. The total cost will inevitably rise with more intricate configurations that require a lot of time and work.</p>
                                 <div className="pricing_features_btn flex justify-center mt-5">
-                                    <button className='glowingButton'>
-                                        <span className='me-3'>EXPLORE ALL SERVICES</span>
-                                        <span>➤</span>
-                                    </button>
+                                    <Button className="primary-btn uppercase " label={"Calculate Your Website"} bgColor='bg-white'></Button>
                                 </div>
                             </div>
                         </div>
