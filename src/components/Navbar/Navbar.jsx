@@ -14,13 +14,15 @@ const Navbar = ({
                         <Logo src={logoSrc} />
                     </div>
                     <div className="ml-[auto] navbar_request_btn sm:block hidden">
+                        <a href="/coming-soon">
                         <Button className="text-white secondary-button" label="Request a Quote" />
+                        </a>
                     </div>
-                    <div className='navbar_hamburger_menu flex items-center'>
-                        <div className="hamburger-menu h-[4rem] w-[3rem] cursor-pointer flex items-center justify-end" onClick={onSideMenuChange}>
+                    <div className='navbar_hamburger_menu flex items-center' onClick={onSideMenuChange}>
+                        <div className="hamburger-menu h-[4rem] w-[3rem] cursor-pointer flex items-center justify-end">
                             <div className="bar relative transition-all duration-500 bg-[#eee] rounded-sm h-[3px] w-[1.4rem]"></div>
                         </div>
-                        <h3 className="mx-4 uppercase text-xl text-extrabold text-white">Menu</h3>
+                        <h3 className="mx-4 uppercase text-xl text-extrabold text-white cursor-pointer">Menu</h3>
                     </div>
                 </div>
             </nav>

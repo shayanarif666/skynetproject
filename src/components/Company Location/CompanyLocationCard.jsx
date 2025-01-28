@@ -18,10 +18,6 @@ const CompanyLocationCard = ({
                     <div className="company_location_card_location">
                         <p className='text-white text-xl mt-4'>{data.description}</p>
                     </div>
-                    <div className="company_location_card_address mt-4">
-                        <h5 className='text-white font-bold text-xl mb-3'>Clients :</h5>
-                        <p className='text-white text-xl'>{data.clientLocation}</p>
-                    </div>
                     <div className="company_location_card_client_address lg:flex items-center justify-between bg-white mt-5 px-4 py-2">
                         <div className="clinet_address mt-3 text-lg">
                             <address className='flex items-center'>

@@ -27,7 +27,7 @@ const NavbarMenuItems = ({
           </li>
           <li className='relative'>
             <a
-              href="#"
+              href="/coming-soon"
               onClick={() => handleLinkClick("services")}
               className={`active_menu_link text-[#eee] pt-[.7rem] lg:py-[.7rem] text-center flex items-center text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]`}
               style={{ "--i": "0.05s" }}
@@ -101,10 +101,12 @@ const NavbarMenuItems = ({
             <a href="#" style={{ "--i": "0.3s" }} className='text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]'>Case Studies</a>
           </li> */}
           <li>
-            <a href="#" style={{ "--i": "0.35s" }} className='text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]'>Contact</a>
+            <a href="/coming-soon" style={{ "--i": "0.35s" }} className='text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]'>Contact</a>
           </li>
           <div className="quote mt-10">
+            <a href="#contact">
             <Button className="text-white secondary-button" label="Request a Quote" />
+            </a>
           </div>
         </ul>
 

@@ -11,9 +11,8 @@ const CompanyLocation = () => {
         {
             id: 1,
             location: "Karachi",
-            description: "Founded in Karachi, Skynet Silicon helps Floridian businesses grow their brands online. Our services stem from a Miami-Dade County hub, while our global team serves brands from across the U.S. and internationally.",
-            clientLocation: "Miami Country Day School, Arnold Jewelers, FieldEdge, Rollink, Barton G",
-            address: "17975 Collins Avenue Sunny Isles Beach, FL 33160",
+            description: "Founded in Karachi, Skynet Silicon is a leading technology company committed to helping businesses grow their brands in the digital world. With ur head office based in Karachi, Pakistan, we provide innovative and reliable solutions to clients across the country and beyond. Our team of skilled professionals specializes in front-end and back-end development, graphics designing, and app development, ensuring that businesses achieve their goals with cutting-edge technology and creative strategies. At Skynet Silicon, we are dedicated to empowering brands and driving success in an ever-evolving digital landscape.",
+            address: "office address Hunaid City A-104, Block 17, Gulistan E Johar, Karachi",
             phone: "(+92) 3313908443",
             bgImg: "https://www.digitalsilk.com/wp-content/uploads/2023/12/miami-1.jpg"
         },
