@@ -55,7 +55,7 @@ const Footer = () => {
                             <div className="footer-menus-links">
                                 <h3>Company</h3>
                                 <div className="footer-menus">
-                                    <Link to="/about">About Us</Link>
+                                    <Link to="/about-us">About Us</Link>
                                     <Link to="/case-studies">Case Studies</Link>
                                     <Link to="/digital-trends">Digital Trends</Link>
                                     <Link to="/top-companies">Top Companies</Link>

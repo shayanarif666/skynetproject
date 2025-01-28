@@ -1,7 +1,7 @@
 export const heroBrands = [
     {
         id: 1,
-        src: "./Images/United Remodeling.webp"
+        src: "./Images/Brands/1.png"
     },
     {
         id: 2,
@@ -36,52 +36,47 @@ export const heroBrands = [
 export const workingBrands = [
     {
         id: 1,
-        src: "./Images/T&A Home Efficient.webp",
+        src: "./Images/Brands/1.png",
         comapny: "T&A Home Efficient"
     },
     {
         id: 2,
-        src: "./Images/United Remodeling.webp",
+        src: "./Images/Brands/2.png",
         comapny: "United Remodeling"
     },
     {
         id: 3,
-        src: "./Images/T&A Home Efficient.webp",
+        src: "./Images/Brands/3.png",
         comapny: "T&A Home Efficient"
     },
     {
         id: 4,
-        src: "./Images/United Remodeling.webp",
+        src: "./Images/Brands/4.png",
         comapny: "United Remodeling"
     },
     {
         id: 5,
-        src: "./Images/T&A Home Efficient.webp",
+        src: "./Images/Brands/5.png",
         comapny: "T&A Home Efficient"
     },
     {
         id: 6,
-        src: "./Images/United Remodeling.webp",
+        src: "./Images/Brands/6.png",
         comapny: "United Remodeling"
     },
     {
         id: 7,
-        src: "./Images/T&A Home Efficient.webp",
+        src: "./Images/Brands/7.png",
         comapny: "T&A Home Efficient"
     },
     {
         id: 8,
-        src: "./Images/United Remodeling.webp",
+        src: "./Images/Brands/8.png",
         comapny: "United Remodeling"
     },
     {
         id: 9,
-        src: "./Images/T&A Home Efficient.webp",
+        src: "./Images/Brands/9.png",
         comapny: "T&A Home Efficient"
-    },
-    {
-        id: 10,
-        src: "./Images/United Remodeling.webp",
-        comapny: "United Remodeling"
     }
 ]

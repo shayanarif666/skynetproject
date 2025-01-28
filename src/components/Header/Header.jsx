@@ -4,7 +4,7 @@ import "./header.css";
 
 const Header = ({
     bgColor = "",
-    minHeight = "h-[100vh]",
+    minHeight = "h-[90vh]",
     isHeroImagesContained = true,
     titleMaxWidth = "",
     title = "",
