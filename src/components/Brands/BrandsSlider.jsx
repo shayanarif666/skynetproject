@@ -12,14 +12,15 @@ const BrandsSlider = ({
     className = "",
     scrollPosition = "left",
     scrollTo = "scrollLeft",
+    sliderGap = "",
     ...props
 }) => {
 
-    console.log(scrollPosition, scrollTo)
+    console.log("items,", items)
 
     return (
         <>
-            <div id="marquee" data-scroll-section>
+            <div id="marquee" data-scroll-section className={`${sliderGap}`}>
                 <div className={`marquee-wrapper flex items-center justify-center`} style={{ height: bannerHeight, backgroundColor: `${bgColor}` }}>
                     {
                         items?.map((item, ind) => {
@@ -40,7 +41,7 @@ const BrandsSlider = ({
                                      <div className="client_logos">
                                         <img src={item.src} alt="" />
                                     </div>
-                                    {item.company && <h3 className='text-lg mt-4 font-medium text-slate-300'>{item.comapny}</h3>}
+                                    {item.company && <h3 className='text-lg mt-0 font-medium text-slate-300'>{item.company}</h3>}
                                 </div>
                             )
                         })

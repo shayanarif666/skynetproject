@@ -1,21 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logoSrc from "../../assets/logo-white.svg"
 import { Button, Logo } from "../index";
 
 const Navbar = ({
-    onSideMenuChange,
-    isClick
+    onSideMenuChange
 }) => {
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10); // Change threshold as needed
+        };
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <nav className={`navbar fixed top-0 w-full left-0 z-[999] border-b border-b-[#ffffff66]`}>
-                <div className="container-fluid flex-nowrap">
+            <nav className={`navbar w-full fixed top-0 z-[999] transition-all duration-500 ${isScrolled
+                ? "bg-[#33217f]"
+                : "border-b-[#ffffff66] border-b"
+                }`}>
+                <div className="container-fluid">
                     <div className="logo">
                         <Logo src={logoSrc} />
                     </div>
                     <div className="ml-[auto] navbar_request_btn sm:block hidden">
                         <a href="/coming-soon">
-                        <Button className="text-white secondary-button" label="Request a Quote" />
+                            <Button className="text-white secondary-button" label="Request a Quote" />
                         </a>
                     </div>
                     <div className='navbar_hamburger_menu flex items-center' onClick={onSideMenuChange}>

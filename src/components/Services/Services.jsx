@@ -1,7 +1,7 @@
 import React from 'react';
 import { TbDeviceDesktopStar } from "react-icons/tb";
 import { VscSettingsGear } from "react-icons/vsc";
-import { MdOutlineSendToMobile } from "react-icons/md";
+import { MdOutlineSendToMobile, MdOutlineDesignServices  } from "react-icons/md";
 import { FaMagnifyingGlassChart } from "react-icons/fa6";
 import { RiLuggageCartLine } from "react-icons/ri";
 import { motion } from 'framer-motion';
@@ -76,7 +76,7 @@ const Services = ({
                             <motion.div viewport={{ once: true }} initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
                                 <div className="service-detail-wrapper block absolute top-0 left-0 w-full h-full z-[-1] invisible transition-all duration-300 opacity-0 bg-white" style={{ background: `url(${uiux_web_image})` }}></div>
 
-                                <FaMagnifyingGlassChart className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
+                                <MdOutlineDesignServices className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
                                 <h3 className='text-white font-bold text-3xl sm:text-4xl my-3'>UX/UI Design</h3>
                                 <p className='text-white font-semibold text-lg mt-8 w-[100%] lg:w-[485px] xl:w-[625px] 2xl:w-[770px]'>Our award-winning designers use trusted methods and innovative approaches to create engaging visual experiences and seamless user journeys. Whether you’re looking to build a custom UX/UI or redesign your current one, we’ll enhance your visual identity and ensure your website is both aesthetically pleasing and highly functional.</p>
 

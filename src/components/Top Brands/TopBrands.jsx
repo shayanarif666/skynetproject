@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrandsSlider } from '../index';
+import { BrandsSlider, Button } from '../index';
 import { workingBrands } from '../brandItems';
 import { motion } from "framer-motion"
 
@@ -20,16 +20,11 @@ const TopBrands = () => {
                         </motion.div>
                     </div>
                 </div>
-                <BrandsSlider sliderGap="mb-4" items={workingBrands} scrollPosition='left' scrollTo="scrollLeft" itemWidth='300px' className="flex flex-column justify-center items-center" bgColor="none !important" />
-                <BrandsSlider sliderGap="mb-4" items={workingBrands} scrollPosition='right' scrollTo="scrollRight" itemWidth='300px' className="flex flex-column justify-center items-center" bgColor="none !important" />
+                <BrandsSlider bannerHeight='15vh' sliderGap="mb-4" items={workingBrands} itemBgColor='#4c86d21a' scrollPosition='left' scrollTo="scrollLeft" itemWidth='300px' className="flex flex-column justify-center items-center" bgColor="none !important" />
+                <BrandsSlider bannerHeight='15vh' sliderGap="mb-4" items={workingBrands} itemBgColor='#4c86d21a' scrollPosition='right' scrollTo="scrollRight" itemWidth='300px' className="flex flex-column justify-center items-center" bgColor="none !important" />
 
-                <div className="row gx-0">
-                    <div className="col-12 flex justify-center mt-5">
-                        <button className='glowingButton'>
-                            <span className='me-3'>EXPLORE ALL SERVICES</span>
-                            <span>➤</span>
-                        </button>
-                    </div>
+                <div className="flex justify-center mt-14">
+                    <Button className='primary-btn text-white hover:text-white' label={"EXPLORE ALL SERVICES"} />
                 </div>
 
             </section >

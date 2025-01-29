@@ -104,9 +104,7 @@ const NavbarMenuItems = ({
             <a href="/coming-soon" style={{ "--i": "0.35s" }} className='text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]'>Contact</a>
           </li>
           <div className="quote mt-10">
-            <a href="#contact">
             <Button className="text-white secondary-button" label="Request a Quote" />
-            </a>
           </div>
         </ul>
 
