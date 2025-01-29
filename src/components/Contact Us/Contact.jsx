@@ -100,7 +100,7 @@ const Contact = () => {
                                 </div>
                                 {errors.message && <p role="alert" className='text-red-500 mb-3'>**{errors.message.message}</p>}
                                 <div className="text-start">
-                                    <button>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
+                                    <button className='contact-btn'>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
                                 </div>
                             </form>
                         </div>

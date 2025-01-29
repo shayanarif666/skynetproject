@@ -14,7 +14,7 @@ const Header = ({
     ...props
 }) => {
     return (
-        <header className={`header ${minHeight} overflow-hidden relative flex items-center justify-center`} style={{background: `url(${bgImg})`}}>
+        <header className={`header ${minHeight} overflow-hidden relative flex items-center justify-center`} style={{ background: `url(${bgImg})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
 
             <div className={`absolute w-full h-full ${bgColor} z-[2] opacity-80`}></div>
 

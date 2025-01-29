@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./style.css"
-import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, CaseStudies, Contact, Footer, CompanyLocation, PricingObjectives, Subscribe, ServiceTab, BrandsSlider } from "../components/index";
-import TopBrands from "../components/Top Brands/TopBrands";
+import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, CaseStudies, Contact, Footer, CompanyLocation, PricingObjectives, Subscribe, ServiceTab, BrandsSlider, TopBrands } from "../components/index";
 import { heroBrands } from "../components/brandItems";
 
 const HomePage = () => {
@@ -28,8 +27,8 @@ const HomePage = () => {
                 <TopBrands />
                 <Services title={"Explore Our Experience as a Web Design Firm"} description={"Being a full-service web design firm, we take care of all your online requirements in one location. In-depth planning and research, unique designs, and digital tactics that expand your audience, increase traffic, and promote interaction are all part of our custom web design services."} />
                 <Timeline />
-                <CaseStudies />
-                <ServiceTab />
+                {/* <CaseStudies />
+                <ServiceTab /> */}
                 <PricingObjectives />
                 <Subscribe />
                 <CompanyLocation />

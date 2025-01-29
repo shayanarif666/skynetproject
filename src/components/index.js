@@ -15,15 +15,19 @@ import Navbar from "./Navbar/Navbar";
 import NavbarMenuItems from "./Navbar/NavbarMenuItems";
 import ShortCompanyInfo from "./Home Page Components/Short Company Info/ShortCompanyInfo";
 import Services from "./Services/Services";
-import Timeline from "./Timeline/Timeline"
+import Timeline from "./Timeline/Timeline";
 import PricingObjectives from "./Pricing Objectives/PricingObjectives";
 import ServiceTab from "./Features/ServiceTab";
 import Subscribe from "./Subscribe/Subscribe";
 import SkynetMean from "./About Us Page Components/SkynetMean";
-import ServiceOffers from "./About Us Page Components/ServiceOffers"
+import ServiceOffers from "./About Us Page Components/ServiceOffers";
 import SkynetVision from "./About Us Page Components/SkynetVision";
-import ValueAddition from "./About Us Page Components/ValueAddition"
-// import TopBrands from "./HomePage/Top Brands/TopBrands";
+import ServiceHeader from "./Service Page Component/ServiceHeader";
+import ServiceDetails from "./Service Page Component/ServiceDetails";
+import ValueAddition from "./About Us Page Components/ValueAddition";
+import TopBrands from "./Top Brands/TopBrands";
+import WhyWeUse from "./Service Page Component/WhyWeUse";
+import WhyUs from "./Service Page Component/WhyUs";
 
 export {
     About,
@@ -50,6 +54,10 @@ export {
     SkynetMean,
     ServiceOffers,
     SkynetVision,
-    ValueAddition
-    // TopBrands,
+    ServiceHeader,
+    ServiceDetails,
+    ValueAddition,
+    TopBrands,
+    WhyWeUse,
+    WhyUs,
 }

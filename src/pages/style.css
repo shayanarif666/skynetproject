@@ -61,14 +61,17 @@
     }
 }
 
-.navbar_menu_links a {
+.navbar_menu_links .nav_menu_link {
     opacity: 0;
     transform: translateY(10px);
     animation: hide 0.5s forwards ease;
 }
 
-.container-full.active .navbar_menu_links a {
+.container-full.active .navbar_menu_links .nav_menu_link {
     animation: appear 0.5s forwards ease var(--i);
+}
+.container-full.active  .navbar_menu_links .navbar_sub_menu a:hover {
+    color: #04e4ff !important;
 }
 
 @keyframes appear {

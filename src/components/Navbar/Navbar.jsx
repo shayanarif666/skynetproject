@@ -10,7 +10,7 @@ const Navbar = ({
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10); // Change threshold as needed
+            setIsScrolled(window.scrollY > 50); // Change threshold as needed
         };
         window.addEventListener("scroll", handleScroll);
 
@@ -21,11 +21,11 @@ const Navbar = ({
 
     return (
         <>
-            <nav className={`navbar w-full fixed top-0 z-[999] transition-all duration-500 ${isScrolled
+            <nav className={`navbar w-full fixed top-0 left-0 z-[999] transition-all duration-500 ${isScrolled
                 ? "bg-[#33217f]"
                 : "border-b-[#ffffff66] border-b"
                 }`}>
-                <div className="container-fluid">
+                <div className="container-fluid flex-nowrap">
                     <div className="logo">
                         <Logo src={logoSrc} />
                     </div>

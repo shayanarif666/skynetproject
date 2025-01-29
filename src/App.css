@@ -125,6 +125,22 @@ Buttons Classes Start
     text-shadow: 4px 4px 6px rgb(32, 167, 219);
 }
 
+.contact-btn {
+    border: 1px solid rgb(255, 255, 255, .3);
+    background-color: rgb(255, 255, 255, .3);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all .2s ease-in-out;
+}
+.contact-btn:hover {
+    color: rgba(37,20,98,1);
+    background-color: #fff; 
+    border-color: rgb(255, 255, 255, .1);
+}
+
 /* ############################ 
 ----------  Buttons Classes End ----------
 ############################ */

@@ -9,7 +9,7 @@ const Logo = ({
     return (
         <>
             <Link to={`/`}>
-                <img src={src} alt={src} className={`${className}`} {...props} />
+                <img src={src} alt={src} className={`${className} max-w-full`} {...props} />
             </Link>
         </>
     )

@@ -2,7 +2,7 @@
     background: radial-gradient(circle, rgba(13,56,109,1) 13%, rgba(37,20,98,1) 34%, rgba(18,21,58,1) 72%);
 }
 
-.follow-us h5::before {
+#contact .follow-us h5::before {
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -12,8 +12,8 @@
     margin-right: 15px;
 }
 
-form input,
-form textarea {
+#contact form input,
+#contact form textarea {
     background: none !important;
     border-radius: 0% !important;
     border: transparent !important;
@@ -21,35 +21,20 @@ form textarea {
     display: inline-block;
     color: #fff !important;
 }
-form textarea {
+#contact form textarea {
     height: 200px;
 }
-form input::placeholder,
-form textarea::placeholder {
+#contact form input::placeholder,
+#contact form textarea::placeholder {
     color: #fff !important;
     font-weight: 600 !important;
     font-size: 1.1rem !important;
 }
-form input:focus,
-form textarea:focus {
+#contact form input:focus,
+#contact form textarea:focus {
     box-shadow: none !important;
 }
-form button {
-    border: 1px solid rgb(255, 255, 255, .3) !important;
-    background-color: rgb(255, 255, 255, .3) !important;
-    color: #fff !important;
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.2rem;
-    transition: all .2s ease-in-out;
-}
-form button:hover {
-    color: rgba(37,20,98,1) !important;
-    background-color: #fff !important; 
-    border-color: rgb(255, 255, 255, .1) !important;
-}
-.input-group::after {
+#contact .input-group::after {
     content: "";
     display: block;
     width: 95%;
@@ -57,7 +42,7 @@ form button:hover {
     background-color: rgb(255, 255, 255, .4);
     transform: translateY(-20px);
 }
-.input-group-text {
+#contact .input-group-text {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -72,9 +57,9 @@ form button:hover {
     border: none !important;
     line-height: none !important;
 }
-.input-group-textarea::after {
+#contact .input-group-textarea::after {
     transform: translateY(0px) !important;
 }
-.input-group-textarea-text {
+#contact .input-group-textarea-text {
     margin-bottom: 8.8rem !important;
 }
