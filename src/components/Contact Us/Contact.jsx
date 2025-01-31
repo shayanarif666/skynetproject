@@ -7,48 +7,57 @@ import "./contact.css";
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import { BeatLoader } from 'react-spinners';
+import PhoneInput from 'react-phone-input-2';
 
 const Contact = () => {
 
     // Error Handling
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
+    const [phone, setPhone] = useState('');
 
     // Form
     const {
         register,
         handleSubmit,
+        setValue,
         formState: { errors },
     } = useForm();
 
     const handleContactForm = async (data, event) => {
         setLoading(true);
         try {
-            const formData = new FormData(event.target);
+            if (phone.length > 3) {
+                const formData = new FormData(event.target);
 
-            formData.append("access_key", "a67bb4a4-9923-4dc9-af1f-ea08c3db4acd");
+                formData.append("access_key", "a67bb4a4-9923-4dc9-af1f-ea08c3db4acd");
 
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
+                const object = Object.fromEntries(formData);
+                const newData = { ...object, phone: `+${data.phone}` }
+                const json = JSON.stringify(newData);
 
-            const res = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json"
-                },
-                body: json
-            }).then((res) => res.json());
+                const res = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                    },
+                    body: json
+                }).then((res) => res.json());
 
-            if (res.success) {
-                console.log("Success", res);
-                setLoading(false);
-                setError(false)
-                Swal.fire({
-                    icon: "success",
-                    title: "Successfully sent your form",
-                });
-            }
+                if (res.success) {
+                    console.log("Success", res);
+                    setLoading(false);
+                    setError(false)
+                    Swal.fire({
+                        icon: "success",
+                        title: "Successfully sent your form",
+                    });
+                }
+            } else Swal.fire({
+                icon: "error",
+                title: "Phone Number is required",
+            });
         } catch (error) {
             setError(error);
             setLoading(false)
@@ -89,18 +98,34 @@ const Contact = () => {
                                     <input name='email' type="email" {...register("email", { required: "Email is required" })} className='form-control mb-4' placeholder='Email*' />
                                 </div>
                                 {errors.email && <p role="alert" className='text-red-500 mb-3'>**{errors.email.message}</p>}
-                                <div className="input-group">
-                                    <span class="input-group-text"><MdOutlinePhoneInTalk /></span>
-                                    <input name='number' type="number" {...register("phone", { required: "Phone Number is required" })} className='form-control mb-4' placeholder='Phone*' />
+
+                                <div className="flag_dropdown_after mb-3">
+                                    <PhoneInput
+                                        country={"us"} // Set Default Country (Change to 'pk', 'gb', etc.)
+                                        enableSearch={true} // Allows search in dropdown
+                                        disableDropdown={false} // Ensures dropdown remains enabled
+                                        international
+                                        withCountryCallingCode
+                                        value={phone}
+                                        onChange={(phone) => {
+                                            setPhone(phone);
+                                            setValue("phone", phone, { shouldValidate: true });
+                                        }}
+                                        className="z-[999] ms-3"
+                                        inputStyle={{ width: "100%", padding: "20px", borderRadius: "0", marginLeft: "50px" }}
+                                        countryCodeEditable={false} // Prevent users from manually editing the code
+                                    />
                                 </div>
-                                {errors.phone && <p role="alert" className='text-red-500 mb-3'>**{errors.phone.message}</p>}
+                                {/* Validation */}
+                                {errors.phone && <p className="text-red-500 mt-2">{errors.phone.message}</p>}
+
                                 <div className="input-group input-group-textarea mb-5">
                                     <span class="input-group-text input-group-textarea-text"><RiMessage2Line /></span>
                                     <textarea name="message" {...register("message", { required: "Message is required" })} className='form-control' placeholder='Your Message*' id=""></textarea>
                                 </div>
                                 {errors.message && <p role="alert" className='text-red-500 mb-3'>**{errors.message.message}</p>}
                                 <div className="text-start">
-                                    <button className='contact-btn'>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
+                                    <button className='primary-white-btn after:bg-[radial-gradient(circle,_rgba(26,8,152,1)_0%,_rgba(24,12,75,1)_64%)] hover:text-white'>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
                                 </div>
                             </form>
                         </div>

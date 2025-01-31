@@ -12,16 +12,15 @@ body {
 Custom Scrollbar
 ############################ */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 /* Track */
-::-webkit-scrollbar-track {
-    background: #00042a;
-}
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, rgb(119, 17, 177) 43%, rgba(0,0,0,1) 100%);
-    border-radius: 15px;
+    background: #aaa;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
     cursor: pointer;
 }
 /* ############################ 
@@ -126,18 +125,16 @@ Buttons Classes Start
 }
 
 .contact-btn {
-    border: 1px solid rgb(255, 255, 255, .3);
-    background-color: rgb(255, 255, 255, .3);
-    color: #fff;
-    padding: 1rem 2rem;
+    border: 2px solid #222;
+    color: #222;
+    padding: .6rem 2rem;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.2rem;
     transition: all .2s ease-in-out;
 }
 .contact-btn:hover {
-    color: rgba(37,20,98,1);
-    background-color: #fff; 
+    background-color: #222; 
     border-color: rgb(255, 255, 255, .1);
 }
 
