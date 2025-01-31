@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { AboutPage, HomePage, ServicePage, UploadFilePage } from "./pages/page";
+import { AboutPage, HomePage, ServicePage, UploadCategory, UploadFilePage, UploadService } from "./pages/page";
 import "../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
 import "./App.css";
 import ComingSoon from './components/ComingSoon';
@@ -13,6 +13,8 @@ function App() {
         <Route path='/about-us' element={<AboutPage />}></Route>
         <Route path='/service/:category' element={<ServicePage />}></Route>
         <Route path='/upload-portfolio' element={<UploadFilePage />} />
+        <Route path='/upload-category' element={<UploadCategory />} />
+        <Route path='/upload-service' element={<UploadService />} />
         <Route path='*' element={<ComingSoon />} />
       </Routes>
     </>

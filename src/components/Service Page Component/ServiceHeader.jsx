@@ -20,6 +20,7 @@ import serviceTwo from "/Images/Portfolio/service (8).webp";
 import serviceThree from "/Images/Portfolio/service (9).webp";
 
 const ServiceHeader = ({
+    service,
     minHeight = "h-[100vh]",
     className = '',
     ...props
@@ -47,17 +48,17 @@ const ServiceHeader = ({
                             >
                                 Service
                             </Link>
-                            <Typography className='text-white'>{category?.replace("-", " ")}</Typography>
+                            <Typography className='text-white'>{service.category.name}</Typography>
                         </Breadcrumbs>
                         <h2 className={`mt-6 header_primary_heading text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white font-bold leading-tight 2xl:max-w-[1500px]`}>
-                            Custom Website Development Company
+                            {service.title}
                         </h2>
                         <p className='text-white text-lg mt-10'>
-                        Collaborate with a top web development company to create a user-focused, high-performing website that will increase engagement, increase conversions, and propel business expansion.
+                            {service.description}
                         </p>
                         <ul className='mt-10'>
                             {
-                                ["Create A Unique Digital Experience", "Drive Higher Conversions", "Attract Qualified Traffic"].map((list, index) => (
+                                service.featured_list.map((list, index) => (
                                     <li key={index} className='text-white mb-3 text-lg font-medium flex items-center'>
                                         <MdKeyboardDoubleArrowRight className='text-[#04e4ff] me-2 text-xl mt-px' />
                                         <span>{list}</span>

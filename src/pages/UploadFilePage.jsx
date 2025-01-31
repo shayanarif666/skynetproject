@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 
 const UploadFilePage = () => {
     const [file, setFile] = useState(null); // To store the selected file
+    const [category, setCategory] = useState("");
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [categories, setCategories] = useState([]);
 
     const handleFileChange = (event) => {
         const selectedFile = event.target.files[0];
@@ -10,6 +14,7 @@ const UploadFilePage = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault(); // Prevent the default form submission
+        console.log(file, category, title, description)
         if (!file) {
             setMessage("Please select a file to upload.");
             return;
@@ -17,11 +22,14 @@ const UploadFilePage = () => {
 
         const formData = new FormData();
         formData.append("file", file); // Add the file to the form data
+        formData.append("title", title);
+        formData.append("description", description);
+        formData.append("category", category)
 
         try {
-            const response = await fetch("http://localhost:5000/api/file", {
+            const response = await fetch("http://localhost:5000/api/portfolio", {
                 method: "POST",
-                body: formData, // Send form data as the request body
+                body: formData // Send form data as the request body
             });
 
             const data = await response.json();
@@ -36,7 +44,21 @@ const UploadFilePage = () => {
 
     const removeFile = () => {
         setFile(null);
-    }
+    };
+
+    // Categories
+    useEffect(() => {
+        (async () => {
+            try {
+                const response = await fetch("http://localhost:5000/api/category");
+                const data = await response.json();
+                setCategories(data);
+                console.log(data)
+            } catch (error) {
+                console.error("Error uploading file:", error);
+            }
+        })()
+    }, [])
 
     return (
         <div className="container mx-auto p-4">
@@ -58,6 +80,21 @@ const UploadFilePage = () => {
                 </div>
                 {file && (
                     <div className="mt-4">
+                        <label htmlFor="" className="text-sm text-gray-500 mb-2">Select Category*</label>
+                        <select name="" onChange={(e) => setCategory(e.target.value)} className="form-select w-full rounded-none focus:shadow-none " id="">
+                            {
+                                categories && categories.map(({_id, name}) => {
+                                    return <option value={name} key={_id}>{name}</option>
+                                })
+                            }
+                        </select>
+
+                        <label htmlFor="" className="text-sm text-gray-500 mb-2">Title*</label>
+                        <input type="text" name="title" onChange={(e) => setTitle(e.target.value)} placeholder="Portfolio Title" className="mb-4 py-3 form-control w-full rounded-none focus:shadow-none" />
+
+                        <label htmlFor="" className="text-sm text-gray-500 mb-2">Description*</label>
+                        <textarea name="description" onChange={(e) => setDescription(e.target.value)} placeholder="Portfolio Description" className="h-[100px] py-3 form-control w-full rounded-none focus:shadow-none" id=""></textarea>
+
                         <div className="flex items-center justify-between bg-gray-100 p-3 rounded">
                             <div>
                                 <p className="text-gray-700">

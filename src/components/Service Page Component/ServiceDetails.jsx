@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BeatLoader } from 'react-spinners';
 import { useCollapse } from "react-collapsed";
 import "./css/serviceDetail.css";
 import ServicePortfolioImages from './ServicePortfolioImages';
 import { Button } from '../index';
 
-const ServiceDetails = () => {
+const ServiceDetails = ({ service }) => {
+
     // Error Handling
     const [loading, setLoading] = useState(false);
     const [openIndex, setOpenIndex] = useState(0);
@@ -31,6 +32,7 @@ const ServiceDetails = () => {
         }
     ];
 
+
     return (
         <>
             <section id="service_details" className='bg-[#00042a] py-24'>
@@ -41,7 +43,7 @@ const ServiceDetails = () => {
                             <h1 className='text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-snug'>Services for Creating Custom Websites</h1>
                             <p className='text-white text-[20px] mt-10'>Skynet Silicon is a full-service agency comprised of leading web designers from around the globe. Whether building a website from scratch or redesigning your current digital presence, our web design services include:</p>
                             <div className="service_offers mt-14">
-                                {serviceOffers.map((offer, index) => {
+                                {service.service_explanation.map((offer, index) => {
                                     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse({ isExpanded: openIndex === index });
                                     return (
                                         <div className={`service_offer_card mb-10 ${isExpanded ? "isActiveService" : ""}`} key={index}>
@@ -49,7 +51,7 @@ const ServiceDetails = () => {
                                                 {offer.title}
                                             </button>
                                             <div {...getCollapseProps()} className='service_offer_card_content mt-3'>
-                                                <p className='text-white text-[20px] leading-relaxed'>{offer.content}</p>
+                                                <p className='text-white text-[20px] leading-relaxed'>{offer.description}</p>
                                             </div>
                                         </div>
                                     );

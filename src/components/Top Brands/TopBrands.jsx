@@ -12,8 +12,8 @@ const TopBrands = () => {
                         <motion.div initial={{ y: "100px", opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, transition: { duration: 1 }, y: 0 }} className="col-12 text-center">
                             <div className="top-brands-info">
                                 <h5 className='text-2xl text-white uppercase font-bold'>Clients Across Industries</h5>
-                                <h4 className='sm:text-5xl text-3xl text-white uppercase font-bold my-4'>Full-Service Web Design Agency</h4>
-                                <p className='text-xl sm:text-2xl text-white font-normal'>From startups to Fortune 500 companies <br />
+                                <h4 className='sm:text-5xl text-3xl text-white uppercase font-bold my-4'>Skynet Silicon – Web, Mobile & Marketing Experts</h4>
+                                <p className='text-xl sm:text-2xl text-white font-normal'>
                                     <span className='text-2xl sm:text-3xl font-medium'>we create custom solutions that grow brands online</span>
                                 </p>
                             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Button } from "../index";
 import { Link } from 'react-router-dom';
@@ -9,6 +9,7 @@ const NavbarMenuItems = ({
 
   const [activeLink, setActiveLink] = useState(""); // Active link state
   const [isSubMenu, setIsSubMenu] = useState(false);
+  const [categories, setCategories] = useState([]);
 
   // Function to handle click on links
   const handleLinkClick = (link) => {
@@ -16,7 +17,6 @@ const NavbarMenuItems = ({
     setIsSubMenu(!isSubMenu);
   };
 
-  console.log(activeLink)
 
   return (
     <>
@@ -36,28 +36,28 @@ const NavbarMenuItems = ({
             </a>
             <div className={`navbar_sub_menu flex ${activeLink === "services" ? "opacity-100" : "opacity-0"} transition-all duration-300 ease-in-out items-start ${activeLink === "services" ? "lg:h-[240px] h-[120px] overflow-y-auto" : "h-0"}`}>
               <div className="sub_menu me-4">
-                <h3 className='lg:text-white text-[#04e4ff] text-lg uppercase font-bold my-3'>Branding</h3>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base'>Branding Service</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Logo Design</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Brand Identity</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Graphic Design</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Brand Marketing</a>
+                <h3 className='lg:text-white text-[#04e4ff] text-lg uppercase font-bold my-3'>Marketing</h3>
+                <Link to={`/service/branding-service`} className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base'>Branding Service</Link>
+                <Link to={`/service/brand-identity`} className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Brand Identity</Link>
+                <Link to={`/service/social-media-marketing`} className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Social Media Marketing</Link>
+                <Link to={`/service/seo`} className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>SEO</Link>
+                <Link to={`/service/brand-marketing`} className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Brand Marketing</Link>
               </div>
               <div className="sub_menu me-4">
-                <h3 className='lg:text-white text-[#04e4ff] text-lg uppercase font-bold my-3'>Web Design</h3>
-                <a href='/coming-soon' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Custom Design</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Responsive Design</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Redesign Identity</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Wordpress Design</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>eCommerce Marketing</a>
+                <h3 className='lg:text-white text-[#04e4ff] text-lg uppercase font-bold my-3'>Design</h3>
+                <Link to={`/service/web-design`} className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Web Design</Link>
+                <Link to={`/service/wordpress-design`} className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Wordpress Design</Link>
+                <Link to={`/service/redesign-identity`} className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Redesign Identity</Link>
+                <Link to={`/service/graphic-design`} className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Graphic Design</Link>
+                <Link to={`/service/logo-design`} className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Logo Design</Link>
               </div>
               <div className="sub_menu me-4">
                 <h3 className='lg:text-white text-[#04e4ff] text-lg uppercase font-bold my-3'>Development</h3>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>App Development</a>
+                <Link to={`/service/app-development`} className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>App Development</Link>
                 <Link to='/service/web-development' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Web Development</Link>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Appsheet Development</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Social Media Marketing</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>SEO</a>
+                <Link to={`/service/appsheet-development`} className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Appsheet Development</Link>
+                <Link to={`/service/ecommerce-development`} className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Ecommerce Development</Link>
+                <Link to={`/service/wordpress-development`} className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Wordpress Development</Link>
               </div>
             </div>
           </li>

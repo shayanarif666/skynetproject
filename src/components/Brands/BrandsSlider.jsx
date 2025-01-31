@@ -16,8 +16,6 @@ const BrandsSlider = ({
     ...props
 }) => {
 
-    console.log("items,", items)
-
     return (
         <>
             <div id="marquee" data-scroll-section className={`${sliderGap}`}>

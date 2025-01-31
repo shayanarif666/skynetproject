@@ -1,38 +1,56 @@
 import React from 'react'
 
-const WhyUs = () => {
+const WhyUs = ({ service }) => {
+
+    console.log("why us", service)
+
     return (
         <>
             <section id="why_us" className='py-24'>
                 <div className="container text-center">
                     <div className="why_we_use_content">
 
-                        <h2 className='text-4xl font-bold mb-10'>For a Top-Performing Website, You Need <span className='text-[#1092fd]'>Website Development.</span> <br /> Here’s Why</h2>
+                        <h2 className='text-4xl font-bold mb-10'>For a Top-Performing, You Need <span className='text-[#1092fd]'>{service.category.name}.</span> <br /> Here’s Why</h2>
 
-                        <div className="lg:flex mb-6">
-                            <div className="lg:w-[33.3%] bg-[#1092fd] p-10">
-                                <h2 className='text-white text-2xl font-semibold'>1. Flexibility in Website Design</h2>
-                                <p className='text-white mt-6 text-sm'>When a Website specialist from Skynet Silicon is in charge of you, you have access to a completely configurable web platform that is perfect for building almost any type of website. Use Website web design to showcase your blog, eCommerce store, or business website however you like. A Website developer can create a custom Website theme for you, and there are over 5,000 free themes that serve as standards for proper Website website design.</p>
-                            </div>
-                            <div className="lg:w-[33.3%] bg-[#fff] p-10">
-                                <h2 className='text-[#222] text-2xl font-semibold'>2. Dynamic Websites</h2>
-                                <p className='text-[#222] mt-6 text-sm'>In essence, your website is the focal point of your brand's online presence and a vital instrument for global commercial marketing.
-                                    In order to help you expand considerably, we have invested a great deal of time and energy into developing an aesthetically pleasing, highly functional, and interactive website for you.</p>
-                            </div>
-                            <div className="lg:w-[33.3%] bg-[#1092fd] p-10">
-                                <h2 className='text-[#fff] text-2xl font-semibold'>3. E-Commerce Development</h2>
-                                <p className='text-[#fff] mt-6 text-sm'>To increase their market share, millions of companies now offer their goods online via e-commerce platforms. Our staff builds websites that meet your clients' needs because they understand their psychology. In addition, we guarantee that our services are always rigorously tested, 100% bug-free, and reasonably priced.
-                                    Our flexible websites and IT assistance have helped our current clients increase their businesses by 150%.
-                                    Talk to our team about your project. Could you be the next Daraz, Amazon, or eBay?</p>
-                            </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                            {
+                                service.why_you_need_service.map((serv, index, arr) => {
+                                    console.log(arr)
+                                    return (
+                                        <div className={`md:m-1 lg:m-0 why_us_content ${index % 2 !== 0 ? "bg-[#1092fd]" : "bg-[#222]"} rounded-[0px] p-10`}>
+                                            <h2 className={` text-white  text-2xl font-semibold`}>{serv.title}</h2>
+                                            <p className={`text-white mt-6 text-sm`}>{serv.description}</p>
+                                        </div>
+                                    )
+                                })
+                            }
+                            {
+                                service.category.name === "App Development" &&
+                                <>
+                                    <div className="md:m-1 lg:m-0 why_us_content bg-[#222] rounded-[0px] p-10">
+                                        <h2 className={` text-white  text-2xl font-semibold`}>5. Cross-Platform Compatibility</h2>
+                                        <p className={`text-white mt-6 text-sm`}>In today’s digital landscape, having a website or app that works seamlessly across different devices and platforms is crucial. Our development process ensures responsive web design and cross-platform mobile app development, making sure your product functions smoothly on iOS, Android, and various screen sizes. This guarantees a consistent user experience, reducing bounce rates and increasing engagement, whether accessed from a smartphone, tablet, or desktop.</p>
+                                    </div>
+                                    <div className="md:m-1 lg:m-0 why_us_content bg-[#1092fd] p-10">
+                                        <h2 className={` text-white  text-2xl font-semibold`}>6. AI & Automation in Development</h2>
+                                        <p className={`text-white mt-6 text-sm`}>Integrating AI-powered features and automation in web and mobile development enhances efficiency, personalization, and user engagement. From chatbots for customer service to machine learning-driven recommendations, AI makes applications smarter and more intuitive. Automation streamlines processes like testing, content updates, and data analysis, improving overall performance. By leveraging AI and automation, businesses can stay ahead in a competitive market with intelligent and adaptive digital solutions.</p>
+                                    </div>
+                                </>
+                            }
+                            {
+                                service.category.name === "Web Development" &&
+                                <>
+                                    <div className="md:m-1 lg:m-0 why_us_content bg-[#222] rounded-[0px] p-10">
+                                        <h2 className={` text-white  text-2xl font-semibold`}>5. AI-Powered Web Development</h2>
+                                        <p className={`text-white mt-6 text-sm`}>The future of web development lies in Artificial Intelligence. By integrating AI-driven chatbots, personalized content recommendations, and smart automation, websites can deliver an enhanced user experience. AI-powered analytics help businesses understand user behavior and optimize their platforms for better engagement and conversions. Machine learning algorithms ensure websites adapt dynamically to user needs, making digital platforms more intelligent and user-friendly.</p>
+                                    </div>
+                                    <div className="md:m-1 lg:m-0 why_us_content bg-[#1092fd] p-10">
+                                        <h2 className={` text-white  text-2xl font-semibold`}>6. Progressive Web Applications (PWA)</h2>
+                                        <p className={`text-white mt-6 text-sm`}>Progressive Web Applications (PWAs) combine the best of websites and mobile apps, offering a fast, responsive, and offline-capable experience. PWAs load quickly, work across all devices, and provide app-like functionality without requiring downloads from an app store. With improved performance, push notifications, and offline access, PWAs increase engagement and offer a seamless browsing experience, making them an essential part of modern web development.</p>
+                                    </div>
+                                </>
+                            }
                         </div>
-                        <div className="lg:flex mb-6 justify-center">
-                            <div className="lg:w-[33.3%] bg-[#fff] p-10">
-                                <h2 className='text-[#222] text-2xl font-semibold'>4. SEO-Ready Website Design</h2>
-                                <p className='text-[#222] mt-6 text-sm'>Website development plays a crucial role in building a strong online presence, and optimizing your site for search engines is easier than ever. A well-structured website allows you to implement SEO best practices, such as using clean code, optimizing URLs, adding metadata, and ensuring fast loading speeds. With responsive design, mobile-friendliness, and accessibility, modern web development enhances user experience—one of the key factors that search engines reward with higher rankings. By leveraging cutting-edge frameworks and SEO-driven strategies, you can create a website that not only looks great but also drives organic traffic and improves conversions.</p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>
