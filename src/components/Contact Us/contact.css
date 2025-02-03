@@ -42,9 +42,11 @@
 #contact .flag_dropdown_after::after {
     content: "";
     display: block;
-    width: 95%;
+    width: 100%;
     height: 1px;
     background-color: rgb(255, 255, 255, .4);
+}
+#contact .input-group::after {
     transform: translateY(-20px);
 }
 
@@ -81,28 +83,31 @@
 }
 
 
-.flag-dropdown,
-.selected-flag:hover,
-.react-tel-input .flag-dropdown.open .selected-flag {
+#contact .contact_form .flag-dropdown,
+#contact .contact_form .selected-flag:hover,
+#contact .contact_form .react-tel-input .flag-dropdown.open .selected-flag {
     background: none !important;
 }
 
-.selected-flag {
+#contact .contact_form .selected-flag {
     padding: 0 !important;
     margin: 0 !important;
 }
 
-.react-tel-input .flag {
+#contact .contact_form .react-tel-input .flag {
     scale: 1.7;
     overflow: hidden;
 }
 
-.flag-dropdown.open ul.country-list li.search {
+#contact .contact_form .flag-dropdown.open ul.country-list li.search {
     border-bottom: 1px solid #04e4ff;
     width: 100%;
     z-index: 99
 }
 
-.flag-dropdown.open ul.country-list li.search input.search-box {
+#contact .contact_form .flag-dropdown.open ul.country-list li.search input.search-box {
     color: #000 !important;
+}
+#contact .contact_form .form-select {
+    filter: brightness(1000);
 }

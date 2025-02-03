@@ -20,7 +20,6 @@ Marquee Section
 }
 
 #marquee .item img {
-
     transition: all .3s ease-in-out;
 }
 #marquee .item img:hover {

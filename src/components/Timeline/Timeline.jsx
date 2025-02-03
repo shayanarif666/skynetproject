@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from "framer-motion";
 import "./timeline.css";
 import { Button } from '../index';
 
@@ -12,10 +11,10 @@ const Timeline = () => {
                         <div className="lg:w-1/2 w-full py-20 px-4 bg-white timeline_section_left_column z-[99]">
                             <div className="timeline_left_section sticky top-0 min-h[40%]">
                                 <div className="timeline_left_content">
-                                    <motion.h2 initial={{ x: "-200px", opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className='text-[#1b2c5c] font-bold text-3xl md:text-4xl xl:text-6xl'>Technologies We Use to Meet Customer Needs</motion.h2>
-                                    <motion.p initial={{ x: "-200px", opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className='text-lg font-medium text-[#1b2c5c] mt-4'>with our comprehensive services for software development We at Skynet Silicon provide full-cycle software development services that are customized to meet your particular project specifications and commercial objectives. From technological roadmaps and IT strategy advice to scalable
+                                    <h2 className='text-[#1b2c5c] font-bold text-3xl md:text-4xl xl:text-6xl'>Technologies We Use to Meet Customer Needs</h2>
+                                    <p className='text-lg font-medium text-[#1b2c5c] mt-4'>with our comprehensive services for software development We at Skynet Silicon provide full-cycle software development services that are customized to meet your particular project specifications and commercial objectives. From technological roadmaps and IT strategy advice to scalable
 
-end-to-end solutions—you're in good hands!</motion.p>
+end-to-end solutions—you're in good hands!</p>
                                 </div>
                                 <div className="timeline_left_img mt-4">
                                     <img src="https://www.digitalsilk.com/wp-content/uploads/2024/10/CMS-Platform-Tailored-For-Client-Needs.png.webp" alt="" />

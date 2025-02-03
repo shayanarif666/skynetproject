@@ -14,7 +14,7 @@ const ServiceOffers = () => {
                         <div className="lg:w-[60%] lg:ml-[5%]">
                             <h1 className='text-3xl sm:text-4xl md:text-5xl leading-tight font-bold text-[#00042a] mb-10'>Empower Your Business with Our Wide Range of Services </h1>
                             <div className="services">
-                                <div className="sm:flex mb-10">
+                                <div className="sm:flex">
                                     <div className="service-detail flex">
                                         <div className="service-detail-icon me-2 mt-[3px]">
                                             <IoMdCheckmark></IoMdCheckmark>
@@ -36,7 +36,7 @@ const ServiceOffers = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="sm:flex mb-10">
+                                <div className="sm:flex lg:my-10">
                                     <div className="service-detail flex">
                                         <div className="service-detail-icon me-2 mt-[3px]">
                                             <IoMdCheckmark></IoMdCheckmark>

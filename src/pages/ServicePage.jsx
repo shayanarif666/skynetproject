@@ -19,22 +19,32 @@ const ServicePage = () => {
 
     // Service Api Call
     useEffect(() => {
+        let isMounted = true;
+
         (async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/services/${category}`);
+                const response = await fetch(`https://skynetsiliconserver.vercel.app/api/services/${category}`);
                 const data = await response.json();
-                setService(data);
-                console.log("data", data);
+                if (isMounted) {
+                    setService(data);
+                    console.log("Fetched Data:", data);
+                }
             } catch (error) {
-                console.log("Error", error)
+                console.log("Error fetching service data:", error);
             }
-        })()
-    }, [category])
+        })();
+
+        return () => {
+            isMounted = false; // Cleanup function to prevent state updates on unmounted components
+            // setService(null)
+        };
+    }, [category]);
 
     return (
         <>
-            <div className={`container-full h-screen w-screen ${isClick ? "active overflow-y-hidden h-screen" : ""}`}>
 
+
+            <div className={`container-full h-screen w-screen ${isClick ? "active overflow-y-hidden h-screen" : ""}`}>
                 {service &&
                     <>
                         <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />

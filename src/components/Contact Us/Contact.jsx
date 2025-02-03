@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import { FaGithub } from "react-icons/fa";
+import React, { useEffect, useState } from 'react';
+import { FaFacebook } from "react-icons/fa";
 import { CiHome, CiUser, CiLinkedin } from "react-icons/ci";
 import { MdAlternateEmail, MdOutlinePhoneInTalk } from "react-icons/md";
 import { RiMessage2Line } from "react-icons/ri";
+import { BiCategory } from "react-icons/bi";
 import "./contact.css";
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import { BeatLoader } from 'react-spinners';
 import PhoneInput from 'react-phone-input-2';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
 
@@ -15,6 +17,7 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [phone, setPhone] = useState('');
+    const [categories, setCategories] = useState([]);
 
     // Form
     const {
@@ -24,6 +27,7 @@ const Contact = () => {
         formState: { errors },
     } = useForm();
 
+    // Contact Form 
     const handleContactForm = async (data, event) => {
         setLoading(true);
         try {
@@ -64,23 +68,37 @@ const Contact = () => {
         }
     }
 
+    // Fetching Categories
+    useEffect(() => {
+        (async () => {
+            try {
+                const response = await fetch("https://skynetsiliconserver.vercel.app/api/category");
+                if (!response.ok) throw new Error("Categories could not fetch");
+                const data = await response.json();
+                setCategories(data);
+            } catch (error) {
+                console.log(error);
+            }
+        })()
+    }, [])
+
     return (
         <>
-            <section id="contact" className='py-20'>
+            <section id="contact" className='py-20 overflow-hidden'>
                 <div className="container">
-                    <div className="row gy-5">
+                    <div className="row">
                         <div className="col-12 col-lg-6 mt-20">
                             <h4 className='text-white uppercase text-2xl font-bold mb-3'>Take The Silk Road To</h4>
                             <h1 className='text-sky-400 font-bold text-4xl sm:text-5xl'>Digitizing Your Business <br /> Growth</h1>
                             <div className="follow-us flex items-center mt-5">
                                 <h5 className='text-lg text-white font-semibold me-20'>Follow Us</h5>
                                 <div className="social-icons flex items-center">
-                                    <CiLinkedin className='text-white text-4xl me-3 border-2 border-slate-500 rounded-full p-1'></CiLinkedin>
-                                    <FaGithub className='text-white text-4xl border-2 border-slate-500 rounded-full p-1'></FaGithub>
+                                    <Link to={`https://www.linkedin.com/company/skynet-silicon/posts/?feedView=all`} target='_blank'><CiLinkedin className='text-[#fff] text-4xl me-3 border-2 border-slate-500 rounded-full p-1 hover:bg-white hover:text-[#00042a] transition-all duration-300 cursor-pointer'></CiLinkedin></Link>
+                                    <Link to={``}><FaFacebook className='text-[#fff] text-4xl hover:bg-white hover:text-[#00042a] border-2 border-slate-500 rounded-full p-1 transition-all duration-300 cursor-pointer'></FaFacebook></Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-lg-6">
+                        <div className="contact_form col-12 col-lg-6">
                             <h3 className='text-white font-bold text-4xl text-center'>Start A Conversation With Us</h3>
                             <form action="" className='mt-5' onSubmit={handleSubmit(handleContactForm)}>
                                 <div className="input-group">
@@ -100,22 +118,42 @@ const Contact = () => {
                                 {errors.email && <p role="alert" className='text-red-500 mb-3'>**{errors.email.message}</p>}
 
                                 <div className="flag_dropdown_after mb-3">
-                                    <PhoneInput
-                                        country={"us"} // Set Default Country (Change to 'pk', 'gb', etc.)
-                                        enableSearch={true} // Allows search in dropdown
-                                        disableDropdown={false} // Ensures dropdown remains enabled
-                                        international
-                                        withCountryCallingCode
-                                        value={phone}
-                                        onChange={(phone) => {
-                                            setPhone(phone);
-                                            setValue("phone", phone, { shouldValidate: true });
-                                        }}
-                                        className="z-[999] ms-3"
-                                        inputStyle={{ width: "100%", padding: "20px", borderRadius: "0", marginLeft: "50px" }}
-                                        countryCodeEditable={false} // Prevent users from manually editing the code
-                                    />
+                                    <div className="flex">
+                                        <span className="ms-[.7rem]">
+                                            <MdOutlinePhoneInTalk className='text-2xl text-white mt-1 me-3' />
+                                        </span>
+                                        <PhoneInput
+                                            country={"us"} // Set Default Country (Change to 'pk', 'gb', etc.)
+                                            enableSearch={true} // Allows search in dropdown
+                                            disableDropdown={false} // Ensures dropdown remains enabled
+                                            international
+                                            withCountryCallingCode
+                                            value={phone}
+                                            onChange={(phone) => {
+                                                setPhone(phone);
+                                                setValue("phone", phone, { shouldValidate: true });
+                                            }}
+                                            className="z-[999] ms-3"
+                                            inputStyle={{ width: "100%", padding: "20px", borderRadius: "0", marginLeft: "35px", display: "inline-block" }}
+                                            countryCodeEditable={false} // Prevent users from manually editing the code
+                                        />
+                                    </div>
                                 </div>
+
+                                <div className="flag_dropdown_after mb-4 mt-[2rem]">
+                                    <div className="flex">
+                                        <BiCategory className='text-white text-2xl mt-[6px] ms-[13px] me-[4px]' />
+                                        <select name="" id="" className='focus:shadow-none form-select bg-transparent border-none text-white cursor-pointer'>
+                                            <option hidden selected>Select Category</option>
+                                            {
+                                                categories?.map(({ _id, name, slug }) => (
+                                                    <option value={name} className='bg-[#00042a] border-2 border-[#00042a]' key={_id}>{name}</option>
+                                                ))
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+
                                 {/* Validation */}
                                 {errors.phone && <p className="text-red-500 mt-2">{errors.phone.message}</p>}
 
@@ -125,7 +163,7 @@ const Contact = () => {
                                 </div>
                                 {errors.message && <p role="alert" className='text-red-500 mb-3'>**{errors.message.message}</p>}
                                 <div className="text-start">
-                                    <button className='primary-white-btn after:bg-[radial-gradient(circle,_rgba(26,8,152,1)_0%,_rgba(24,12,75,1)_64%)] hover:text-white'>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
+                                    <button className='primary-white-btn hover:text-white'>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
                                 </div>
                             </form>
                         </div>

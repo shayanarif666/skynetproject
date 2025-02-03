@@ -4,7 +4,6 @@ import { VscSettingsGear } from "react-icons/vsc";
 import { MdOutlineSendToMobile, MdOutlineDesignServices  } from "react-icons/md";
 import { FaMagnifyingGlassChart } from "react-icons/fa6";
 import { RiLuggageCartLine } from "react-icons/ri";
-import { motion } from 'framer-motion';
 import custom_web_image from "/Images/Services/custom_web_design-min.webp";
 import responsive_web_image from "/Images/Services/responsive_design-min.webp";
 import seo_web_image from "/Images/Services/seo-min.webp";
@@ -24,16 +23,16 @@ const Services = ({
             <section id="services" className='py-20 bg-[#00042a] relative overflow-clip'>
                 <div className="container">
                     <div className="lg:flex g-4">
-                        <motion.div viewport={{ once: true }} initial={{ x: "-300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="w-full lg:w-2/5 service-intro-column">
+                        <div className="w-full lg:w-2/5 service-intro-column">
                             <div className="service-intro min-h[40%] sticky top-0 p-[2rem]">
                                 <h3 className='text-sky-500 font-semibold text-xl mb-4'>WHY SKYNET SILICON?</h3>
                                 <h1 className='text-white font-bold text-3xl md:text-4xl xl:text-6xl'>{title}</h1>
                                 <p className='text-white text-lg mt-5'>{description}</p>
                                 <img className='img-fluid mt-20' src="https://www.digitalsilk.com/wp-content/uploads/2024/09/Explore-Our-Web-Design-Services-1.png.webp" alt="" />
                             </div>
-                        </motion.div>
+                        </div>
                         <div className="service_detail_before_effect w-full lg:w-3/5">
-                            <motion.div viewport={{ once: true }} initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="service-detail group mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
+                            <div className="service-detail group mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
                                 <div className="service-detail-wrapper block absolute top-0 left-0 w-full h-full z-[-1] invisible transition-all duration-300 opacity-0 bg-white" style={{ background: `url(${custom_web_image})` }}></div>
                                 <TbDeviceDesktopStar className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
                                 <h3 className='text-white font-bold text-3xl sm:text-4xl my-3 group-hover:text-[#00042a]'>Unique Web Design</h3>
@@ -41,8 +40,8 @@ const Services = ({
 
                                 <div className="overlay-circle-one block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[320px] h-[320px] bg-[#7e57c2] right-0 bottom-[-50%]"></div>
                                 <div className="overlay-circle-two block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[270px] h-[270px] bg-[#00b9ff] right-[-10%] top-[20%]"></div>
-                            </motion.div>
-                            <motion.div viewport={{ once: true }} initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
+                            </div>
+                            <div className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
                                 <div className="service-detail-wrapper block absolute top-0 left-0 w-full h-full z-[-1] invisible transition-all duration-300 opacity-0 bg-white" style={{ background: `url(${redesign_web_image})` }}></div>
 
                                 <VscSettingsGear className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
@@ -52,8 +51,8 @@ const Services = ({
 
                                 <div className="overlay-circle-one block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[320px] h-[320px] bg-[#7e57c2] right-0 bottom-[-50%]"></div>
                                 <div className="overlay-circle-two block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[270px] h-[270px] bg-[#00b9ff] right-[-10%] top-[20%]"></div>
-                            </motion.div>
-                            <motion.div viewport={{ once: true }} initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
+                            </div>
+                            <div className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
                                 <div className="service-detail-wrapper block absolute top-0 left-0 w-full h-full z-[-1] invisible transition-all duration-300 opacity-0 bg-white" style={{ background: `url(${responsive_web_image})` }}></div>
 
                                 <MdOutlineSendToMobile className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
@@ -62,8 +61,8 @@ const Services = ({
 
                                 <div className="overlay-circle-one block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[320px] h-[320px] bg-[#7e57c2] right-0 bottom-[-50%]"></div>
                                 <div className="overlay-circle-two block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[270px] h-[270px] bg-[#00b9ff] right-[-10%] top-[20%]"></div>
-                            </motion.div>
-                            <motion.div viewport={{ once: true }} initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
+                            </div>
+                            <div className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
                                 <div className="service-detail-wrapper block absolute top-0 left-0 w-full h-full z-[-1] invisible transition-all duration-300 opacity-0 bg-white" style={{ background: `url(${seo_web_image})` }}></div>
 
                                 <FaMagnifyingGlassChart className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
@@ -72,8 +71,8 @@ const Services = ({
 
                                 <div className="overlay-circle-one block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[320px] h-[320px] bg-[#7e57c2] right-0 bottom-[-50%]"></div>
                                 <div className="overlay-circle-two block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[270px] h-[270px] bg-[#00b9ff] right-[-10%] top-[20%]"></div>
-                            </motion.div>
-                            <motion.div viewport={{ once: true }} initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
+                            </div>
+                            <div className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
                                 <div className="service-detail-wrapper block absolute top-0 left-0 w-full h-full z-[-1] invisible transition-all duration-300 opacity-0 bg-white" style={{ background: `url(${uiux_web_image})` }}></div>
 
                                 <MdOutlineDesignServices className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
@@ -82,8 +81,8 @@ const Services = ({
 
                                 <div className="overlay-circle-one block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[320px] h-[320px] bg-[#7e57c2] right-0 bottom-[-50%]"></div>
                                 <div className="overlay-circle-two block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[270px] h-[270px] bg-[#00b9ff] right-[-10%] top-[20%]"></div>
-                            </motion.div>
-                            <motion.div viewport={{ once: true }} initial={{ x: "300px", opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 1 }, x: 0 }} className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
+                            </div>
+                            <div className="service-detail mb-4 bg-[#070b30] px-[4rem] py-[3rem] relative overflow-hidden w-full z-[999] hover:w-[60vw] cursor-pointer">
                                 <div className="service-detail-wrapper block absolute top-0 left-0 w-full h-full z-[-1] invisible transition-all duration-300 opacity-0 bg-white" style={{ background: `url(${ecommerce_web_image})` }}></div>
 
                                 <RiLuggageCartLine className='text-white text-8xl border-2 border-sky-500 rounded-full p-3' />
@@ -92,7 +91,7 @@ const Services = ({
 
                                 <div className="overlay-circle-one block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[320px] h-[320px] bg-[#7e57c2] right-0 bottom-[-50%]"></div>
                                 <div className="overlay-circle-two block rounded-full absolute blur-2xl invisible opacity-0 transition-all duration-300 ease-in-out w-[270px] h-[270px] bg-[#00b9ff] right-[-10%] top-[20%]"></div>
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
                 </div>

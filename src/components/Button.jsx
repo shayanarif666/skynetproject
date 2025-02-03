@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Button = ({
+    link="",
     label,
     Icon = null,
     href = '/',
@@ -12,9 +13,11 @@ const Button = ({
 }) => {
     return (
         <>
-            <button className={`${className} after:${bgColor} ${color} `} {...props}>
-                {label} 
-            </button>
+            <Link to={link}>
+                <button className={`${className} after:${bgColor} ${color} `} {...props}>
+                    {label}
+                </button>
+            </Link>
         </>
     )
 }

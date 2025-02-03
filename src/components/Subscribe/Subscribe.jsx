@@ -13,7 +13,7 @@ const Subscribe = () => {
                                 <p className='text-white text-2xl lg:text-3xl font-bold my-4'><em className='text-sky-500'>Subscribe</em> Now & Lead the Digital Revolution!</p>
                                 <div className="relative">
                                     <input type="email" placeholder='Enter Your Email' className='p-4 form-control bg-transparent w-100 text-white rounded-none border-1 border-gray-600' />
-                                    <button className='bg-sky-500 text-white py-3 px-4 uppercase font-medium mt-2 me-3 hover:bg-sky-600 absolute top-0 right-0'>Subscribe</button>
+                                    <button className='bg-sky-500 text-white py-3 px-4 uppercase font-medium mt-2 me-2 hover:bg-sky-600 absolute top-0 right-0'>Subscribe</button>
                                 </div>
                             </div>
                         </div>

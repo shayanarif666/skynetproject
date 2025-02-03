@@ -1,8 +1,8 @@
 import React from 'react'
 
-const WhyUs = ({ service }) => {
-
-    console.log("why us", service)
+const WhyUs = ({ 
+    service = { category: null, featured_list: [], title: "", description: "", category: "" },
+}) => {
 
     return (
         <>
@@ -10,11 +10,11 @@ const WhyUs = ({ service }) => {
                 <div className="container text-center">
                     <div className="why_we_use_content">
 
-                        <h2 className='text-4xl font-bold mb-10'>For a Top-Performing, You Need <span className='text-[#1092fd]'>{service.category.name}.</span> <br /> Here’s Why</h2>
+                        <h2 className='text-4xl font-bold mb-10'>For a Top-Performing, You Need <span className='text-[#1092fd]'>{service.category.name|| "Loading Service..."}.</span> <br /> Here’s Why</h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                             {
-                                service.why_you_need_service.map((serv, index, arr) => {
+                                service.why_you_need_service?.map((serv, index, arr) => {
                                     console.log(arr)
                                     return (
                                         <div className={`md:m-1 lg:m-0 why_us_content ${index % 2 !== 0 ? "bg-[#1092fd]" : "bg-[#222]"} rounded-[0px] p-10`}>

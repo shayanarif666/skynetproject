@@ -51,7 +51,7 @@ const UploadService = () => {
     // Submitting Form
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         const formData = {
             title,
             description,
@@ -65,7 +65,7 @@ const UploadService = () => {
         console.log(formData)
 
         try {
-            const response = await fetch("http://localhost:5000/api/services", {
+            const response = await fetch("https://skynetsiliconserver.vercel.app/api/services", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -82,7 +82,7 @@ const UploadService = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/category");
+                const response = await fetch("https://skynetsiliconserver.vercel.app/api/category");
                 const data = await response.json();
                 setCategories(data);
                 console.log(data)
@@ -95,7 +95,7 @@ const UploadService = () => {
     return (
         <>
             <div className="container py-4 bg-gray-300">
-                <form action='' onSubmit={handleSubmit}>
+                <form action=''>
                     {/* Basic Fields */}
                     <label className='text-gray-500 text-sm'>Service Title*</label>
                     <input type="text" className='form-control focus:shadow-none rounded-none mb-4 mt-1' value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Service Title" />
@@ -105,8 +105,9 @@ const UploadService = () => {
 
                     <label className='text-gray-500 text-sm'>Select Category</label>
                     <select name="" onChange={(e) => setCategory(e.target.value)} className='form-select focus:shadow-none rounded-none mb-4 mt-1' id="">
+                        <option selected hidden>Select Category</option>
                         {
-                            categories && categories.map(({_id, name}) => {
+                            categories && categories.map(({_id, name, slug}) => {
                                 return <option value={name} key={_id}>{name}</option>
                             })
                         }
@@ -149,7 +150,7 @@ const UploadService = () => {
                     ))}
                     <button type="button" className='bg-gray-500 hover:bg-gray-600 text-sm text-white px-2 py-1 mb-4 mt-3' onClick={addWhyChooseUs}>+ Add Benefit</button> <br />
 
-                    <Button className='primary-white-btn' label={"Create Service"} />
+                    <button className='primary-white-btn hover:text-[#fff]' onClick={handleSubmit}>Create Service</button>
                 </form>
             </div>
         </>

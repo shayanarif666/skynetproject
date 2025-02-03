@@ -31,7 +31,7 @@ const Navbar = ({
                     </div>
                     <div className="ml-[auto] navbar_request_btn sm:block hidden">
                         <a href="/coming-soon">
-                            <Button className="text-white secondary-button" label="Request a Quote" />
+                            <Button link="/contact" className="text-white secondary-button" label="Request a Quote" />
                         </a>
                     </div>
                     <div className='navbar_hamburger_menu flex items-center' onClick={onSideMenuChange}>

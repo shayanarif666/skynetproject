@@ -173,7 +173,6 @@
     .container-full.active {
         min-height: 100%;
         transition: all .3s ease-in-out;
-        overflow-y: scroll !important;
     }
 
     .container-full.active .navbar {
@@ -185,7 +184,7 @@
     }
 
     .navbar_menu_links {
-        position: relative !important;
+        position: relative;
         justify-content: center;
         width: 100%;
     }

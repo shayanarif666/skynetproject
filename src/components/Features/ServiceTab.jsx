@@ -1,7 +1,6 @@
 import React from 'react';
 import "./features.css";
-import { motion } from "framer-motion"
-import { Logo, Button } from '../index';
+import { Button } from '../index';
 
 const ServiceTab = () => {
     return (
@@ -9,10 +8,10 @@ const ServiceTab = () => {
             <section id="service_tab_section" className='service_tab_section py-24'>
                 <div className="container">
 
-                    <motion.div initial={{ y: "100px", opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1, transition: { duration: .6 }, y: 0 }} className="service_tab_section_intro text-center mb-20">
+                    <div className="service_tab_section_intro text-center mb-20">
                         <h3 className='text-white font-bold text-2xl uppercase'>Our Experts Have Won Industry Awards</h3>
                         <h1 className='text-white font-bold text-5xl mt-3'>Recognized Web Design Experts</h1>
-                    </motion.div>
+                    </div>
 
                     <ul class="nav nav-pills mb-5 w-100 flex items-center justify-around service_tab_section_tab" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">

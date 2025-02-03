@@ -15,25 +15,23 @@ const BrandsSlider = ({
     sliderGap = "",
     ...props
 }) => {
-
     return (
         <>
-            <div id="marquee" data-scroll-section className={`${sliderGap}`}>
+            <div id="marquee" className={`${sliderGap}`}>
                 <div className={`marquee-wrapper flex items-center justify-center`} style={{ height: bannerHeight, backgroundColor: `${bgColor}` }}>
                     {
                         items?.map((item, ind) => {
                             return (
                                 <div
-                                    class={`item item${item.id} ${className} mt-2`}
+                                    class={`item item${item.id} ${className} mt-2 absolute p-[2.5rem]`}
+                                    key={item.id}
                                     style={{
-                                        position: "absolute",
                                         width: itemWidth,
                                         [scrollPosition]: `max(calc(${itemWidth} * ${items.length}), 100%)`,
                                         animation: `${scrollTo} 80s infinite linear`, 
                                         animationDelay: `calc(80s / ${items?.length} * (${items?.length} - ${item.id}) * -1)`,
                                         border: `${border}`,
                                         backgroundColor: `${itemBgColor}`,
-                                        padding: "2.5rem",
                                     }}
                                 >
                                      <div className="client_logos">

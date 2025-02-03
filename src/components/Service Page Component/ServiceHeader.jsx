@@ -48,17 +48,17 @@ const ServiceHeader = ({
                             >
                                 Service
                             </Link>
-                            <Typography className='text-white'>{service.category.name}</Typography>
+                            <Typography className='text-white'>{service.category.name || "Loading Service..."}</Typography>
                         </Breadcrumbs>
-                        <h2 className={`mt-6 header_primary_heading text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white font-bold leading-tight 2xl:max-w-[1500px]`}>
-                            {service.title}
+                        <h2 className={`mt-6 header_primary_heading text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white font-bold 2xl:max-w-[1500px]`}>
+                            {service.title || "Loading Service..."}
                         </h2>
                         <p className='text-white text-lg mt-10'>
-                            {service.description}
+                            {service.description || "Loading Service..."}
                         </p>
                         <ul className='mt-10'>
                             {
-                                service.featured_list.map((list, index) => (
+                                service?.featured_list?.map((list, index) => (
                                     <li key={index} className='text-white mb-3 text-lg font-medium flex items-center'>
                                         <MdKeyboardDoubleArrowRight className='text-[#04e4ff] me-2 text-xl mt-px' />
                                         <span>{list}</span>
@@ -67,7 +67,7 @@ const ServiceHeader = ({
                             }
                         </ul>
                         <div className="service_header_btn mt-10">
-                            <Button className="primary-white-btn" label="REQUEST A QUOTE" />
+                            <Button link="/contact" className="primary-white-btn" label="REQUEST A QUOTE" />
                         </div>
 
                         <div className="short_company_info_ratings flex items-center my-10">

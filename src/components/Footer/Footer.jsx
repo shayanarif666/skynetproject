@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import logoSrc from "../../assets/logo-white.svg"
 import Logo from '../Logo';
 
-const Footer = () => {
+const Footer = ({ className }) => {
     return (
         <>
-            <footer id="footer" className='py-20'>
+            <footer id="footer" className={`py-20 ${className}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-12 mb-5">
@@ -18,51 +18,51 @@ const Footer = () => {
                     </div>
                     <div className="row gy-5">
                         <div className="col-lg-3 col-sm-6">
-                            <div className="footer-menus-links">
-                                <h3>Main Services</h3>
-                                <div className="footer-menus">
-                                    <Link to="/custom-web-design">Custom Web Design</Link>
-                                    <Link to="/branding-service">Branding Services</Link>
-                                    <Link to="/ecommerce-design" s>eCommerce Design</Link>
-                                    <Link to="/shopify-website-design">Shopify Website Design</Link>
-                                    <Link to="/wordpress-web-design">WordPress Web Design</Link>
+                            <div className="footer-menus-links relative ml-[2rem]">
+                                <h3 className='text-white font-bold text-[1.4rem]'>Main Services</h3>
+                                <div className="footer-menus mt-[2rem]">
+                                    <Link to="/custom-web-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Custom Web Design</Link>
+                                    <Link to="/branding-service" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Branding Services</Link>
+                                    <Link to="/ecommerce-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>eCommerce Design</Link>
+                                    <Link to="/shopify-website-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Shopify Website Design</Link>
+                                    <Link to="/wordpress-web-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>WordPress Web Design</Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-sm-6">
-                            <div className="footer-menus-links">
-                                <h3>Apps & Development</h3>
-                                <div className="footer-menus">
-                                    <Link to="/website-cost-calculator">Website Cost Calculator</Link>
-                                    <Link to="/conversion-rate-calculator">Conversion Rate Calculator</Link>
-                                    <Link to="/custom-web-development">Custom Web Development</Link>
-                                    <Link to="/magento-development">Magento Development</Link>
-                                    <Link to="/ecommerce-development">eCommerce Development</Link>
-                                    <Link to="/woocommerce-development">WooCommerce Development</Link>
+                            <div className="footer-menus-links relative ml-[2rem]">
+                                <h3 className='text-white font-bold text-[1.4rem]'>Apps & Development</h3>
+                                <div className="footer-menus mt-[2rem]">
+                                    <Link to="/website-cost-calculator" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Website Cost Calculator</Link>
+                                    <Link to="/conversion-rate-calculator" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Conversion Rate Calculator</Link>
+                                    <Link to="/custom-web-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Custom Web Development</Link>
+                                    <Link to="/magento-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Magento Development</Link>
+                                    <Link to="/ecommerce-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>eCommerce Development</Link>
+                                    <Link to="/woocommerce-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>WooCommerce Development</Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-sm-6">
-                            <div className="footer-menus-links">
-                                <h3>Location Services</h3>
-                                <div className="footer-menus">
-                                    <Link to="/nyc-web-design">NYC Web Design</Link>
-                                    <Link to="/location">Karachi Web Design</Link>
+                            <div className="footer-menus-links relative ml-[2rem]">
+                                <h3 className='text-white font-bold text-[1.4rem]'>Location Services</h3>
+                                <div className="footer-menus mt-[2rem]">
+                                    <Link to="/nyc-web-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>NYC Web Design</Link>
+                                    <Link to="/location" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Karachi Web Design</Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-sm-6">
-                            <div className="footer-menus-links">
-                                <h3>Company</h3>
-                                <div className="footer-menus">
-                                    <Link to="/about-us">About Us</Link>
-                                    <Link to="/case-studies">Case Studies</Link>
-                                    <Link to="/digital-trends">Digital Trends</Link>
-                                    <Link to="/top-companies">Top Companies</Link>
-                                    <Link to="/reviews">Reviews</Link>
-                                    <Link to="/sitemap">Sitemap</Link>
-                                    <Link to="/locations">Locations</Link>
-                                    <Link to="/contact">Contact Us</Link>
+                            <div className="footer-menus-links relative ml-[2rem]">
+                                <h3 className='text-white font-bold text-[1.4rem]'>Company</h3>
+                                <div className="footer-menus mt-[2rem]">
+                                    <Link to="/about-us" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>About Us</Link>
+                                    <Link to="/case-studies" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Case Studies</Link>
+                                    <Link to="/digital-trends" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Digital Trends</Link>
+                                    <Link to="/top-companies" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Top Companies</Link>
+                                    <Link to="/reviews" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Reviews</Link>
+                                    <Link to="/sitemap" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Sitemap</Link>
+                                    <Link to="/locations" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Locations</Link>
+                                    <Link to="/contact" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Contact Us</Link>
                                 </div>
                             </div>
                         </div>
@@ -77,11 +77,11 @@ const Footer = () => {
                     </div>
                     <div className="row mt-4 g-4">
                         <div className="col-xl-3 col-lg-4 col-md-6">
-                            <div className="footer-company-location footer-company-location-one flex items-center">
-                                <div className="footer-company-location-logo">
+                            <div className="footer-company-location mx-[1rem] footer-company-location-one flex items-center">
+                                <div className="footer-company-location-logo text-[#298aca] text-[4rem] font-extrabold">
                                     <h1 className="logo">KH</h1>
                                 </div>
-                                <div className="footer-company-location-address ms-4">
+                                <div className="footer-company-location-address mt-[1rem] ms-4">
                                     <address className='text-sm text-white'>St:104 Hunaid City
                                         <h6 className='text-sm text-white'>Gulistan-e-jouhar</h6>
                                         Karachi.</address>
