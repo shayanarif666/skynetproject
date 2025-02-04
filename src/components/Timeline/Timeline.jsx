@@ -23,7 +23,7 @@ end-to-end solutions—you're in good hands!</p>
                         </div>
                         <div className="lg:w-1/2 w-full">
                             <div className="timeline_right_section">
-                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#c6eff9] to-[#38d5fc] py-5 sm:border-l-[6px] sm:border-[#61dbfb] cursor-pointer">
+                                <div className="timeline_card_react timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#c6eff9] to-[#38d5fc] py-5 sm:border-l-[6px] sm:border-[#61dbfb] cursor-pointer">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" className='-ms-20 me-10 img-fluid max-w-52 sm:block hidden' alt="" />
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">
@@ -37,7 +37,7 @@ end-to-end solutions—you're in good hands!</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#a5ff90] to-[#529f41]  py-5 sm:border-l-[6px] sm:border-[#529f41] cursor-pointer">
+                                <div className="timeline_card_node timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#a5ff90] to-[#529f41]  py-5 sm:border-l-[6px] sm:border-[#529f41] cursor-pointer">
                                     <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png" className='sm:block hidden me-10 max-w-52 -ms-20' alt="" />
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">
@@ -51,7 +51,7 @@ end-to-end solutions—you're in good hands!</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#bdd9ff] to-[#105fc7] py-5 sm:border-l-[6px] sm:border-[#3B7BCE] cursor-pointer">
+                                <div className="timeline_card_wordpress timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#bdd9ff] to-[#105fc7] py-5 sm:border-l-[6px] sm:border-[#3B7BCE] cursor-pointer">
                                     <img src="https://www.digitalsilk.com/wp-content/uploads/2024/09/g10.svg" className='sm:block hidden me-10' alt="" />
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">
@@ -65,7 +65,7 @@ end-to-end solutions—you're in good hands!</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#e8ffa9] to-[#97c024] py-5 sm:border-l-[6px] sm:border-[#97c024] cursor-pointer">
+                                <div className="timeline_card_android timeline_card relative z-[9] flex items-center after:bg-gradient-to-r sm:hover:after:bg-gradient-to-r from-[#e8ffa9] to-[#97c024] py-5 sm:border-l-[6px] sm:border-[#97c024] cursor-pointer">
                                     <img src="https://www.freeiconspng.com/thumbs/android-icon/android-png-0.png" className='sm:block hidden -ms-20 me-10 img-fluid max-w-52' alt="" />
                                     <div className="timeline_card_content ps-lg-0 ps-sm-4 sm:px-0 px-4">
                                         <div className="timeline_card_title">

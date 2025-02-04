@@ -13,10 +13,10 @@ const ContactPage = () => {
 
     return (
         <>
-            <div className={`container-full h-screen w-screen ${isClick ? "active overflow-hidden" : ""}`}>
+            <div className={`container-full w-screen ${isClick ? "active overflow-y-clip" : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
                 <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />
                 <div className={`main-container `}>
-                    <div className={`main w-full z-[50] origin-left transition-all duration-500 h-screen`}>
+                    <div className={`main w-full z-[50] origin-left transition-all duration-500 h-screen ${isClick ? "pointer-events-none" : ""}`}>
                         <ContactHeader />
                         <main id="main_sections" className={`transition-all ease-in ${isClick ? "opacity-0 pointer-events-none" : "opacity-100"
                             }`}>

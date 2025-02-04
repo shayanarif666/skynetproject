@@ -66,7 +66,7 @@ const CompanyLocation = () => {
                             companyLocation?.map((company) => (
                                 <div
                                     key={company.id}
-                                    className={`w-full cursor-pointer company_location_card relative flex justify-center flex-col my-4 transition-all duration-500 mx-2 company_location_card_before_effect`}
+                                    className={`w-full company_location_card relative flex justify-center flex-col my-4 transition-all duration-500 mx-2 company_location_card_before_effect`}
                                     style={{
                                         // flexBasis: selectedIndex === company.id ? "70%" : "30%",
                                         height: "100%",

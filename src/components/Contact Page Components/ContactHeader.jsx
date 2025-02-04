@@ -11,9 +11,9 @@ const ContactHeader = ({
 }) => {
     return (
         <>
-            <header className={`header relative flex items-center justify-center`}>
+            <header className={`header lg:min-h-[100%] relative flex items-center justify-center`}>
                 <div className={`absolute w-full h-full bg-gradient-to-r z-[-1] from-[rgba(135,63,231,1)] to-[rgba(72,135,231,1)] opacity-100`}></div>
-                <div className="container lg:flex pb-[125px] pt-[250px]">
+                <div className="container lg:flex pb-[125px] pt-[250px] lg:pt-[270px]">
                     <div className="header_content px-3 lg:w-[45%] w-full lg:mb-0 mb-10">
                         <h3 className='uppercase text-white text-lg font-bold sm:text-center lg:text-left'>Powering the Digital Future</h3>
                         <h2 className={`mt-3 header_primary_heading text-4xl sm:text-5xl xl:text-6xl text-[#1bd9eb] font-bold 2xl:max-w-[1500px] sm:text-center lg:text-left`}>

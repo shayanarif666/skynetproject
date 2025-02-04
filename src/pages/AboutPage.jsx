@@ -13,7 +13,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className={`container-full h-screen w-screen ${isClick ? "active overflow-hidden" : ""}`}>
+      <div className={`container-full h-screen w-screen ${isClick ? "active overflow-y-clip" : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
         <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />
 
         <div className={`main-container `}>

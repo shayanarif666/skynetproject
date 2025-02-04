@@ -14,7 +14,7 @@
 }
 
 .coming-soon-logo svg {
-    animation: infiniteFlip 10s infinite ease-in-out;
+    animation: infiniteFlip 3s infinite ease-in-out;
     height: 100%;
     width: 100%;
 }

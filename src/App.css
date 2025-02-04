@@ -5,7 +5,7 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 /* ############################ 
@@ -21,11 +21,11 @@ Custom Scrollbar
     }
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: #aaa;
+        background: #777;
         cursor: pointer;
     }
     ::-webkit-scrollbar-thumb:hover {
-        background: #999;
+        background: #555;
     }
 }
 /* ############################ 

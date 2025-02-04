@@ -12,31 +12,10 @@
     margin-right: 15px;
 }
 
-#contact form input,
-#contact form textarea {
-    background: none !important;
-    border-radius: 0% !important;
-    border: transparent !important;
-    padding: 15px 0 !important;
-    display: inline-block;
-    color: #fff;
-}
-
 #contact form textarea {
     height: 200px;
 }
 
-#contact form input::placeholder,
-#contact form textarea::placeholder {
-    color: #fff !important;
-    font-weight: 600 !important;
-    font-size: 1.1rem !important;
-}
-
-#contact form input:focus,
-#contact form textarea:focus {
-    box-shadow: none !important;
-}
 
 #contact .input-group::after,
 #contact .flag_dropdown_after::after {
@@ -92,15 +71,18 @@
 #contact .contact_form .selected-flag {
     padding: 0 !important;
     margin: 0 !important;
+    width: 0 !important;
 }
 
 #contact .contact_form .react-tel-input .flag {
     scale: 1.7;
-    overflow: hidden;
+}
+.react-tel-input .selected-flag .arrow {
+    border-top: 3px solid #fff !important;
 }
 
 #contact .contact_form .flag-dropdown.open ul.country-list li.search {
-    border-bottom: 1px solid #04e4ff;
+    border-bottom: 1px solid #1092fd;
     width: 100%;
     z-index: 99
 }

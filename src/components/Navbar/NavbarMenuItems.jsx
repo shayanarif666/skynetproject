@@ -36,18 +36,18 @@ const NavbarMenuItems = ({
             <div className={`navbar_sub_menu flex ${activeLink === "services" ? "visible opacity-100" : "invisible opacity-0"} transition-all duration-300 linear items-start ${activeLink === "services" ? "lg:h-[240px] h-[140px] overflow-y-auto overflow-x-hidden" : "h-0 overflow-hidden"}`}>
               <div className="sub_menu">
                 <h3 className='lg:text-white text-[#04e4ff] text-lg uppercase font-bold my-3'>Marketing</h3>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base'>Branding Service</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Brand Identity</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Brand Marketing</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Social Media Marketing</a>
-                <a href='/coming-soon' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>SEO</a>
+                <Link to='/service/branding-service' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base'>Branding Service</Link>
+                <Link to='/service/brand-identity' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Brand Identity</Link>
+                <Link to='/service/brand-marketing' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Brand Marketing</Link>
+                <Link to='/service/social-media-marketing' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Social Media Marketing</Link>
+                <Link to='/service/search-engine-optimization' className='text-white transition-all duration-300 block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>SEO</Link>
               </div>
               <div className="sub_menu lg:mx-[1.5rem]">
                 <h3 className='lg:text-white text-[#04e4ff] text-lg uppercase font-bold my-3'>Design</h3>
                 <Link to='/service/web-design' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Web Design</Link>
                 <Link to='/service/redesign-identity' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Redesign Identity</Link>
-                <Link to='/coming-soon' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Graphic Design</Link>
-                <Link to='/coming-soon' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Logo Design</Link>
+                <Link to='/service/graphic-design' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Graphic Design</Link>
+                <Link to='/service/logo-design' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Logo Design</Link>
               </div>
               <div className="sub_menu">
                 <h3 className='lg:text-white text-[#04e4ff] text-lg uppercase font-bold my-3'>Development</h3>

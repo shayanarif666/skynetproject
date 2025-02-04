@@ -44,7 +44,7 @@ const ServicePage = () => {
         <>
 
 
-            <div className={`container-full h-screen w-screen ${isClick ? "active overflow-y-hidden h-screen" : ""}`}>
+            <div className={`container-full h-screen w-screen ${isClick ? "active overflow-y-clip" : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
                 {service &&
                     <>
                         <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />

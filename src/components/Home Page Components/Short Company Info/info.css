@@ -31,6 +31,12 @@
     margin-left: -2.5rem;
 }
 
+@media (max-width: 1700px) {
+    .company_intro_video_after::after {
+        transform: translate(250px, -50%);
+    }
+}
+
 @media (max-width: 768px) {
     .company_intro_video_after::after {
         content: "";

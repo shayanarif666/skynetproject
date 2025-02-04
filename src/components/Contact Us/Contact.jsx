@@ -103,17 +103,17 @@ const Contact = () => {
                             <form action="" className='mt-5' onSubmit={handleSubmit(handleContactForm)}>
                                 <div className="input-group">
                                     <span class="input-group-text"><CiUser /></span>
-                                    <input name='name' {...register("name", { required: "Name is required" })} type="name" className='form-control mb-4' placeholder='Name*' />
+                                    <input name='name' {...register("name", { required: "Name is required" })} type="name" className='placeholder:text-white placeholder:font-semibold placeholder:text-[1.1rem] focus:shadow-none form-control mb-4 bg-transparent rounded-none border-none py-[15px] inline-block text-white' placeholder='Name*' />
                                 </div>
                                 {errors.name && <p role="alert" className='text-red-500 mb-3'>**{errors.name.message}</p>}
                                 <div className="input-group">
                                     <span class="input-group-text"><CiHome /></span>
-                                    <input name='company_name' type="name" {...register("company_name", { required: "Organization Name is required" })} className='form-control mb-4' placeholder='Company Name*' />
+                                    <input name='company_name' type="name" {...register("company_name", { required: "Organization Name is required" })} className='placeholder:text-white placeholder:font-semibold placeholder:text-[1.1rem] focus:shadow-none form-control mb-4 bg-transparent rounded-none border-none py-[15px] inline-block text-white' placeholder='Company Name*' />
                                 </div>
                                 {errors.company_name && <p role="alert" className='text-red-500 mb-3'>**{errors.company_name.message}</p>}
                                 <div className="input-group">
                                     <span class="input-group-text"><MdAlternateEmail /></span>
-                                    <input name='email' type="email" {...register("email", { required: "Email is required" })} className='form-control mb-4' placeholder='Email*' />
+                                    <input name='email' type="email" {...register("email", { required: "Email is required" })} className='placeholder:text-white placeholder:font-semibold placeholder:text-[1.1rem] focus:shadow-none form-control mb-4 bg-transparent rounded-none border-none py-[15px] inline-block text-white' placeholder='Email*' />
                                 </div>
                                 {errors.email && <p role="alert" className='text-red-500 mb-3'>**{errors.email.message}</p>}
 
@@ -134,7 +134,7 @@ const Contact = () => {
                                                 setValue("phone", phone, { shouldValidate: true });
                                             }}
                                             className="z-[999] ms-3"
-                                            inputStyle={{ width: "100%", padding: "20px", borderRadius: "0", marginLeft: "35px", display: "inline-block" }}
+                                            inputStyle={{ width: "100%", padding: "20px", borderRadius: "0", marginLeft: "35px", display: "inline-block", background: "transparent", color: "#fff", boxShadow: "none", border: "none" }}
                                             countryCodeEditable={false} // Prevent users from manually editing the code
                                         />
                                     </div>
@@ -159,7 +159,7 @@ const Contact = () => {
 
                                 <div className="input-group input-group-textarea mb-5">
                                     <span class="input-group-text input-group-textarea-text"><RiMessage2Line /></span>
-                                    <textarea name="message" {...register("message", { required: "Message is required" })} className='form-control' placeholder='Your Message*' id=""></textarea>
+                                    <textarea name="message" {...register("message", { required: "Message is required" })} className='placeholder:text-white placeholder:font-semibold placeholder:text-[1.1rem] focus:shadow-none form-control bg-transparent rounded-none border-none py-[15px] inline-block text-white' placeholder='Your Message*' id=""></textarea>
                                 </div>
                                 {errors.message && <p role="alert" className='text-red-500 mb-3'>**{errors.message.message}</p>}
                                 <div className="text-start">

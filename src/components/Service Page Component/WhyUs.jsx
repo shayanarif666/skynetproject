@@ -14,7 +14,7 @@ const WhyUs = ({
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                             {
-                                service.why_you_need_service?.map((serv, index, arr) => {
+                                service.why_you_need_service?.slice(0, 6).map((serv, index, arr) => {
                                     console.log(arr)
                                     return (
                                         <div className={`md:m-1 lg:m-0 why_us_content ${index % 2 !== 0 ? "bg-[#1092fd]" : "bg-[#222]"} rounded-[0px] p-10`}>

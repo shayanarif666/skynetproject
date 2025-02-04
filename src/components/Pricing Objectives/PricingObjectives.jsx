@@ -23,25 +23,25 @@ const PricingObjectives = () => {
                         <div className="col-lg-3 col-md-6">
                             <div className="pricing_features_list text-center">
                                 <h2 className='text-white text-3xl font-bold'>Your choice of platform</h2>
-                                <p className='text-white text-base font-normal my-4'>also plays a role in the cost. Templated solutions are more affordable while developing a fully custom site will increase the project’s total expense.</p>
+                                <p className='text-white text-base font-normal my-4'>The cost of a website depends on your chosen platform. Templated solutions are more affordable and easier to set up, while fully customized websites provide flexibility, better scalability, and advanced features but require higher investments for development.</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <div className="pricing_features_list text-center">
                                 <h2 className='text-white text-3xl font-bold'>Custom graphic elements</h2>
-                                <p className='text-white text-base font-normal my-4'>are essential for enhancing your web presence. However, the more complex the design requirements, the higher the overall cost.</p>
+                                <p className='text-white text-base font-normal my-4'>Custom graphic elements enhance your website’s visual appeal and branding. Simple designs are cost-effective, whereas complex, high-quality graphics and animations require skilled designers, increasing overall project costs while improving user experience, and brand identity significantly.</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <div className="pricing_features_list text-center">
                                 <h2 className='text-white text-3xl font-bold'>After launching</h2>
-                                <p className='text-white text-base font-normal my-4'>your new website, the next step is to outperform competitors in search engine rankings and secure top positions in your industry.</p>
+                                <p className='text-white text-base font-normal my-4'>Launching a website is just the beginning. To stay competitive, optimizing content, improving SEO, and tracking analytics are crucial. A well-optimized website helps in boosting rankings, increasing traffic, converting visitors, and outperforming industry competitors efficiently over time.</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <div className="pricing_features_list pricing_features_list_after text-center">
                                 <h2 className='text-white text-3xl font-bold'>Our full-service</h2>
-                                <p className='text-white text-base font-normal my-4'>web design company offers expertise to clients of all sizes. You can use our design cost calculator below for an estimate or schedule a free consultation with one of our experts to discuss your project’s specifics.</p>
+                                <p className='text-white text-base font-normal my-4'>We provide comprehensive web design services tailored for businesses of all sizes. Use our pricing calculator for budget estimation or schedule a free consultation with our experienced team to discuss project requirements, strategies, and effective design solutions today.</p>
                             </div>
                         </div>
                     </div>

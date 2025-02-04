@@ -24,5 +24,4 @@ Marquee Section
 }
 #marquee .item img:hover {
     filter: none;
-    cursor: pointer;
 }

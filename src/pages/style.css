@@ -1,11 +1,5 @@
 .container-full {
     background: radial-gradient(circle, rgba(94, 5, 122, 1) 0%, rgba(17, 69, 140, 1) 75%);
-    transform-style: preserve-3d;
-}
-
-.logo img {
-    filter: brightness(1000%) saturate(0);
-    width: 250px;
 }
 
 .navbar_hamburger_menu .hamburger-menu .bar:before,
@@ -31,7 +25,6 @@
     transform-style: preserve-3d;
 }
 
-
 .container-full.active .bar {
     transform: rotate(360deg);
     background-color: transparent;
@@ -47,7 +40,6 @@
 
 .container-full.active .main {
     animation: main-animation 0.5s ease;
-    cursor: pointer;
     transform: perspective(1300px) rotateY(30deg) translateZ(250px) scale(.6) translateY(80px);
 }
 

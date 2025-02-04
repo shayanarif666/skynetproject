@@ -21,11 +21,11 @@ const Footer = ({ className }) => {
                             <div className="footer-menus-links relative ml-[2rem]">
                                 <h3 className='text-white font-bold text-[1.4rem]'>Main Services</h3>
                                 <div className="footer-menus mt-[2rem]">
-                                    <Link to="/custom-web-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Custom Web Design</Link>
-                                    <Link to="/branding-service" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Branding Services</Link>
-                                    <Link to="/ecommerce-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>eCommerce Design</Link>
-                                    <Link to="/shopify-website-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Shopify Website Design</Link>
-                                    <Link to="/wordpress-web-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>WordPress Web Design</Link>
+                                    <Link to="/service/web-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Web Development</Link>
+                                    <Link to="/service/wordpress-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Wordpress Development</Link>
+                                    <Link to="/service/ecommerce-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Ecommerce Development</Link>
+                                    <Link to="/service/graphic-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Graphic Design</Link>
+                                    <Link to="/service/app-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Mobile App Development</Link>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@ const Footer = ({ className }) => {
                             <div className="footer-menus-links relative ml-[2rem]">
                                 <h3 className='text-white font-bold text-[1.4rem]'>Location Services</h3>
                                 <div className="footer-menus mt-[2rem]">
-                                    <Link to="/nyc-web-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>NYC Web Design</Link>
+                                    {/* <Link to="/nyc-web-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>NYC Web Design</Link> */}
                                     <Link to="/location" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Karachi Web Design</Link>
                                 </div>
                             </div>
@@ -56,18 +56,18 @@ const Footer = ({ className }) => {
                                 <h3 className='text-white font-bold text-[1.4rem]'>Company</h3>
                                 <div className="footer-menus mt-[2rem]">
                                     <Link to="/about-us" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>About Us</Link>
-                                    <Link to="/case-studies" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Case Studies</Link>
+                                    {/* <Link to="/case-studies" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Case Studies</Link>
                                     <Link to="/digital-trends" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Digital Trends</Link>
                                     <Link to="/top-companies" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Top Companies</Link>
                                     <Link to="/reviews" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Reviews</Link>
                                     <Link to="/sitemap" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Sitemap</Link>
-                                    <Link to="/locations" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Locations</Link>
+                                    <Link to="/locations" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Locations</Link> */}
                                     <Link to="/contact" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Contact Us</Link>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="row mt-20 flex items-center">
+                    <div className="row mt-32 flex items-center">
                         <div className="col-xl-2 col-lg-3 col-md-4 col-sm-5 col-6">
                             <Logo src={logoSrc} />
                         </div>
