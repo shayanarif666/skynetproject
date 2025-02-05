@@ -1,15 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { About, Header, Navbar, NavbarMenuItems, SkynetMean, SkynetVision, ServiceOffers, ValueAddition, Contact, Footer } from "../components/index";
-import AboutImage from "/Images/about-us-banner.webp"
+import AboutImage from "/Images/about-us-banner.webp";
+import ScrollToTop from "../components/ScrollToTop";
 import "./style.css";
 
-const AboutPage = () => {
+const AboutPage = ({ setLoading }) => {
 
   const [isClick, setIsClick] = useState(false);
 
   const handleSideMenu = () => {
     setIsClick(!isClick);
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 3300);
+  }, [])
 
   return (
     <>
@@ -30,13 +37,14 @@ const AboutPage = () => {
               <Footer />
             </main>
           </div>
-          
+
 
           <div className={`shadow one`}></div>
           <div className={`shadow two`}></div>
         </div>
 
         <NavbarMenuItems isClick={isClick} />
+        <ScrollToTop />
 
       </div>
     </>

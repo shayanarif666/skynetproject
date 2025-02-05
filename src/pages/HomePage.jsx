@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css"
 import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, CaseStudies, Contact, Footer, CompanyLocation, PricingObjectives, Subscribe, ServiceTab, BrandsSlider, TopBrands } from "../components/index";
 import { heroBrands } from "../components/brandItems";
+import ScrollToTop from "../components/ScrollToTop";
 
-const HomePage = () => {
+const HomePage = ({ setLoading }) => {
 
   const [isClick, setIsClick] = useState(false);
 
@@ -11,10 +12,16 @@ const HomePage = () => {
     setIsClick(!isClick);
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 3300);
+  }, [])
+
   return (
     <>
-      <div className={`container-full h-screen w-screen ${isClick ? "active overflow-y-clip" : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
 
+      <div className={`container-full h-screen w-screen ${isClick ? "active overflow-y-clip" : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
         <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />
 
         <div className={`main-container`}>
@@ -34,6 +41,7 @@ const HomePage = () => {
               <CompanyLocation />
               <Contact />
             </main>
+
             <Footer />
           </div>
 
@@ -42,6 +50,8 @@ const HomePage = () => {
         </div>
 
         <NavbarMenuItems isClick={isClick} />
+
+        <ScrollToTop />
 
       </div>
     </>

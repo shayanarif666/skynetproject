@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./style.css"
 import { Footer, Navbar, NavbarMenuItems, ServiceDetails, ServiceHeader, Subscribe, TopBrands, WhyUs, WhyWeUse } from "../components/index";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+import ScrollToTop from "../components/ScrollToTop";
 
-const ServicePage = () => {
+const ServicePage = ({ setApiLoading, apiLoading }) => {
 
     // State Variables
     const [isClick, setIsClick] = useState(false);
     const [service, setService] = useState(null);
+
+    const [loader, setLoader] = useState(true);
+
+    // Get Location
+    const location = useLocation();
 
     // Handle Aside Menu
     const handleSideMenu = () => {
@@ -20,13 +26,18 @@ const ServicePage = () => {
     // Service Api Call
     useEffect(() => {
         let isMounted = true;
-
         (async () => {
+            setApiLoading(true);
+            setIsClick(false);
             try {
                 const response = await fetch(`https://skynetsiliconserver.vercel.app/api/services/${category}`);
                 const data = await response.json();
                 if (isMounted) {
                     setService(data);
+                    setLoader(false);
+                    setTimeout(() => {
+                        setApiLoading(false)
+                    }, 2800);
                     console.log("Fetched Data:", data);
                 }
             } catch (error) {
@@ -34,20 +45,16 @@ const ServicePage = () => {
             }
         })();
 
-        return () => {
-            isMounted = false; // Cleanup function to prevent state updates on unmounted components
-            // setService(null)
-        };
-    }, [category]);
+    }, [category, location.pathname]);
 
     return (
         <>
-
-
             <div className={`container-full h-screen w-screen ${isClick ? "active overflow-y-clip" : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
-                {service &&
+                {
+                    service &&
                     <>
                         <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />
+
 
                         <div className={`main-container `}>
                             <div className={`main w-full h-screen z-50 origin-left transition-all duration-500`}>
@@ -68,6 +75,7 @@ const ServicePage = () => {
                         </div>
 
                         <NavbarMenuItems isClick={isClick} />
+                        <ScrollToTop />
                     </>
                 }
             </div>
@@ -76,3 +84,4 @@ const ServicePage = () => {
 }
 
 export default ServicePage
+

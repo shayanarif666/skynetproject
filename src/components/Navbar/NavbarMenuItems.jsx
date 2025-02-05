@@ -1,21 +1,28 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Button } from "../index";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const NavbarMenuItems = ({
   isClick,
+
 }) => {
 
   const [activeLink, setActiveLink] = useState(""); // Active link state
   const [isSubMenu, setIsSubMenu] = useState(false);
+
+  // Get Location
+  const location = useLocation();
 
   // Function to handle click on links
   const handleLinkClick = (link) => {
     setActiveLink((prev) => (prev === link ? "" : link)); // Toggle active link
     setIsSubMenu(!isSubMenu);
   };
+
+  // Pre Loader
+
 
   return (
     <>
