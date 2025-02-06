@@ -1,6 +1,7 @@
 import About from "./About Us Page Components/About"
 import BrandsSlider from "./Brands/BrandsSlider";
 import Button from "./Button";
+import BreadCrumb from "./BreadCrumb";
 import CompanyIntroVideo from "./Home Page Components/Short Company Info/CompanyIntroVideo";
 import CaseStudies from "./Case Studies/CaseStudies";
 import Contact from "./Contact Us/Contact";
@@ -17,7 +18,9 @@ import NavbarMenuItems from "./Navbar/NavbarMenuItems";
 import ShortCompanyInfo from "./Home Page Components/Short Company Info/ShortCompanyInfo";
 import Services from "./Services/Services";
 import Timeline from "./Timeline/Timeline";
+import PreLoader from "./PreLoader";
 import PricingObjectives from "./Pricing Objectives/PricingObjectives";
+import PricingPackage from "./Pricing Packages Page Components/PricingPackage";
 import ServiceTab from "./Features/ServiceTab";
 import Subscribe from "./Subscribe/Subscribe";
 import SkynetMean from "./About Us Page Components/SkynetMean";
@@ -25,6 +28,7 @@ import ServiceOffers from "./About Us Page Components/ServiceOffers";
 import SkynetVision from "./About Us Page Components/SkynetVision";
 import ServiceHeader from "./Service Page Component/ServiceHeader";
 import ServiceDetails from "./Service Page Component/ServiceDetails";
+import ScrollToTop from "./ScrollToTop";
 import ValueAddition from "./About Us Page Components/ValueAddition";
 import TopBrands from "./Top Brands/TopBrands";
 import WhyWeUse from "./Service Page Component/WhyWeUse";
@@ -34,6 +38,7 @@ export {
     About,
     BrandsSlider,
     Button,
+    BreadCrumb,
     CompanyIntroVideo,
     CaseStudies,
     Contact,
@@ -50,7 +55,9 @@ export {
     ShortCompanyInfo,
     Services,
     Timeline,
+    PreLoader,
     PricingObjectives,
+    PricingPackage,
     ServiceTab,
     Subscribe,
     SkynetMean,
@@ -58,6 +65,7 @@ export {
     SkynetVision,
     ServiceHeader,
     ServiceDetails,
+    ScrollToTop,
     ValueAddition,
     TopBrands,
     WhyWeUse,

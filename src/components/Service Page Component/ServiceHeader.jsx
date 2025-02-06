@@ -1,8 +1,7 @@
 import React from 'react';
-import { Breadcrumbs, Typography } from '@mui/material';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { IoStar, IoHome } from 'react-icons/io5';
+import { IoStar } from 'react-icons/io5';
 import { GiVibratingShield } from 'react-icons/gi';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -10,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import "./css/serviceHeader.css";
 
-import { Button } from "../index"
+import { BreadCrumb, Button } from "../index"
 
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -21,6 +20,7 @@ import serviceThree from "/Images/Portfolio/service (9).webp";
 
 const ServiceHeader = ({
     service,
+    isClick,
     minHeight = "h-[100vh]",
     className = '',
     ...props
@@ -31,25 +31,13 @@ const ServiceHeader = ({
 
     return (
         <>
-            <header className={`header h-[fit-content] md:h-screen relative flex items-center justify-center`}>
+            <header className={`header ${isClick ? "md:h-screen" : "md:min-h-screen"} h-[fit-content] relative flex items-center justify-center`}>
 
                 <div className={`absolute w-full h-full bg-gradient-to-r z-[-1] from-[rgba(135,63,231,1)] to-[rgba(72,135,231,1)] opacity-100`}></div>
 
-                <div className="container md:flex pt-[150px]">
+                <div className="container md:flex pt-[185px]">
                     <div className="header_content z-[999] px-3 md:w-[60%] w-full">
-                        <Breadcrumbs aria-label="breadcrumb" className='text-white' separator="›">
-                            <Link underline="hover" className='text-white' href="/">
-                                <span className='flex items-center'><IoHome className='mb-1 text-[#fff] me-2' /> Home</span>
-                            </Link>
-                            <Link
-                                underline="hover"
-                                className='text-white'
-                                href="/material-ui/getting-started/installation/"
-                            >
-                                Service
-                            </Link>
-                            <Typography className='text-white'>{service.category.name || "Loading Service..."}</Typography>
-                        </Breadcrumbs>
+                        <BreadCrumb category={service.category.name} page={"Service"} />
                         <h2 className={`mt-6 header_primary_heading text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white font-bold 2xl:max-w-[1500px]`}>
                             {service.title || "Loading Service..."}
                         </h2>

@@ -49,7 +49,7 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
 
     return (
         <>
-            <div className={`container-full h-screen w-screen ${isClick ? "active overflow-y-clip" : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
+            <div className={`container-full w-screen h-screen ${isClick ? "active overflow-y-clip " : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
                 {
                     service &&
                     <>
@@ -58,7 +58,7 @@ const ServicePage = ({ setApiLoading, apiLoading }) => {
 
                         <div className={`main-container `}>
                             <div className={`main w-full h-screen z-50 origin-left transition-all duration-500`}>
-                                <ServiceHeader service={service} />
+                                <ServiceHeader service={service} isClick={isClick} />
                                 <main id="main_sections" className={`transition-all ease-in ${isClick ? "opacity-0 pointer-events-none" : "opacity-100"
                                     }`}>
                                     <ServiceDetails service={service} />

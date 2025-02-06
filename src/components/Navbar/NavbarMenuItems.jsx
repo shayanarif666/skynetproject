@@ -106,6 +106,9 @@ const NavbarMenuItems = ({
             <a href="#" style={{ "--i": "0.3s" }} className='text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#0898ff]'>Case Studies</a>
           </li> */}
           <li>
+            <Link to="/pricing-package/web-development" style={{ "--i": "0.35s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Pricing</Link>
+          </li>
+          <li>
             <Link to="/contact" style={{ "--i": "0.35s" }} className='nav_menu_link text-[#eee] py-[.7rem] inline-block text-[1.5rem] lg:text-[2rem] uppercase font-bold tracking-[1px] transition-all duration-300 hover:text-[#04e4ff]'>Contact</Link>
           </li>
           <div className="quote mt-10">
