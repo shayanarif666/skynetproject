@@ -42,16 +42,4 @@
         display: flex;
         justify-content: center;
     }
-    .timeline_card_react {
-        background-color: #c6eff9;
-    }
-    .timeline_card_node {
-        background-color: #a5ff90;
-    }
-    .timeline_card_wordpress {
-        background-color: #bdd9ff;
-    }
-    .timeline_card_android {
-        background-color: #e8ffa9;
-    }
 }

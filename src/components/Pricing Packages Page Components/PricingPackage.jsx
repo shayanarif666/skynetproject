@@ -4,6 +4,7 @@ import { Space, Switch } from 'antd';
 import "./css/pricingPackage.css"
 import { pricing } from '../Pricing';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { FormControl, FormControlLabel, Radio, RadioGroup, useMediaQuery } from '@mui/material';
 
 const PricingPackage = ({
     minHeight = "h-full",
@@ -76,6 +77,9 @@ const PricingPackage = ({
         setPricingFeatures(updatedFeatures);
     }
 
+    // Media Query
+    const isMatch = useMediaQuery("(max-width:500px)")
+
     return (
         <>
             <section id='pricing_section' className={`${isClick ? "h-full overflow-hidden" : "min-h-[100%]"} z-[9] bg-[#00042a] relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[50vh] before:z-[-1] before:bg-gradient-to-r from-[rgba(72,135,231,1)] to-[rgba(135,63,231,1)] masked-image  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[40vh] after:z-[-1] after:bg-gradient-to-r`}>
@@ -90,8 +94,25 @@ const PricingPackage = ({
                         </div>
                         <div className="pricing_package_features_list mt-14 shadow-md">
                             <div className="pricing_package_select_feature  bg-gradient-to-r from-[rgba(15,73,144,1)] to-[rgba(70,35,134,1)] p-10">
-                                <div className="row g-4 flex items-center justify-between">
-                                    <div className="service_type col-12 ">
+                                <div className="grid grid-cols-4">
+                                    {
+                                        categories?.map(({ _id, slug, name }, ind) => (
+
+                                            <FormControl>
+                                                <RadioGroup
+                                                    aria-labelledby="demo-radio-buttons-group-label"
+                                                    defaultValue={selectedCategory}
+                                                    name="radio-buttons-group"
+                                                    onChange={(e) => console.log(e.target.value)}
+                                                >
+                                                    <FormControlLabel value={name} className='text-white' control={<Radio />} label={name} />
+                                                </RadioGroup>
+                                            </FormControl>
+
+                                        ))
+                                    }
+                                </div>
+                                {/* <div className="service_type col-12 ">
                                         <label htmlFor="" className='text-white text-xl font-semibold'>Service Type</label>
                                         <select
                                             value={selectedCategory}
@@ -104,12 +125,12 @@ const PricingPackage = ({
                                                 ))
                                             }
                                         </select>
-                                    </div>
-                                    {/* <div className="page_length col-sm-6">
+                                    </div> */}
+                                {/* <div className="page_length col-sm-6">
                                         <label htmlFor="" className='text-white text-xl font-semibold'>No. Of Unique Pages</label>
                                         <input type="number" defaultValue={5} max={20} min={1} className='focus:bg-[#1b2c5c] focus:shadow-none text-lg form-control bg-[#1b2c5c] mt-[15px] px-4 py-[12px] rounded-[25px] text-white border-none cursor-pointer' />
                                     </div> */}
-                                </div>
+
                             </div>
                             <div className="pricing_package_check_list  bg-[#131848] py-10 px-sm-14 px-10">
 
