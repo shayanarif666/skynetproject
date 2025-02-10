@@ -4,6 +4,7 @@ import { AboutPage, HomePage, ServicePage, ContactPage, UploadCategory, UploadFi
 import "./App.css";
 import ComingSoon from './components/ComingSoon';
 import PreLoader from './components/PreLoader';
+import { AnalyticsPage } from './admin/page/page';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,11 @@ function App() {
         <Route path='/upload-service' element={<UploadService />} />
         <Route path='/upload-category' element={<UploadCategory />} />
         <Route path='*' element={<ComingSoon />} />
+
+
+        {/* Admin Routes */}
+        <Route path='/dashboard' element={<AnalyticsPage />} />
+
       </Routes>
     </>
   );

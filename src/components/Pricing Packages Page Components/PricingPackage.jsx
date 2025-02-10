@@ -79,7 +79,7 @@ const PricingPackage = ({
     return (
         <>
             <section id='pricing_section' className={`${isClick ? "h-full overflow-hidden" : "min-h-[100%]"} z-[9] bg-[#00042a] relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[50vh] before:z-[-1] before:bg-gradient-to-r from-[rgba(72,135,231,1)] to-[rgba(135,63,231,1)] masked-image  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[40vh] after:z-[-1] after:bg-gradient-to-r`}>
-                <div className="container">
+                <div className="container max-w-[1280px]">
                     <div className="pricing_package_content pt-[200px] pb-[80px]">
                         <div className="pricing_package_breadcrumb">
                             <BreadCrumb page={"Pricing"} category={selectedCategory} />
