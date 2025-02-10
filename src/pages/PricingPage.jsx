@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Footer, Navbar, NavbarMenuItems, PricingPackage, ScrollToTop } from '../components/index';
-import { useParams } from 'react-router-dom';
+import { Footer, Navbar, NavbarMenuItems, PricingPackage, ScrollToTop, CallToAction } from '../components/index';
+import { useLocation, useParams } from 'react-router-dom';
 
 const PricingPage = () => {
 
@@ -12,11 +12,12 @@ const PricingPage = () => {
   }
 
   // Get Category From URL
-  const { category } = useParams();
+  const location = useLocation();
 
+  // Visit To Top
   useEffect(() => {
-    console.log(category)
-  }, [])
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <>
@@ -28,6 +29,7 @@ const PricingPage = () => {
             <PricingPackage isClick={isClick} />
             <div className={`transition-all ease-in ${isClick ? "opacity-0 pointer-events-none" : "opacity-100"
               }`}>
+              <CallToAction />
               <Footer />
             </div>
           </div>

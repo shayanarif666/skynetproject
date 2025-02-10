@@ -13,9 +13,6 @@ const Navbar = ({
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-
-            console.log(currentScrollY, lastScrollY)
-
             if (currentScrollY > lastScrollY && currentScrollY > 200) {
                 // Scroll Down -> Hide Navbar
                 setIsScrollingUp(false);

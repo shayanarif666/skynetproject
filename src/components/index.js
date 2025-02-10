@@ -7,6 +7,7 @@ import CaseStudies from "./Case Studies/CaseStudies";
 import Contact from "./Contact Us/Contact";
 import ContactHeader from "./Contact Page Components/ContactHeader";
 import CompanyLocation from "./Company Location/CompanyLocation";
+import CallToAction from "./Pricing Packages Page Components/CallToAction";
 import Features from "./Features/Features";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -44,6 +45,7 @@ export {
     Contact,
     ContactHeader,
     CompanyLocation,
+    CallToAction,
     Features,
     Footer,
     Header,

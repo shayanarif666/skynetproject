@@ -35,7 +35,7 @@ const HomePage = ({ setLoading }) => {
               <Services title={"Explore Our Experience as a Web Design Firm"} description={"Being a full-service web design firm, we take care of all your online requirements in one location. In-depth planning and research, unique designs, and digital tactics that expand your audience, increase traffic, and promote interaction are all part of our custom web design services."} />
               <Timeline />
               {/* <CaseStudies />
-                <ServiceTab /> */}
+              <ServiceTab /> */}
               <PricingObjectives />
               <Subscribe />
               <CompanyLocation />

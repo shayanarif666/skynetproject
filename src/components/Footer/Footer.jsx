@@ -33,12 +33,12 @@ const Footer = ({ className }) => {
                             <div className="footer-menus-links relative ml-[2rem]">
                                 <h3 className='text-white font-bold text-[1.4rem]'>Apps & Development</h3>
                                 <div className="footer-menus mt-[2rem]">
-                                    <Link to="/website-cost-calculator" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Website Cost Calculator</Link>
-                                    <Link to="/conversion-rate-calculator" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Conversion Rate Calculator</Link>
-                                    <Link to="/custom-web-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Custom Web Development</Link>
-                                    <Link to="/magento-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Magento Development</Link>
-                                    <Link to="/ecommerce-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>eCommerce Development</Link>
-                                    <Link to="/woocommerce-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>WooCommerce Development</Link>
+                                    <Link to="/pricing-package/web-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Website Cost Calculator</Link>
+                                    <Link to="/pricing-package/app-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>App Cost Calculator</Link>
+                                    <Link to="/pricing-package/ecommerce-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Ecommerce Cost Calculator</Link>
+                                    <Link to="/pricing-package/wordpress-development" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Wordpress Cost Calculator</Link>
+                                    <Link to="/pricing-package/graphic-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Graphic Design Cost Calculator</Link>
+                                    <Link to="/pricing-package/search-engine-optimization" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>SEO Cost Calculator</Link>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@ const Footer = ({ className }) => {
                                 <h3 className='text-white font-bold text-[1.4rem]'>Location Services</h3>
                                 <div className="footer-menus mt-[2rem]">
                                     {/* <Link to="/nyc-web-design" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>NYC Web Design</Link> */}
-                                    <Link to="/location" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Karachi Web Design</Link>
+                                    <Link to="/location" className='text-white block font-normal mt-[.7rem] text-[1.2rem]'>Karachi</Link>
                                 </div>
                             </div>
                         </div>

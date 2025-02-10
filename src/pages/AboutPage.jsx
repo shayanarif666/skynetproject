@@ -3,6 +3,7 @@ import { About, Header, Navbar, NavbarMenuItems, SkynetMean, SkynetVision, Servi
 import AboutImage from "/Images/about-us-banner.webp";
 import ScrollToTop from "../components/ScrollToTop";
 import "./style.css";
+import { useLocation } from 'react-router-dom';
 
 const AboutPage = ({ setLoading }) => {
 
@@ -17,6 +18,14 @@ const AboutPage = ({ setLoading }) => {
       setLoading(false)
     }, 3300);
   }, [])
+
+  // Get Category From URL
+  const location = useLocation();
+
+  // Visit To Top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <>

@@ -3,6 +3,7 @@ import "./style.css"
 import { Footer, Navbar, NavbarMenuItems } from "../components/index";
 import { ContactHeader } from "../components/index";
 import ScrollToTop from "../components/ScrollToTop";
+import { useLocation } from "react-router-dom";
 
 const ContactPage = ({ setLoading }) => {
 
@@ -18,9 +19,17 @@ const ContactPage = ({ setLoading }) => {
         }, 3300);
     }, [])
 
+    // Get Category From URL
+    const location = useLocation();
+
+    // Visit To Top
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return (
         <>
-            <div className={`container-full h-screen w-screen ${isClick ? "active " : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
+            <div className={`container-full h-full w-screen ${isClick ? "active " : ""}`} style={{ transformStyle: `${isClick ? "preserve-3d" : ""}` }}>
                 <Navbar onSideMenuChange={handleSideMenu} isClick={isClick} />
                 <div className={`main-container `}>
                     <div className={`main w-full z-[50] origin-left transition-all duration-500 h-screen ${isClick ? "pointer-events-none" : ""}`}>
