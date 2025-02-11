@@ -16,7 +16,7 @@ const PricingPage = () => {
 
   // Visit To Top
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 350);
   }, [location.pathname]);
 
   return (

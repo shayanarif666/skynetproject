@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { BreadCrumb } from '../index';
+import { BreadCrumb, CategorySelection } from '../index';
 import { Space, Switch } from 'antd';
 import "./css/pricingPackage.css"
 import { pricing } from '../Pricing';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { FormControl, FormControlLabel, Radio, RadioGroup, useMediaQuery } from '@mui/material';
+import { PackageTabs } from './PackageTabs';
 
 const PricingPackage = ({
     minHeight = "h-full",
@@ -14,9 +15,9 @@ const PricingPackage = ({
 }) => {
 
     // State Variables
-    const [categories, setCategories] = useState();
     const [pricingFeatures, setPricingFeatures] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("Web Development");
+    const [categories, setCategories] = useState();
 
     const { category } = useParams();
 
@@ -78,7 +79,8 @@ const PricingPackage = ({
     }
 
     // Media Query
-    const isMatch = useMediaQuery("(max-width:500px)")
+    const isMatch = useMediaQuery("(max-width:768px)");
+    const isHeading = useMediaQuery("(max-width:450px)")
 
     return (
         <>
@@ -93,56 +95,21 @@ const PricingPackage = ({
                             <p className='text-white text-xl font-semibold mt-[16px] max-w-[1000px]'>Get transparent pricing for web design, development, and marketing with Skynet Silicon. Estimate costs effortlessly and start your digital journey today</p>
                         </div>
                         <div className="pricing_package_features_list mt-14 shadow-md">
-                            <div className="pricing_package_select_feature  bg-gradient-to-r from-[rgba(15,73,144,1)] to-[rgba(70,35,134,1)] p-10">
-                                <div className="grid grid-cols-4">
-                                    {
-                                        categories?.map(({ _id, slug, name }, ind) => (
-
-                                            <FormControl>
-                                                <RadioGroup
-                                                    aria-labelledby="demo-radio-buttons-group-label"
-                                                    defaultValue={selectedCategory}
-                                                    name="radio-buttons-group"
-                                                    onChange={(e) => console.log(e.target.value)}
-                                                >
-                                                    <FormControlLabel value={name} className='text-white' control={<Radio />} label={name} />
-                                                </RadioGroup>
-                                            </FormControl>
-
-                                        ))
-                                    }
-                                </div>
-                                {/* <div className="service_type col-12 ">
-                                        <label htmlFor="" className='text-white text-xl font-semibold'>Service Type</label>
-                                        <select
-                                            value={selectedCategory}
-                                            onChange={(e) => handleCategory(e.target.value)}
-                                            className='focus:shadow-none text-lg form-select bg-[#1b2c5c] mt-[15px] px-4 py-[12px] rounded-[25px] text-white border-none cursor-pointer'>
-                                            <option hidden selected>Select Category</option>
-                                            {
-                                                categories?.map(({ _id, slug, name }) => (
-                                                    <option value={name} key={_id}>{name}</option>
-                                                ))
-                                            }
-                                        </select>
-                                    </div> */}
-                                {/* <div className="page_length col-sm-6">
-                                        <label htmlFor="" className='text-white text-xl font-semibold'>No. Of Unique Pages</label>
-                                        <input type="number" defaultValue={5} max={20} min={1} className='focus:bg-[#1b2c5c] focus:shadow-none text-lg form-control bg-[#1b2c5c] mt-[15px] px-4 py-[12px] rounded-[25px] text-white border-none cursor-pointer' />
-                                    </div> */}
-
+                            <div className="pricing_package_select_feature min-w-full relative bg-gradient-to-r from-[rgba(15,73,144,1)] to-[rgba(70,35,134,1)] p-4 mb-4 rounded-[25px]">
+                                <CategorySelection onCategoryChange={handleCategory} selectedCategory={selectedCategory} categories={categories} />
                             </div>
+                            
                             <div className="pricing_package_check_list  bg-[#131848] py-10 px-sm-14 px-10">
 
                                 <h2 className='text-white text-3xl font-bold mb-14'><span className='text-[#0ad5f1]'>{selectedCategory}</span> Cost Calculator</h2>
 
                                 <div className="pricing_package_check_list_title mb-[20px] flex items-center justify-between row">
                                     <div className="select_title col-6 md:col-9">
-                                        <h4 className='text-[#04e4ff] text-xl uppercase font-bold'>Select:</h4>
+                                        <h4 className={`text-[#04e4ff] ${isHeading ? "text-sm" : "text-base"} sm:text-base lg:text-xl uppercase font-bold me-4`}>Select:</h4>
                                     </div>
                                     <div className="price_title flex items-center col-6 md:col-3 justify-end">
-                                        <h4 className='text-[#04e4ff] lg:text-xl uppercase font-bold w-[50%] md:w-[35%] text-center me-sm-0 me-4'>Hours:</h4>
-                                        <h4 className='text-[#04e4ff] lg:text-xl uppercase font-bold w-[50%] md:w-[20%] text-center'>Price:</h4>
+                                        <h4 className={`text-[#04e4ff] ${isHeading ? "text-sm" : "text-base"} sm:text-base lg:text-xl uppercase font-bold w-[50%] md:w-[35%] text-center me-sm-0 me-4`}>Hours:</h4>
+                                        <h4 className={`text-[#04e4ff] ${isHeading ? "text-sm" : "text-base"} sm:text-base lg:text-xl uppercase font-bold w-[50%] md:w-[35%] text-center me-sm-0`}>Price:</h4>
                                     </div>
                                 </div>
 
@@ -162,11 +129,11 @@ const PricingPackage = ({
                                                     }
                                                 </div>
                                                 <div className="feature_price order-3 col-6 col-md-3 flex items-center p-[16px] justify-between">
-                                                    <div className="hours me-10 w-[50%] text-center">
-                                                        <h5 className='text-white text-xl font-semibold '>{feature.isChecked ? (feature.hours * feature.quantity) : 0} Hr</h5>
+                                                    <div className="hours me-[1rem] sm:me-10 w-[50%] text-center">
+                                                        <h5 className={`text-white ${isHeading ? "text-sm" : "text-base"}  sm:text-xl font-semibold`}>{feature.isChecked ? (feature.hours * feature.quantity) : 0} Hr</h5>
                                                     </div>
                                                     <div className="price w-[50%] text-center">
-                                                        <h5 className='text-white text-xl font-semibold'>${feature.isChecked ? (feature.price * feature.quantity) : 0}</h5>
+                                                        <h5 className={`text-white ${isHeading ? "text-sm" : "text-base"} sm:text-xl font-semibold`}>${feature.isChecked ? (feature.price * feature.quantity) : 0}</h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -184,10 +151,13 @@ const PricingPackage = ({
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* <PackageTabs /> */}
         </>
     )
 }
