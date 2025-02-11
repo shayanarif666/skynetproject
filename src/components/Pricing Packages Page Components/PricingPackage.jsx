@@ -104,12 +104,12 @@ const PricingPackage = ({
                                 <h2 className='text-white text-3xl font-bold mb-14'><span className='text-[#0ad5f1]'>{selectedCategory}</span> Cost Calculator</h2>
 
                                 <div className="pricing_package_check_list_title mb-[20px] flex items-center justify-between row">
-                                    <div className="select_title col-6 md:col-9">
+                                    <div className="select_title col-6 col-md-9">
                                         <h4 className={`text-[#04e4ff] ${isHeading ? "text-sm" : "text-base"} sm:text-base lg:text-xl uppercase font-bold me-4`}>Select:</h4>
                                     </div>
-                                    <div className="price_title flex items-center col-6 md:col-3 justify-end">
-                                        <h4 className={`text-[#04e4ff] ${isHeading ? "text-sm" : "text-base"} sm:text-base lg:text-xl uppercase font-bold w-[50%] md:w-[35%] text-center me-sm-0 me-4`}>Hours:</h4>
-                                        <h4 className={`text-[#04e4ff] ${isHeading ? "text-sm" : "text-base"} sm:text-base lg:text-xl uppercase font-bold w-[50%] md:w-[35%] text-center me-sm-0`}>Price:</h4>
+                                    <div className="price_title flex items-center col-6 col-md-3 justify-center">
+                                        <h4 className={`text-[#04e4ff] ${isHeading ? "text-sm" : "text-base"} sm:text-base lg:text-xl w-[50%] uppercase font-bold  text-center`}>Hours:</h4>
+                                        <h4 className={`text-[#04e4ff] ${isHeading ? "text-sm" : "text-base"} sm:text-base lg:text-xl w-[50%] uppercase font-bold text-center`}>Price:</h4>
                                     </div>
                                 </div>
 
@@ -129,10 +129,10 @@ const PricingPackage = ({
                                                     }
                                                 </div>
                                                 <div className="feature_price order-3 col-6 col-md-3 flex items-center p-[16px] justify-between">
-                                                    <div className="hours me-[1rem] sm:me-10 w-[50%] text-center">
+                                                    <div className="hours me-[1rem] sm:me-10 w-[100%] text-center">
                                                         <h5 className={`text-white ${isHeading ? "text-sm" : "text-base"}  sm:text-xl font-semibold`}>{feature.isChecked ? (feature.hours * feature.quantity) : 0} Hr</h5>
                                                     </div>
-                                                    <div className="price w-[50%] text-center">
+                                                    <div className="price w-[100%] text-center">
                                                         <h5 className={`text-white ${isHeading ? "text-sm" : "text-base"} sm:text-xl font-semibold`}>${feature.isChecked ? (feature.price * feature.quantity) : 0}</h5>
                                                     </div>
                                                 </div>

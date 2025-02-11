@@ -31,7 +31,7 @@ const ServiceHeader = ({
 
     return (
         <>
-            <header className={`header ${isClick ? "md:h-screen" : "md:min-h-screen"} h-[fit-content] relative flex items-center justify-center`}>
+            <header className={`header ${isClick ? "md:h-screen overflow-hidden" : "md:min-h-screen"} h-[fit-content] relative flex items-center justify-center`}>
 
                 <div className={`absolute w-full h-full bg-gradient-to-r z-[-1] from-[rgba(135,63,231,1)] to-[rgba(72,135,231,1)] opacity-100`}></div>
 
