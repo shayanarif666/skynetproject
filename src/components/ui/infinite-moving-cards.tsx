@@ -87,7 +87,7 @@ export const InfiniteMovingCards = ({
             className="relative border-slate-700 px-8 w-[450px]"
             key={item.src}
           >
-            <img src={item.src} className="max-w-full" alt="" />
+            <img src={item.src} className="max-w-full" alt="" loading="lazy" />
           </li>
         ))}
       </ul>

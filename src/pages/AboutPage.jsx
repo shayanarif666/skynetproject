@@ -4,6 +4,7 @@ import AboutImage from "/Images/about-us-banner.webp";
 import ScrollToTop from "../components/ScrollToTop";
 import "./style.css";
 import { useLocation } from 'react-router-dom';
+import { HeroParallaxEffect } from '../components/HeroParallaxEffect';
 
 const AboutPage = ({ setLoading }) => {
 
@@ -34,8 +35,9 @@ const AboutPage = ({ setLoading }) => {
 
         <div className={`main-container `}>
           <div className={`main w-full z-[999] origin-left border-[#ffffff66] transition-all duration-500 h-screen`}>
-            <Header bgImg={AboutImage} isHeroImagesContained={false} minHeight='h-[70vh]' bgColor="bg-[#2b1360]" title={`About Skynet Silicon`} subTitle="Skynet has a digital heart and a technological mind." />
-            <main id="main_sections" className={`transition-all ease-in bg-[#fff] ${isClick ? "pointer-events-none overflow-hidden h-[30vh]" : "opacity-100 h-full"
+            <HeroParallaxEffect isClick={isClick} />
+            {/* <Header isHeroImagesContained={false} bgColor="bg-[#2b1360]" title={`About Skynet Silicon`} subTitle="Skynet has a digital heart and a technological mind." /> */}
+            <main id="main_sections" className={`transition-all mt-[200vh] ease-in bg-[#fff] ${isClick ? "pointer-events-none overflow-hidden h-0 opacity-0" : "opacity-100 h-full"
               }`}>
               <About />
               <SkynetMean />

@@ -28,8 +28,8 @@ const PricingObjectives = () => {
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <div className="pricing_features_list text-center">
-                                <h2 className='text-white text-3xl font-bold'>Custom graphic elements</h2>
-                                <p className='text-white text-base font-normal my-4'>Custom graphic elements enhance your website’s visual appeal and branding. Simple designs are cost-effective, whereas complex, high-quality graphics and animations require skilled designers, increasing overall project costs while improving user experience, and brand identity significantly.</p>
+                                <h2 className='text-white text-3xl font-bold'>Boost web reach</h2>
+                                <p className='text-white text-base font-normal my-4'>Expanding your online presence is crucial for success. With strategic SEO, engaging content, and targeted marketing, we help your brand reach the right audience. Our expert solutions drive traffic, enhance visibility, and maximize conversions.</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">

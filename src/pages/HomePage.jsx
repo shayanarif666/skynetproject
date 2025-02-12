@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./style.css"
-import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, CaseStudies, Contact, Footer, CompanyLocation, PricingObjectives, Subscribe, ServiceTab, TopBrands } from "../components/index";
-// import { heroBrands } from "../components/brandItems";
+import { Header, Navbar, NavbarMenuItems, ShortCompanyInfo, Services, Timeline, Contact, Footer, CompanyLocation, PricingObjectives, Subscribe, TopBrands } from "../components/index";
 import ScrollToTop from "../components/ScrollToTop";
 import InfiniteMovingBrands from '../components/Brands/InfiniteMovingBrands';
+
 
 const HomePage = ({ setLoading }) => {
 
@@ -27,7 +27,7 @@ const HomePage = ({ setLoading }) => {
 
         <div className={`main-container`}>
           <div className={`main w-full z-50 origin-left transition-all duration-500 h-screen`}>
-            <Header bgColor="bg-gradient-to-r from-[#30007d] to-[#000]" titleMaxWidth="w-[1500px]" title={`Transforming Ideas into Digital Success Stories`} subTitle="Innovate. Inspire. Achieve – with SKYNET SILICON" />
+            <Header bgColor="bg-gradient-to-r from-[#30007d] to-[#000]" titleMaxWidth="w-[1500px]" title={`Transforming Ideas into Digital Success Stories`} subTitle={`Innovate. Inspire. Achieve – with`} isColorfulText={true} />
             <InfiniteMovingBrands />
             <main id="main_sections" className={`transition-all ease-in ${isClick ? "opacity-0 pointer-events-none" : "opacity-100"
               }`}>

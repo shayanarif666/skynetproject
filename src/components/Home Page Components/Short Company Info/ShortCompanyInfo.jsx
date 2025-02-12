@@ -3,18 +3,20 @@ import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { CompanyIntroVideo } from "../../index";
 import { GiVibratingShield } from "react-icons/gi";
 import { IoStar } from "react-icons/io5";
-import solutionImg from "/Images/web-designs-with-trophy.png.webp"
+import solutionImg from "/Images/web-designs-with-trophy.png.webp";
 import "./info.css";
 
 const Info = () => {
+
+    const words = ["Your Vision, Our Technology – Limitless Possibilities", "Innovate, Elevate, Dominate – With Skynet Silicon", "Smart Solutions for a Smarter Digital World", "Transforming Ideas into Digital Success"];
+
     return (
         <>
             <section id="short_company_info" className='py-16 bg-[#00042a] overflow-x-hidden'>
-
                 <div className="container">
                     <div className="lg:flex">
                         <div className="lg:w-1/2 w-full">
-                            <h1 className='text-3xl sm:text-4xl md:text-5xl text-white font-bold '>Innovative Web Company <br className='lg:block hidden' /> Offering Tailored Solutions</h1>
+                            <h1 className='text-3xl sm:text-4xl md:text-5xl text-white font-bold'>Innovate, Elevate, Dominate – With Skynet Silicon</h1>
                             <div className="info-service mt-5">
                                 <p className='text-2xl text-white mb-4 flex items-center'>
                                     <IoCheckmarkDoneSharp className='me-2 text-cyan-500' />
