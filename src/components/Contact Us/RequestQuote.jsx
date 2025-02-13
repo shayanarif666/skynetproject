@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import PhoneInput from "react-phone-input-2";
 import { BeatLoader } from 'react-spinners';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const RequestQuote = () => {
 
@@ -10,6 +11,9 @@ const RequestQuote = () => {
     const [error, setError] = useState(false);
     const [categories, setCategories] = useState([]);
     const [phone, setPhone] = useState("");
+
+    // Recaptcha Ref
+    const recaptchaRef = React.createRef();
 
     // React Hook Form
     const {
@@ -23,6 +27,7 @@ const RequestQuote = () => {
     const handleContactForm = async (data, event) => {
         setLoading(true);
         try {
+            recaptchaRef.current.execute();
             if (phone.length > 3) {
                 const formData = new FormData(event.target);
 
@@ -68,6 +73,9 @@ const RequestQuote = () => {
             setCategories(data);
         })()
     }, [])
+
+    // ReCaptcha Change
+    const onChange = () => {}
 
     return (
         <>
@@ -121,7 +129,13 @@ const RequestQuote = () => {
                 <textarea name='message' placeholder='Message*' {...register("message", { required: "Message is required" })} className='rounded-none mb-6 placeholder:text-lg py-3 focus:shadow-none focus:border-inherit form-control mt-6' />
                 {errors.message && <p role="alert" className='text-red-500 mb-3'>**{errors.message.message}</p>}
 
-                <div className="text-start">
+                <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6Ldp0dUqAAAAAGjYLWZmRneKOQCxtSgImOk1g_6M"
+                    onChange={onChange}
+                />
+
+                <div className="text-start mt-3">
                     <button className='primary-white-btn border-2 border-[#006cae] hover:text-white'>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
                 </div>
 

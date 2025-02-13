@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 import { BeatLoader } from 'react-spinners';
 import PhoneInput from 'react-phone-input-2';
 import { Link } from 'react-router-dom';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
 
@@ -18,6 +19,9 @@ const Contact = () => {
     const [error, setError] = useState(false);
     const [phone, setPhone] = useState('');
     const [categories, setCategories] = useState([]);
+
+    // Recaptcha Ref
+    const recaptchaRef = React.createRef();
 
     // Form
     const {
@@ -31,6 +35,7 @@ const Contact = () => {
     const handleContactForm = async (data, event) => {
         setLoading(true);
         try {
+            recaptchaRef.current.execute();
             if (phone.length > 3) {
                 const formData = new FormData(event.target);
 
@@ -81,6 +86,10 @@ const Contact = () => {
             }
         })()
     }, [])
+
+
+    // ReCaptcha Change
+    const onChange = () => {}
 
     return (
         <>
@@ -162,7 +171,15 @@ const Contact = () => {
                                     <textarea name="message" {...register("message", { required: "Message is required" })} className='placeholder:text-white placeholder:font-semibold placeholder:text-[1.1rem] focus:shadow-none form-control bg-transparent rounded-none border-none py-[15px] inline-block text-white' placeholder='Your Message*' id=""></textarea>
                                 </div>
                                 {errors.message && <p role="alert" className='text-red-500 mb-3'>**{errors.message.message}</p>}
-                                <div className="text-start">
+
+                                <ReCAPTCHA
+                                    ref={recaptchaRef}
+                                    sitekey="6LeKztUqAAAAAM5HA_LwUeiUNSi11knMAgH06yvH"
+                                    onChange={onChange}
+                                />
+
+               
+                                <div className="text-start mt-2">
                                     <button className='primary-white-btn hover:text-white'>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
                                 </div>
                             </form>
