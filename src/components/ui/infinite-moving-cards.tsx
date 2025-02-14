@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
   items,
+  itemClass,
   direction = "left",
   speed = "fast",
   pauseOnHover = false,
@@ -10,10 +11,12 @@ export const InfiniteMovingCards = ({
 }: {
   items: {
     src: string;
+    company: string;
     id: Number;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
+  itemClass?: string;
   pauseOnHover?: boolean;
   className?: string;
 }) => {
@@ -84,10 +87,11 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative border-slate-700 px-8 w-[450px]"
+            className={`relative border-slate-700 px-8 w-[300px] ${itemClass}`}
             key={item.src}
           >
-            <img src={item.src} className="max-w-full" alt="" loading="lazy" />
+            <img src={item.src} className="max-w-full " alt="" loading="lazy" />
+            {item.company && <h4 className="font-medium text-white">{item.company}</h4>}
           </li>
         ))}
       </ul>

@@ -9,19 +9,20 @@ import {
 
 
 export const HeroParallax = ({
-    products,
+    portfolio,
     isClick,
 }: {
-    products: {
+    portfolio: {
+        _id: Number;
+        category: string;
         title: string;
-        link: string;
-        thumbnail: string;
+        src: string;
     }[];
     isClick: Boolean
 }) => {
-    const firstRow = products.slice(0, 5);
-    const secondRow = products.slice(5, 10);
-    const thirdRow = products.slice(10, 15);
+    const firstRow = portfolio.slice(0, 5);
+    const secondRow = portfolio.slice(5, 10);
+    const thirdRow = portfolio.reverse().slice(0, 5);
     const ref = React.useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -71,29 +72,29 @@ export const HeroParallax = ({
                 className=""
             >
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-                    {firstRow.map((product) => (
+                    {firstRow.map((port) => (
                         <ProductCard
-                            product={product}
+                            portfolio={port}
                             translate={translateX}
-                            key={product.title}
+                            // key={port._id}
                         />
                     ))}
                 </motion.div>
                 <motion.div className="flex flex-row  mb-20 space-x-20 ">
                     {secondRow.map((product) => (
                         <ProductCard
-                            product={product}
+                            portfolio={product}
                             translate={translateXReverse}
-                            key={product.title}
+                            // key={product._id}
                         />
                     ))}
                 </motion.div>
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
                     {thirdRow.map((product) => (
                         <ProductCard
-                            product={product}
+                        portfolio={product}
                             translate={translateX}
-                            key={product.title}
+                            // key={product._id}
                         />
                     ))}
                 </motion.div>
@@ -116,13 +117,14 @@ export const Header = () => {
 };
 
 export const ProductCard = ({
-    product,
+    portfolio,
     translate,
 }: {
-    product: {
+    portfolio: {
+        _id: Number;
+        src: string;
         title: string;
-        link: string;
-        thumbnail: string;
+        category: string;
     };
     translate: MotionValue<number>;
 }) => {
@@ -134,20 +136,20 @@ export const ProductCard = ({
             whileHover={{
                 y: -20,
             }}
-            key={product.title}
+            // key={portfolio._id}
             className="group/product h-96 w-[30rem] relative flex-shrink-0"
         >
 
             <img
-                src={product.thumbnail}
+                src={`${portfolio.src}`}
                 className="object-cover object-left-top absolute inset-0 h-[600px] w-[600px]"
-                alt={product.title}
+                alt={portfolio.title}
                 loading="lazy"
             />
 
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
             <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-                {product.title}
+                {portfolio.title}
             </h2>
         </motion.div>
     );

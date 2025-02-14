@@ -53,7 +53,7 @@ const NavbarMenuItems = ({
                 <h3 className='lg:text-white text-[#04e4ff] text-lg uppercase font-bold my-3'>Design</h3>
                 <Link to='/service/web-design' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Web Design</Link>
                 <Link to='/service/redesign-identity' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Redesign Identity</Link>
-                <Link to='/service/graphic-design' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Graphic Design</Link>
+                <Link to='/service/graphic-designing' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Graphic Design</Link>
                 <Link to='/service/logo-design' className='text-white transition-all duration-300  block mb-2 font-semibold text-[.8rem] 2xl:text-base cursor-pointer'>Logo Design</Link>
               </div>
               <div className="sub_menu">

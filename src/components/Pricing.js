@@ -107,7 +107,7 @@ export const pricing = [
     },
     {
         _id: 7,
-        category: "Graphic Design",
+        category: "Graphic Designing",
         features: [
             { title: "Custom Images", isChecked: true, isQuantity: true, quantity: 1, hours: 10, price: 150 },
             { title: "Business Card Design", isChecked: true, isQuantity: true, quantity: 1, hours: 8, price: 100 },

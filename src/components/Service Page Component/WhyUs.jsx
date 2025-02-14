@@ -34,68 +34,6 @@ const WhyUs = ({
                                     )
                                 })
                             }
-                            {
-                                service.category.name === "App Development" &&
-                                <>
-                                    <div className="relative text-center md:m-1 lg:m-0 why_us_content bg-[#222] rounded-[0px] p-10">
-                                        <GlowingEffect
-                                            blur={1}
-                                            spread={50}
-                                            borderWidth={5}
-                                            glow={true}
-                                            disabled={false}
-                                            proximity={64}
-                                            inactiveZone={0.01}
-                                        />
-                                        <h2 className={` text-white  text-2xl font-semibold`}>5. Cross-Platform Compatibility</h2>
-                                        <p className={`text-white mt-6 text-sm`}>In today’s digital landscape, having a website or app that works seamlessly across different devices and platforms is crucial. Our development process ensures responsive web design and cross-platform mobile app development, making sure your product functions smoothly on iOS, Android, and various screen sizes. This guarantees a consistent user experience, reducing bounce rates and increasing engagement, whether accessed from a smartphone, tablet, or desktop.</p>
-                                    </div>
-                                    <div className="relative text-center md:m-1 lg:m-0 why_us_content bg-[#1092fd] p-10">
-                                        <GlowingEffect
-                                            blur={1}
-                                            spread={50}
-                                            borderWidth={5}
-                                            glow={true}
-                                            disabled={false}
-                                            proximity={64}
-                                            inactiveZone={0.01}
-                                        />
-                                        <h2 className={` text-white  text-2xl font-semibold`}>6. AI & Automation in Development</h2>
-                                        <p className={`text-white mt-6 text-sm`}>Integrating AI-powered features and automation in web and mobile development enhances efficiency, personalization, and user engagement. From chatbots for customer service to machine learning-driven recommendations, AI makes applications smarter and more intuitive. Automation streamlines processes like testing, content updates, and data analysis, improving overall performance. By leveraging AI and automation, businesses can stay ahead in a competitive market with intelligent and adaptive digital solutions.</p>
-                                    </div>
-                                </>
-                            }
-                            {
-                                service.category.name === "Web Development" &&
-                                <>
-                                    <div className="relative text-center md:m-1 lg:m-0 why_us_content bg-[#222] rounded-[0px] p-10">
-                                        <GlowingEffect
-                                            blur={1}
-                                            spread={50}
-                                            borderWidth={5}
-                                            glow={true}
-                                            disabled={false}
-                                            proximity={64}
-                                            inactiveZone={0.01}
-                                        />
-                                        <h2 className={` text-white  text-2xl font-semibold`}>5. AI-Powered Web Development</h2>
-                                        <p className={`text-white mt-6 text-sm`}>The future of web development lies in Artificial Intelligence. By integrating AI-driven chatbots, personalized content recommendations, and smart automation, websites can deliver an enhanced user experience. AI-powered analytics help businesses understand user behavior and optimize their platforms for better engagement and conversions. Machine learning algorithms ensure websites adapt dynamically to user needs, making digital platforms more intelligent and user-friendly.</p>
-                                    </div>
-                                    <div className="relative text-center md:m-1 lg:m-0 why_us_content bg-[#1092fd] p-10">
-                                        <GlowingEffect
-                                            blur={1}
-                                            spread={50}
-                                            borderWidth={5}
-                                            glow={true}
-                                            disabled={false}
-                                            proximity={64}
-                                            inactiveZone={0.01}
-                                        />
-                                        <h2 className={` text-white  text-2xl font-semibold`}>6. Progressive Web Applications (PWA)</h2>
-                                        <p className={`text-white mt-6 text-sm`}>Progressive Web Applications (PWAs) combine the best of websites and mobile apps, offering a fast, responsive, and offline-capable experience. PWAs load quickly, work across all devices, and provide app-like functionality without requiring downloads from an app store. With improved performance, push notifications, and offline access, PWAs increase engagement and offer a seamless browsing experience, making them an essential part of modern web development.</p>
-                                    </div>
-                                </>
-                            }
                         </div>
                     </div>
                 </div>

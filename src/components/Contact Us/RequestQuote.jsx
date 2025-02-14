@@ -11,9 +11,7 @@ const RequestQuote = () => {
     const [error, setError] = useState(false);
     const [categories, setCategories] = useState([]);
     const [phone, setPhone] = useState("");
-
-    // Recaptcha Ref
-    const recaptchaRef = React.createRef();
+    const [captchaValue, setCaptchaValue] = useState("");
 
     // React Hook Form
     const {
@@ -75,7 +73,29 @@ const RequestQuote = () => {
     }, [])
 
     // ReCaptcha Change
-    const onChange = () => {}
+    // ReCaptcha Change
+    const handleCaptchaChange = async (value) => {
+        // Step 1: Verify reCAPTCHA with the backend
+        const recaptchaResponse = await fetch("http://localhost:5000/verify-recaptcha", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token: value }),
+        });
+
+        const recaptchaData = await recaptchaResponse.json();
+        console.log("reCAPTCHA Response:", recaptchaData);
+
+        setCaptchaValue(value);
+
+        if (!recaptchaData.success) {
+            Swal.fire({
+                icon: "error",
+                title: "reCAPTCHA verification failed! Try again.",
+            });
+            setLoading(false);
+            return;
+        }
+    };
 
     return (
         <>
@@ -130,13 +150,12 @@ const RequestQuote = () => {
                 {errors.message && <p role="alert" className='text-red-500 mb-3'>**{errors.message.message}</p>}
 
                 <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey="6Ldp0dUqAAAAAGjYLWZmRneKOQCxtSgImOk1g_6M"
-                    onChange={onChange}
+                    sitekey="6LeD79UqAAAAAEDdrrGoxrQy1pupDv7_xhyWOtgf"
+                    onChange={handleCaptchaChange}
                 />
 
                 <div className="text-start mt-3">
-                    <button className='primary-white-btn border-2 border-[#006cae] hover:text-white'>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
+                    <button className={`${captchaValue ? "opacity-100 pointer-events-auto" : "opacity-50 pointer-events-none"} primary-white-btn border-2 border-[#006cae] hover:text-white`}>{loading ? <BeatLoader size={12} color='#fff' /> : "Submit"}</button>
                 </div>
 
             </form>

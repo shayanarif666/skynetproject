@@ -1,105 +1,120 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HeroParallax } from "./ui/hero-parallax";
 
 export function HeroParallaxEffect({
     isClick
 }) {
+    // Fetch Portfolio
+
+
     return <div className="max-h-screen">
-        <HeroParallax products={products} isClick={isClick} />;
+        <HeroParallax portfolio={products} isClick={isClick} />;
     </div>
 }
 export const products = [
-    {
+    { 
+        _id: 1,
         title: "Moonbeam",
-        link: "https://gomoonbeam.com",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (1).webp",
     },
-    {
-        title: "Cursor",
-        link: "https://cursor.so",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (2).webp",
     },
-    {
-        title: "Rogue",
-        link: "https://userogue.com",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (3).webp",
     },
-
-    {
-        title: "Editorially",
-        link: "https://editorially.org",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (4).webp",
     },
-    {
-        title: "Editrix AI",
-        link: "https://editrix.ai",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (5).webp",
     },
-    {
-        title: "Pixel Perfect",
-        link: "https://app.pixelperfect.quest",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (6).webp",
     },
-
-    {
-        title: "Algochurn",
-        link: "https://algochurn.com",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (7).webp",
     },
-    {
-        title: "Aceternity UI",
-        link: "https://ui.aceternity.com",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (8).webp",
     },
-    {
-        title: "Tailwind Master Kit",
-        link: "https://tailwindmasterkit.com",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (9).webp",
     },
-    {
-        title: "SmartBridge",
-        link: "https://smartbridgetech.com",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (10).webp",
     },
-    {
-        title: "Renderwork Studio",
-        link: "https://renderwork.studio",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (1).webp",
     },
-
-    {
-        title: "Creme Digital",
-        link: "https://cremedigital.com",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (2).webp",
     },
-    {
-        title: "Golden Bells Academy",
-        link: "https://goldenbellsacademy.com",
-        thumbnail:
-            "https://elements-resized.envatousercontent.com/elements-template-kits-preview-images/files/389491884/404-Page.jpeg?w=1370&cf_fit=scale-down&q=85&format=auto&s=e5b7ed7e6940f4b0208f8bc112d80a7b1b272c12622b3450163c61d625e7f9d0",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (3).webp",
     },
-    {
-        title: "Invoker Labs",
-        link: "https://invoker.lol",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (4).webp",
     },
-    {
-        title: "E Free Invoice",
-        link: "https://efreeinvoice.com",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-    },
+    { 
+        _id: 1,
+        title: "Moonbeam",
+        category: "",
+        src:
+            "/Images/Portfolio/portfolio (5).webp",
+    }
 ];

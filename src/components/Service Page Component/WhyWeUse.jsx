@@ -31,36 +31,6 @@ const WhyWeUse = ({
                                         </div>
                                     ))
                                 }
-                                {
-                                    service.category.name === "App Development" && <div className={`relative text-center h-[200px] rounded-none flex items-center flex-col justify-center m-px bg-[#181818] p-3`}>
-                                        <GlowingEffect
-                                            blur={1}
-                                            spread={50}
-                                            borderWidth={5}
-                                            glow={true}
-                                            disabled={false}
-                                            proximity={64}
-                                            inactiveZone={0.01}
-                                        />
-                                        <h2 className='text-white text-2xl font-semibold'>Advanced Security Measures</h2>
-                                        <p className='text-white mt-6 text-sm'>We implement encryption, secure authentication, and firewall protection to safeguard your website and app from cyber threats. Our proactive security approach ensures data protection, compliance, and a reliable digital experience for users.</p>
-                                    </div>
-                                }
-                                {
-                                    service.category.name === "Web Development" && <div className={`relative text-center h-[200px] rounded-none flex items-center flex-col justify-center m-px bg-[#181818] p-3`}>
-                                        <GlowingEffect
-                                            blur={0}
-                                            spread={50}
-                                            borderWidth={5}
-                                            glow={true}
-                                            disabled={false}
-                                            proximity={64}
-                                            inactiveZone={0.01}
-                                        />
-                                        <h2 className='text-white text-2xl font-semibold'>Advanced Security Measures</h2>
-                                        <p className='text-white mt-6 text-sm'>We implement encryption, secure authentication, and firewall protection to safeguard your website and app from cyber threats. Our proactive security approach ensures data protection, compliance, and a reliable digital experience for users.</p>
-                                    </div>
-                                }
                             </div>
 
                         </div>

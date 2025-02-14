@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrandsSlider, Button } from '../index';
+import { Button } from '../index';
 import { workingBrands } from '../brandItems';
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
+import InfiniteMovingBrands from '../Brands/InfiniteMovingBrands';
 
 const TopBrands = () => {
     // Typewrite Effect
@@ -36,9 +37,7 @@ const TopBrands = () => {
                         </div>
                     </div>
                 </div>
-                <BrandsSlider bannerHeight='18vh' sliderGap="mb-4" items={workingBrands} itemBgColor='#4c86d21a' scrollPosition='left' scrollTo="scrollLeft" itemWidth='300px' className="flex flex-column justify-center items-center" bgColor="none !important" />
-                {/* <BrandsSlider bannerHeight='18vh' sliderGap="mb-4" items={workingBrands} itemBgColor='#4c86d21a' scrollPosition='right' scrollTo="scrollRight" itemWidth='300px' className="flex flex-column justify-center items-center" bgColor="none !important" /> */}
-
+                <InfiniteMovingBrands height='18vh' bgColor='' className='bg-[#4c86d21a] flex flex-column justify-center items-center py-4' brand={workingBrands} />
                 {/* <div className="flex justify-center mt-14">
                     <Button className='primary-btn text-white hover:text-white' label={"EXPLORE ALL SERVICES"} />
                 </div> */}

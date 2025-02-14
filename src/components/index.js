@@ -1,5 +1,4 @@
 import About from "./About Us Page Components/About"
-import BrandsSlider from "./Brands/BrandsSlider";
 import Button from "./Button";
 import BreadCrumb from "./BreadCrumb";
 import CompanyIntroVideo from "./Home Page Components/Short Company Info/CompanyIntroVideo";
@@ -38,7 +37,6 @@ import WhyUs from "./Service Page Component/WhyUs";
 
 export {
     About,
-    BrandsSlider,
     Button,
     BreadCrumb,
     CompanyIntroVideo,

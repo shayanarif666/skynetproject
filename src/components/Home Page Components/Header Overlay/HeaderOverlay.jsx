@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 
 const HeaderOverlay = React.memo(() => {
-  // Portfolio Images
+  
   const portfolio = [
-    { id: 1, src: "/Images/Portfolio/1.jpg" },
-    { id: 2, src: "/Images/Portfolio/2.webp" },
-    { id: 3, src: "/Images/Portfolio/3.jpg" },
-    { id: 4, src: "/Images/Portfolio/4.jpg" },
-    { id: 5, src: "/Images/Portfolio/1.jpg" },
-    { id: 6, src: "/Images/Portfolio/2.webp" },
-    { id: 7, src: "/Images/Portfolio/3.jpg" },
-    { id: 8, src: "/Images/Portfolio/4.jpg" },
-    { id: 9, src: "/Images/Portfolio/3.jpg" },
-    { id: 10, src: "/Images/Portfolio/4.jpg" },
+    { id: 1, src: "/Images/Portfolio/portfolio (1).webp" },
+    { id: 2, src: "/Images/Portfolio/portfolio (2).webp" },
+    { id: 3, src: "/Images/Portfolio/portfolio (3).webp" },
+    { id: 4, src: "/Images/Portfolio/portfolio (4).webp" },
+    { id: 5, src: "/Images/Portfolio/portfolio (5).webp" },
+    { id: 6, src: "/Images/Portfolio/portfolio (6).webp" },
+    { id: 7, src: "/Images/Portfolio/portfolio (7).webp" },
+    { id: 8, src: "/Images/Portfolio/portfolio (8).webp" },
+    { id: 9, src: "/Images/Portfolio/portfolio (9).webp" },
+    { id: 10, src: "/Images/Portfolio/portfolio (10).webp" },
   ];
 
   // Three Columns for Image Overlays
-  const heroImagesOverlayColumn = [portfolio, portfolio, portfolio];
+  const heroImagesOverlayColumn = [portfolio, portfolio.reverse(), portfolio];
 
   return (
     <div className="hero_section_images_overlays flex md:flex-row flex-col scale-125">
@@ -30,10 +30,10 @@ const HeaderOverlay = React.memo(() => {
           transition={{ ease: "linear", repeat: Infinity, repeatType: "loop", duration: 13 }}
           style={{ overflow: "hidden", willChange: "transform" }} // GPU Optimization
         >
-          {column.map(({ id, src }) => (
+          {column.map(({ _id, src }) => (
             <img
-              key={id}
-              src={src}
+              key={_id}
+              src={`${src}`}
               alt="Portfolio Image"
               className="w-full p-1 rounded-lg"
               loading="lazy" // Lazy loading for performance boost
@@ -46,3 +46,4 @@ const HeaderOverlay = React.memo(() => {
 });
 
 export default HeaderOverlay;
+
